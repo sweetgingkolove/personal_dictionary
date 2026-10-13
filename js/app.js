@@ -15,7 +15,7 @@ const POS_MAP = {
   'other': 'other'
 };
 
-const SUGGESTED_TAGS = ['medical', 'architecture', 'christian', 'french', 'latin'];
+const SUGGESTED_TAGS = ['architecture', 'botany and zoology', 'christian', 'color', 'french', 'geology', 'latin', 'medical', 'military', 'nautical', 'textiles'];
 const CUSTOM_TAGS_STORAGE_KEY = 'personal_dictionary_custom_tags';
 
 /**

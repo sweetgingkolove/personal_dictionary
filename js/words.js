@@ -8,10 +8,10 @@ export const INITIAL_WORDS = [
     "partOfSpeech": [
       "noun"
     ],
-    "definition": "In botany, when parts of a plant naturally detach themselves, mostly dead leaves (autumn) or ripe fruit",
+    "definition": "in botany, when parts of a plant naturally detach themselves, mostly dead leaves (autumn) or ripe fruit",
     "source": "erin winseman's rumpus review of wintering",
     "tags": [
-      "medical"
+      "botany and zoology"
     ],
     "dateAdded": "2021-03-28T12:00:00.000Z"
   },
@@ -45,7 +45,9 @@ export const INITIAL_WORDS = [
     ],
     "definition": "Hawk-like",
     "source": "john fowles' the magus",
-    "tags": [],
+    "tags": [
+      "botany and zoology"
+    ],
     "dateAdded": "2024-05-30T12:00:00.000Z"
   },
   {
@@ -92,8 +94,7 @@ export const INITIAL_WORDS = [
     "definition": "Latin or adyton (greek) the innermost sanctuary in an ancient greek temple open only to priests, the inner sanctum that houses the cult image of the god",
     "source": "villette",
     "tags": [
-      "architecture",
-      "latin"
+      "architecture"
     ],
     "dateAdded": "2022-02-06T12:00:00.000Z"
   },
@@ -105,9 +106,7 @@ export const INITIAL_WORDS = [
     ],
     "definition": "Related to the roll of a dice or on chance, random (alia iacta est!)",
     "source": "",
-    "tags": [
-      "latin"
-    ],
+    "tags": [],
     "dateAdded": "2021-05-16T12:00:00.000Z"
   },
   {
@@ -118,9 +117,7 @@ export const INITIAL_WORDS = [
     ],
     "definition": "Related to pain associated with pleasure",
     "source": "john fowles' the magus",
-    "tags": [
-      "medical"
-    ],
+    "tags": [],
     "dateAdded": "2024-05-30T12:00:00.000Z"
   },
   {
@@ -131,7 +128,9 @@ export const INITIAL_WORDS = [
     ],
     "definition": "Undying, after an amaranth, a mythical flower that was never supposed to fade. also a dark purple color",
     "source": "the guermantes way",
-    "tags": [],
+    "tags": [
+      "color"
+    ],
     "dateAdded": "2026-10-10T12:00:00.000Z"
   },
   {
@@ -153,7 +152,9 @@ export const INITIAL_WORDS = [
     ],
     "definition": "An ambush",
     "source": "",
-    "tags": [],
+    "tags": [
+      "military"
+    ],
     "dateAdded": "2023-01-02T12:00:00.000Z"
   },
   {
@@ -186,7 +187,9 @@ export const INITIAL_WORDS = [
     ],
     "definition": "Describing animals that swim from the sea into rivers to breed, like salmon and other fish (moving the opposite way--from freshwater to the sea--is called catadromous, like freshwater eels)",
     "source": "",
-    "tags": [],
+    "tags": [
+      "botany and zoology"
+    ],
     "dateAdded": "2021-06-13T12:00:00.000Z"
   },
   {
@@ -263,17 +266,6 @@ export const INITIAL_WORDS = [
     "dateAdded": "2020-02-03T12:00:00.000Z"
   },
   {
-    "id": "antinomy-23",
-    "word": "antinomy",
-    "partOfSpeech": [
-      "noun"
-    ],
-    "definition": "A contradiction between two principles/ideas that are reasonable; a paradox",
-    "source": "thomas mann's the magic mountain",
-    "tags": [],
-    "dateAdded": "2024-11-21T12:00:00.000Z"
-  },
-  {
     "id": "antinomian-24",
     "word": "antinomian",
     "partOfSpeech": [
@@ -285,6 +277,17 @@ export const INITIAL_WORDS = [
       "christian"
     ],
     "dateAdded": "2026-10-10T12:00:00.000Z"
+  },
+  {
+    "id": "antinomy-23",
+    "word": "antinomy",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A contradiction between two principles/ideas that are reasonable; a paradox",
+    "source": "thomas mann's the magic mountain",
+    "tags": [],
+    "dateAdded": "2024-11-21T12:00:00.000Z"
   },
   {
     "id": "apercu-25",
@@ -403,7 +406,6 @@ export const INITIAL_WORDS = [
     "definition": "The stuff/resources you use for a specific activity, but especially the equipment, methods, and pharmaceuticals used in medicine",
     "source": "covid vaccine reporting",
     "tags": [
-      "latin",
       "medical"
     ],
     "dateAdded": "2021-10-30T12:00:00.000Z"
@@ -416,7 +418,9 @@ export const INITIAL_WORDS = [
     ],
     "definition": "A historical (15th-17th c.) long gun that preceded the musket and rifle, fired from a support and used in europe, the ottoman empire and japan",
     "source": "hyouge mono",
-    "tags": [],
+    "tags": [
+      "military"
+    ],
     "dateAdded": "2021-08-22T12:00:00.000Z"
   },
   {
@@ -512,7 +516,7 @@ export const INITIAL_WORDS = [
     "definition": "An ancient missile-firing siege weapon that fired bolts (like a crossbow) or heavy balls",
     "source": "",
     "tags": [
-      "architecture"
+      "military"
     ],
     "dateAdded": "2021-05-16T12:00:00.000Z"
   },
@@ -538,7 +542,8 @@ export const INITIAL_WORDS = [
     "definition": "A defensive structure that protected a castle, usually a tower at a gate or bridge",
     "source": "",
     "tags": [
-      "architecture"
+      "architecture",
+      "military"
     ],
     "dateAdded": "2021-05-16T12:00:00.000Z"
   },
@@ -563,7 +568,9 @@ export const INITIAL_WORDS = [
     ],
     "definition": "A mountain or mound, used in the names of english hills, or a mound of earth over a grave",
     "source": "beowulf",
-    "tags": [],
+    "tags": [
+      "geology"
+    ],
     "dateAdded": "2023-01-02T12:00:00.000Z"
   },
   {
@@ -573,7 +580,7 @@ export const INITIAL_WORDS = [
       "noun",
       "verb"
     ],
-    "definition": "A blow with a stick or a cudgel; a punishment where someone canes the soles of your feet",
+    "definition": "a blow with a stick or a cudgel; a punishment where someone canes the soles of your feet",
     "source": "",
     "tags": [],
     "dateAdded": "2026-10-11T12:56:19.342750Z"
@@ -586,7 +593,9 @@ export const INITIAL_WORDS = [
     ],
     "definition": "Frog or toad-like",
     "source": "john fowles' the magus",
-    "tags": [],
+    "tags": [
+      "botany and zoology"
+    ],
     "dateAdded": "2024-05-30T12:00:00.000Z"
   },
   {
@@ -664,7 +673,7 @@ export const INITIAL_WORDS = [
       "noun"
     ],
     "definition": "Architecture: a structure--a cupola, turret, terrace, open gallery, etc.--that takes advantage of a good view",
-    "source": "robert louis stevenson's \"apology for idlers,\"",
+    "source": "robert louis stevenson's \"apology for idlers\"",
     "tags": [
       "architecture"
     ],
@@ -714,10 +723,8 @@ export const INITIAL_WORDS = [
       "adverb"
     ],
     "definition": "Again or twice--used in music to repeat",
-    "source": "\"natives on the boat,\"",
-    "tags": [
-      "latin"
-    ],
+    "source": "\"natives on the boat\"",
+    "tags": [],
     "dateAdded": "2020-10-24T12:00:00.000Z"
   },
   {
@@ -729,7 +736,8 @@ export const INITIAL_WORDS = [
     "definition": "A cold, dry wind from the northeast in switzerland, and the areas of france and italy around lake geneva",
     "source": "art of personal essay",
     "tags": [
-      "french"
+      "french",
+      "geology"
     ],
     "dateAdded": "2026-10-11T12:56:19.343358Z"
   },
@@ -741,7 +749,9 @@ export const INITIAL_WORDS = [
     ],
     "definition": "A dark brownish yellowish pigment made from the soot of burned wood",
     "source": "",
-    "tags": [],
+    "tags": [
+      "color"
+    ],
     "dateAdded": "2021-03-28T12:00:00.000Z"
   },
   {
@@ -787,7 +797,9 @@ export const INITIAL_WORDS = [
     ],
     "definition": "A large meteor or fireball, especially one that explodes",
     "source": "andre aciman's homo irrealis",
-    "tags": [],
+    "tags": [
+      "geology"
+    ],
     "dateAdded": "2022-05-01T12:00:00.000Z"
   },
   {
@@ -809,7 +821,9 @@ export const INITIAL_WORDS = [
     ],
     "definition": "A thicket; a growth of massed trees or shrubs",
     "source": "the tetris effect soundtrack",
-    "tags": [],
+    "tags": [
+      "geology"
+    ],
     "dateAdded": "2021-03-28T12:00:00.000Z"
   },
   {
@@ -845,7 +859,8 @@ export const INITIAL_WORDS = [
     "definition": "A temporary fortification, like earth piled up to breast height to protect people standing behind it",
     "source": "",
     "tags": [
-      "architecture"
+      "architecture",
+      "military"
     ],
     "dateAdded": "2026-10-11T12:56:19.343837Z"
   },
@@ -868,7 +883,9 @@ export const INITIAL_WORDS = [
     ],
     "definition": "When military officers get a higher title as a reward, but not the pay associated with that reward",
     "source": "kate bolick's spinster",
-    "tags": [],
+    "tags": [
+      "military"
+    ],
     "dateAdded": "2026-10-10T12:00:00.000Z"
   },
   {
@@ -891,8 +908,10 @@ export const INITIAL_WORDS = [
       "noun"
     ],
     "definition": "The shiny parts on a boat (varnished woodwork, polished metal)",
-    "source": "DFW's \"a supposedly fun thing i'll never do again,\"",
-    "tags": [],
+    "source": "DFW's \"a supposedly fun thing i'll never do again\"",
+    "tags": [
+      "nautical"
+    ],
     "dateAdded": "2021-03-28T12:00:00.000Z"
   },
   {
@@ -915,7 +934,7 @@ export const INITIAL_WORDS = [
     "definition": "A cape with a hood, worn by arabs in northwest africa (the maghreb)",
     "source": "i capture the castle",
     "tags": [
-      "french"
+      "textiles"
     ],
     "dateAdded": "2021-04-11T12:00:00.000Z"
   },
@@ -939,7 +958,8 @@ export const INITIAL_WORDS = [
     "definition": "A large watertight box in which construction can be done underwater, or (historically) a chest or wagon for holding/transporting ammo",
     "source": "",
     "tags": [
-      "architecture"
+      "architecture",
+      "military"
     ],
     "dateAdded": "2021-05-16T12:00:00.000Z"
   },
@@ -952,7 +972,8 @@ export const INITIAL_WORDS = [
     "definition": "A feverish delirium formerly supposed to affect sailors in the tropics",
     "source": "",
     "tags": [
-      "medical"
+      "medical",
+      "nautical"
     ],
     "dateAdded": "2021-06-06T12:00:00.000Z"
   },
@@ -964,7 +985,9 @@ export const INITIAL_WORDS = [
     ],
     "definition": "A layer of soil with a lot of calcium carbonate, found in older soils near the surface, and also in dry areas (like deserts)",
     "source": "making of the atomic bomb",
-    "tags": [],
+    "tags": [
+      "geology"
+    ],
     "dateAdded": "2025-04-21T12:00:00.000Z"
   },
   {
@@ -996,11 +1019,9 @@ export const INITIAL_WORDS = [
       "noun",
       "adjective"
     ],
-    "definition": "Anything relating to Cambridge, the place in england (or massachussetts) or the university, particularly students/people affiliated with Cambridge. from the latin name for Cambridge. also see Oxonian, which is the same except for Oxford (latin name and all--oxonia)",
+    "definition": "/adj. anything relating to Cambridge, the place in england (or massachussetts) or the university, particularly students/people affiliated with Cambridge. from the latin name for Cambridge. also see Oxonian, which is the same except for Oxford (latin name and all--oxonia)",
     "source": "david price's geniuses of war",
-    "tags": [
-      "latin"
-    ],
+    "tags": [],
     "dateAdded": "2021-06-14T12:00:00.000Z"
   },
   {
@@ -1011,9 +1032,7 @@ export const INITIAL_WORDS = [
     ],
     "definition": "To intone, chant, recite with musical tones, particularly a religious text",
     "source": "an emerging critic application",
-    "tags": [
-      "latin"
-    ],
+    "tags": [],
     "dateAdded": "2021-06-14T12:00:00.000Z"
   },
   {
@@ -1037,7 +1056,9 @@ export const INITIAL_WORDS = [
     ],
     "definition": "A machine that lifts heavy things by rotating a cable around a vertical drum (like for rope on a ship). also a similar part on a tape recorder",
     "source": "the lies of locke lamora",
-    "tags": [],
+    "tags": [
+      "nautical"
+    ],
     "dateAdded": "2020-01-16T12:00:00.000Z"
   },
   {
@@ -1048,7 +1069,9 @@ export const INITIAL_WORDS = [
     ],
     "definition": "Wool from a kind of sheep in central asia",
     "source": "",
-    "tags": [],
+    "tags": [
+      "textiles"
+    ],
     "dateAdded": "2026-10-11T12:56:19.345333Z"
   },
   {
@@ -1081,7 +1104,9 @@ export const INITIAL_WORDS = [
     ],
     "definition": "A three or four-masted portuguese sailing ship in the 14th-17th c.--big merchant and exploration ships (caravels were smaller)",
     "source": "marc david baer's the ottomans",
-    "tags": [],
+    "tags": [
+      "nautical"
+    ],
     "dateAdded": "2021-10-24T12:00:00.000Z"
   },
   {
@@ -1169,7 +1194,8 @@ export const INITIAL_WORDS = [
     "definition": "A bright, vivid reddish pink (from the french for \"cherry\")",
     "source": "",
     "tags": [
-      "french"
+      "french",
+      "color"
     ],
     "dateAdded": "2021-03-28T12:00:00.000Z"
   },
@@ -1216,7 +1242,9 @@ export const INITIAL_WORDS = [
     ],
     "definition": "A movable barrier made of a bunch of spikes or stakes, used to defend against cavalry (lit. frisian horses)",
     "source": "john fowles' the magus",
-    "tags": [],
+    "tags": [
+      "military"
+    ],
     "dateAdded": "2024-05-30T12:00:00.000Z"
   },
   {
@@ -1265,7 +1293,7 @@ export const INITIAL_WORDS = [
     "definition": "Describing yellowed leaves from lack of chlorophyll, being afflicted with a plant disease",
     "source": "john fowles' the magus",
     "tags": [
-      "medical"
+      "botany and zoology"
     ],
     "dateAdded": "2024-05-30T12:00:00.000Z"
   },
@@ -1307,6 +1335,19 @@ export const INITIAL_WORDS = [
     "dateAdded": "2026-10-10T12:00:00.000Z"
   },
   {
+    "id": "cicatrize-119",
+    "word": "cicatrize",
+    "partOfSpeech": [
+      "verb"
+    ],
+    "definition": "To heal by forming a scar (cicatrix=scar, or a mark that looks like a scar)",
+    "source": "jane eyre",
+    "tags": [
+      "medical"
+    ],
+    "dateAdded": "2021-06-06T12:00:00.000Z"
+  },
+  {
     "id": "cicisbeo-112",
     "word": "cicisbeo",
     "partOfSpeech": [
@@ -1329,6 +1370,17 @@ export const INITIAL_WORDS = [
     "dateAdded": "2021-03-28T12:00:00.000Z"
   },
   {
+    "id": "cinerarium-120",
+    "word": "cinerarium",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A place to put cremated remains",
+    "source": "the beak of the finch",
+    "tags": [],
+    "dateAdded": "2026-10-10T12:00:00.000Z"
+  },
+  {
     "id": "cinq-a-sept-114",
     "word": "cinq a sept",
     "partOfSpeech": [
@@ -1340,6 +1392,20 @@ export const INITIAL_WORDS = [
       "french"
     ],
     "dateAdded": "2021-06-13T12:00:00.000Z"
+  },
+  {
+    "id": "circumvallation-121",
+    "word": "circumvallation",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "To surround with walls or ramparts or siegeworks (as an attack in war)",
+    "source": "robert louis stevenson's \"on marriage\"",
+    "tags": [
+      "architecture",
+      "military"
+    ],
+    "dateAdded": "2022-04-17T12:00:00.000Z"
   },
   {
     "id": "claque-115",
@@ -1361,7 +1427,7 @@ export const INITIAL_WORDS = [
       "adjective"
     ],
     "definition": "Enclosed, confining, like a cloister",
-    "source": "DFW's \"authority and american usage,\"",
+    "source": "DFW's \"authority and american usage\"",
     "tags": [],
     "dateAdded": "2020-06-22T12:00:00.000Z"
   },
@@ -1373,7 +1439,9 @@ export const INITIAL_WORDS = [
     ],
     "definition": "That metal thing with two horns that's used to secure ropes",
     "source": "annie dillard's an american childhood",
-    "tags": [],
+    "tags": [
+      "nautical"
+    ],
     "dateAdded": "2022-03-26T12:00:00.000Z"
   },
   {
@@ -1386,46 +1454,6 @@ export const INITIAL_WORDS = [
     "source": "",
     "tags": [],
     "dateAdded": "2021-06-06T12:00:00.000Z"
-  },
-  {
-    "id": "cicatrize-119",
-    "word": "cicatrize",
-    "partOfSpeech": [
-      "verb"
-    ],
-    "definition": "To heal by forming a scar (cicatrix=scar, or a mark that looks like a scar)",
-    "source": "jane eyre",
-    "tags": [
-      "medical"
-    ],
-    "dateAdded": "2021-06-06T12:00:00.000Z"
-  },
-  {
-    "id": "cinerarium-120",
-    "word": "cinerarium",
-    "partOfSpeech": [
-      "noun"
-    ],
-    "definition": "A place to put cremated remains",
-    "source": "the beak of the finch",
-    "tags": [
-      "architecture",
-      "latin"
-    ],
-    "dateAdded": "2026-10-10T12:00:00.000Z"
-  },
-  {
-    "id": "circumvallation-121",
-    "word": "circumvallation",
-    "partOfSpeech": [
-      "noun"
-    ],
-    "definition": "To surround with walls or ramparts or siegeworks (as an attack in war)",
-    "source": "robert louis stevenson's \"on marriage,\"",
-    "tags": [
-      "architecture"
-    ],
-    "dateAdded": "2022-04-17T12:00:00.000Z"
   },
   {
     "id": "coffle-122",
@@ -1445,7 +1473,7 @@ export const INITIAL_WORDS = [
       "noun"
     ],
     "definition": "A projecting corner of a wall or building, often somewhere you can gain a vantage point",
-    "source": "(from toby ferris's short life in a strange world",
+    "source": "toby ferris's short life in a strange world",
     "tags": [
       "architecture"
     ],
@@ -1457,7 +1485,7 @@ export const INITIAL_WORDS = [
     "partOfSpeech": [
       "noun"
     ],
-    "definition": "The fiber from the outside of a coconut, used to make ropes, etc",
+    "definition": "The fiber from the outside of a coconut, used to make ropes, etc.",
     "source": "",
     "tags": [],
     "dateAdded": "2021-03-28T12:00:00.000Z"
@@ -1470,7 +1498,9 @@ export const INITIAL_WORDS = [
     ],
     "definition": "A light meal (what you could eat on fast days)",
     "source": "john fowles' the magus",
-    "tags": [],
+    "tags": [
+      "christian"
+    ],
     "dateAdded": "2024-05-30T12:00:00.000Z"
   },
   {
@@ -1535,17 +1565,6 @@ export const INITIAL_WORDS = [
     "dateAdded": "2020-02-02T12:00:00.000Z"
   },
   {
-    "id": "contemn-131",
-    "word": "contemn",
-    "partOfSpeech": [
-      "verb"
-    ],
-    "definition": "The verb form of contempt--to scorn or treat with contempt",
-    "source": "within a budding grove",
-    "tags": [],
-    "dateAdded": "2026-10-10T12:00:00.000Z"
-  },
-  {
     "id": "conte-philosophique-132",
     "word": "conte philosophique",
     "partOfSpeech": [
@@ -1557,6 +1576,17 @@ export const INITIAL_WORDS = [
       "french"
     ],
     "dateAdded": "2023-01-02T12:00:00.000Z"
+  },
+  {
+    "id": "contemn-131",
+    "word": "contemn",
+    "partOfSpeech": [
+      "verb"
+    ],
+    "definition": "The verb form of contempt--to scorn or treat with contempt",
+    "source": "within a budding grove",
+    "tags": [],
+    "dateAdded": "2026-10-10T12:00:00.000Z"
   },
   {
     "id": "contumacious-133",
@@ -1590,7 +1620,10 @@ export const INITIAL_WORDS = [
     ],
     "definition": "Leather made from horsehide, or shoes made from that leather, or the reddish-brown color of that leather",
     "source": "annie dillard's an american childhood",
-    "tags": [],
+    "tags": [
+      "color",
+      "textiles"
+    ],
     "dateAdded": "2022-03-26T12:00:00.000Z"
   },
   {
@@ -1648,7 +1681,8 @@ export const INITIAL_WORDS = [
     "definition": "A short drapey robe thing worn by catholic priests",
     "source": "barbara pym's a glass of blessings",
     "tags": [
-      "christian"
+      "christian",
+      "textiles"
     ],
     "dateAdded": "2025-11-11T12:00:00.000Z"
   },
@@ -1660,7 +1694,9 @@ export const INITIAL_WORDS = [
     ],
     "definition": "A word used to describe landforms that are kind of like valleys or canyons or drainage flows (like lava flows)",
     "source": "",
-    "tags": [],
+    "tags": [
+      "geology"
+    ],
     "dateAdded": "2021-05-16T12:00:00.000Z"
   },
   {
@@ -1826,8 +1862,23 @@ export const INITIAL_WORDS = [
     ],
     "definition": "A small crane on a ship to lower lifeboats",
     "source": "john fowles' the magus",
-    "tags": [],
+    "tags": [
+      "nautical"
+    ],
     "dateAdded": "2024-05-30T12:00:00.000Z"
+  },
+  {
+    "id": "de-trop-166",
+    "word": "de trop",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Too much, too many; superfluous, excessive (literally from the french)",
+    "source": "frank kermode's the sense of an ending",
+    "tags": [
+      "french"
+    ],
+    "dateAdded": "2021-06-13T12:00:00.000Z"
   },
   {
     "id": "debouch-157",
@@ -1838,8 +1889,8 @@ export const INITIAL_WORDS = [
     "definition": "To emerge or discharge (as rivers do, or troops)--from the latin for \"cheek\", like a squirrel freeing a nut from its mouth, spitting it out",
     "source": "",
     "tags": [
-      "french",
-      "latin"
+      "geology",
+      "military"
     ],
     "dateAdded": "2020-02-03T12:00:00.000Z"
   },
@@ -1852,7 +1903,8 @@ export const INITIAL_WORDS = [
     "definition": "The act of marching from a confined space into the open (in warfare) or where runoff from a small, confined space emerges into a larger, broader space (in river geography). anything coming out of the mouth of something, because that's literally what the word means (bouche!)",
     "source": "jennifer egan's a visit from the goon squad",
     "tags": [
-      "french"
+      "geology",
+      "military"
     ],
     "dateAdded": "2021-06-13T12:00:00.000Z"
   },
@@ -1923,9 +1975,10 @@ export const INITIAL_WORDS = [
     "id": "descant-164",
     "word": "descant",
     "partOfSpeech": [
-      "noun"
+      "noun",
+      "verb"
     ],
-    "definition": "The soprano line above/embellishing a melody; v. talking tediously and at length",
+    "definition": "The soprano line above/embellishing a melody; as verb, talking tediously and at length",
     "source": "at the stranger's gate",
     "tags": [],
     "dateAdded": "2020-06-22T12:00:00.000Z"
@@ -1938,23 +1991,8 @@ export const INITIAL_WORDS = [
     ],
     "definition": "Time-wasting with silly things",
     "source": "john fowles' the magus",
-    "tags": [
-      "latin"
-    ],
+    "tags": [],
     "dateAdded": "2024-05-30T12:00:00.000Z"
-  },
-  {
-    "id": "de-trop-166",
-    "word": "de trop",
-    "partOfSpeech": [
-      "adjective"
-    ],
-    "definition": "Too much, too many; superfluous, excessive (literally from the french)",
-    "source": "frank kermode's the sense of an ending",
-    "tags": [
-      "french"
-    ],
-    "dateAdded": "2021-06-13T12:00:00.000Z"
   },
   {
     "id": "diapason-167",
@@ -2063,8 +2101,23 @@ export const INITIAL_WORDS = [
     ],
     "definition": "A coarse, cheap fabric mostly used for rugs",
     "source": "barbara pym's a glass of blessings",
-    "tags": [],
+    "tags": [
+      "textiles"
+    ],
     "dateAdded": "2025-11-11T12:00:00.000Z"
+  },
+  {
+    "id": "drumlin-179",
+    "word": "drumlin",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A kind of small hill left by glaciers, found in ireland, canada and northern parts of the US",
+    "source": "",
+    "tags": [
+      "geology"
+    ],
+    "dateAdded": "2020-01-21T12:00:00.000Z"
   },
   {
     "id": "druse-druzy-177",
@@ -2074,7 +2127,9 @@ export const INITIAL_WORDS = [
     ],
     "definition": "A set of tiny crystals that forms on another stone. quartz is a common druzy type, and it's considered beautiful because it glitters (so many surfaces to catch the light!)",
     "source": "",
-    "tags": [],
+    "tags": [
+      "geology"
+    ],
     "dateAdded": "2021-03-28T12:00:00.000Z"
   },
   {
@@ -2086,20 +2141,9 @@ export const INITIAL_WORDS = [
     "definition": "A basin that can be flooded to let a ship in, and then drained so people can build/repair/maintain the ship",
     "source": "atul gawande's coaching essay",
     "tags": [
-      "architecture"
+      "nautical"
     ],
     "dateAdded": "2020-04-20T12:00:00.000Z"
-  },
-  {
-    "id": "drumlin-179",
-    "word": "drumlin",
-    "partOfSpeech": [
-      "noun"
-    ],
-    "definition": "A kind of small hill left by glaciers, found in ireland, canada and northern parts of the US",
-    "source": "",
-    "tags": [],
-    "dateAdded": "2020-01-21T12:00:00.000Z"
   },
   {
     "id": "echt-181",
@@ -2134,8 +2178,7 @@ export const INITIAL_WORDS = [
     "definition": "Relating to a bunch of churches combined, or promoting unity among christian churches. kinda similar to \"catholic,\" as far as i can tell",
     "source": "the family roe",
     "tags": [
-      "christian",
-      "latin"
+      "christian"
     ],
     "dateAdded": "2022-03-13T12:00:00.000Z"
   },
@@ -2145,8 +2188,8 @@ export const INITIAL_WORDS = [
     "partOfSpeech": [
       "noun"
     ],
-    "definition": "A phantom, specter; an idealized image of a person or thing",
-    "source": "in ancient greek literature, the spirit-image of a living or dead person (",
+    "definition": "A phantom, specter; an idealized image of a person or thing. in ancient greek literature, the spirit-image of a living or dead person",
+    "source": "",
     "tags": [],
     "dateAdded": "2021-05-16T12:00:00.000Z"
   },
@@ -2196,7 +2239,8 @@ export const INITIAL_WORDS = [
     "definition": "In a castle or fort wall, an opening with slanted sides for cannons to shoot out of",
     "source": "the guermantes way",
     "tags": [
-      "architecture"
+      "architecture",
+      "military"
     ],
     "dateAdded": "2026-10-10T12:00:00.000Z"
   },
@@ -2234,6 +2278,19 @@ export const INITIAL_WORDS = [
     "dateAdded": "2021-06-06T12:00:00.000Z"
   },
   {
+    "id": "en-brosse-194",
+    "word": "en brosse",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A short men's hairstyle that sticks up. in french, this means \"like a brush\"",
+    "source": "the guermantes way",
+    "tags": [
+      "french"
+    ],
+    "dateAdded": "2026-10-10T12:00:00.000Z"
+  },
+  {
     "id": "entelechy-192",
     "word": "entelechy",
     "partOfSpeech": [
@@ -2252,21 +2309,10 @@ export const INITIAL_WORDS = [
     ],
     "definition": "A port, city or trading post where goods are stored to be exported and imported, mostly during the \"age of sail.\" i think \"entry point,\" even though it means more like \"a place between.\"",
     "source": "marc david baer's the ottomans",
-    "tags": [],
-    "dateAdded": "2021-10-24T12:00:00.000Z"
-  },
-  {
-    "id": "en-brosse-194",
-    "word": "en brosse",
-    "partOfSpeech": [
-      "noun"
-    ],
-    "definition": "A short men's hairstyle that sticks up. in french, this means \"like a brush\"",
-    "source": "the guermantes way",
     "tags": [
-      "french"
+      "nautical"
     ],
-    "dateAdded": "2026-10-10T12:00:00.000Z"
+    "dateAdded": "2021-10-24T12:00:00.000Z"
   },
   {
     "id": "epergne-195",
@@ -2288,7 +2334,7 @@ export const INITIAL_WORDS = [
       "noun"
     ],
     "definition": "Follower, disciple, inferior imitator",
-    "source": "DFW's \"authority and american usage,\"",
+    "source": "DFW's \"authority and american usage\"",
     "tags": [],
     "dateAdded": "2020-06-22T12:00:00.000Z"
   },
@@ -2323,7 +2369,7 @@ export const INITIAL_WORDS = [
       "noun"
     ],
     "definition": "An area, bound by wire suspended in the air, which lets jews consider the area inside it a \"private\" domain on the sabbath",
-    "source": "rumpus review of \"the lightness,\"",
+    "source": "rumpus review of \"the lightness\"",
     "tags": [],
     "dateAdded": "2020-10-24T12:00:00.000Z"
   },
@@ -2396,7 +2442,7 @@ export const INITIAL_WORDS = [
       "noun"
     ],
     "definition": "Language that's artificially elegant, an elizabethan literary style with too many devices in it--after a work by john lyly",
-    "source": "DFW's \"authority and american usage,\"",
+    "source": "DFW's \"authority and american usage\"",
     "tags": [],
     "dateAdded": "2020-06-22T12:00:00.000Z"
   },
@@ -2423,17 +2469,6 @@ export const INITIAL_WORDS = [
     "dateAdded": "2021-03-28T12:00:00.000Z"
   },
   {
-    "id": "exiguous-208",
-    "word": "exiguous",
-    "partOfSpeech": [
-      "adjective"
-    ],
-    "definition": "Inadequate, scanty",
-    "source": "john fowles' the magus",
-    "tags": [],
-    "dateAdded": "2024-05-30T12:00:00.000Z"
-  },
-  {
     "id": "exiguity-209",
     "word": "exiguity",
     "partOfSpeech": [
@@ -2443,6 +2478,17 @@ export const INITIAL_WORDS = [
     "source": "the guermantes way",
     "tags": [],
     "dateAdded": "2026-10-10T12:00:00.000Z"
+  },
+  {
+    "id": "exiguous-208",
+    "word": "exiguous",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Inadequate, scanty",
+    "source": "john fowles' the magus",
+    "tags": [],
+    "dateAdded": "2024-05-30T12:00:00.000Z"
   },
   {
     "id": "exogamy-210",
@@ -2478,29 +2524,6 @@ export const INITIAL_WORDS = [
     "dateAdded": "2021-06-21T12:00:00.000Z"
   },
   {
-    "id": "fard-214",
-    "word": "fard",
-    "partOfSpeech": [
-      "verb"
-    ],
-    "definition": "To put makeup on one's face",
-    "source": "john fowles' the magus",
-    "tags": [],
-    "dateAdded": "2024-05-30T12:00:00.000Z"
-  },
-  {
-    "id": "farrow-215",
-    "word": "farrow",
-    "partOfSpeech": [
-      "noun",
-      "verb"
-    ],
-    "definition": "A litter of pigs, or to give birth as a pig",
-    "source": "the NYT crossword",
-    "tags": [],
-    "dateAdded": "2022-01-09T12:00:00.000Z"
-  },
-  {
     "id": "fane-216",
     "word": "fane",
     "partOfSpeech": [
@@ -2523,6 +2546,31 @@ export const INITIAL_WORDS = [
     "source": "",
     "tags": [],
     "dateAdded": "2021-06-06T12:00:00.000Z"
+  },
+  {
+    "id": "fard-214",
+    "word": "fard",
+    "partOfSpeech": [
+      "verb"
+    ],
+    "definition": "To put makeup on one's face",
+    "source": "john fowles' the magus",
+    "tags": [],
+    "dateAdded": "2024-05-30T12:00:00.000Z"
+  },
+  {
+    "id": "farrow-215",
+    "word": "farrow",
+    "partOfSpeech": [
+      "noun",
+      "verb"
+    ],
+    "definition": "A litter of pigs, or to give birth as a pig",
+    "source": "the NYT crossword",
+    "tags": [
+      "botany and zoology"
+    ],
+    "dateAdded": "2022-01-09T12:00:00.000Z"
   },
   {
     "id": "fauld-218",
@@ -2580,9 +2628,7 @@ export const INITIAL_WORDS = [
     ],
     "definition": "Of, relating to, or containing iron; or rusty red (like ferruginous hawks)",
     "source": "",
-    "tags": [
-      "latin"
-    ],
+    "tags": [],
     "dateAdded": "2021-06-13T12:00:00.000Z"
   },
   {
@@ -2593,9 +2639,7 @@ export const INITIAL_WORDS = [
     ],
     "definition": "A strong, bad smell; stench",
     "source": "a crossword",
-    "tags": [
-      "medical"
-    ],
+    "tags": [],
     "dateAdded": "2020-06-21T12:00:00.000Z"
   },
   {
@@ -2606,7 +2650,9 @@ export const INITIAL_WORDS = [
     ],
     "definition": "Gray, old snow that's melted and refrozen and melted again",
     "source": "paul bierman's when the ice is gone",
-    "tags": [],
+    "tags": [
+      "geology"
+    ],
     "dateAdded": "2024-11-21T12:00:00.000Z"
   },
   {
@@ -2617,7 +2663,9 @@ export const INITIAL_WORDS = [
     ],
     "definition": "Tending to break up into small parts; organisms that reproduce by splitting",
     "source": "",
-    "tags": [],
+    "tags": [
+      "botany and zoology"
+    ],
     "dateAdded": "2021-04-17T12:00:00.000Z"
   },
   {
@@ -2652,7 +2700,9 @@ export const INITIAL_WORDS = [
     ],
     "definition": "Anti-aircraft fire from german anti-aircraft guns, which were called Flugabwehrkanone (i.e. flak)",
     "source": "making of the atomic bomb",
-    "tags": [],
+    "tags": [
+      "military"
+    ],
     "dateAdded": "2025-04-21T12:00:00.000Z"
   },
   {
@@ -2663,9 +2713,7 @@ export const INITIAL_WORDS = [
     ],
     "definition": "Villainous, marked by scandalous crime or vice. [related to the latin for whip, flagitium = shameful thing]",
     "source": "",
-    "tags": [
-      "latin"
-    ],
+    "tags": [],
     "dateAdded": "2020-06-13T12:00:00.000Z"
   },
   {
@@ -2687,7 +2735,9 @@ export const INITIAL_WORDS = [
     ],
     "definition": "A warm wind that blows down the leeward slope of a mountain, like the alps",
     "source": "thomas mann's the magic mountain",
-    "tags": [],
+    "tags": [
+      "geology"
+    ],
     "dateAdded": "2024-11-21T12:00:00.000Z"
   },
   {
@@ -2742,9 +2792,7 @@ export const INITIAL_WORDS = [
     ],
     "definition": "Sooty, murky, dark and dusty (fuligo=latin for soot)",
     "source": "the guermantes way",
-    "tags": [
-      "latin"
-    ],
+    "tags": [],
     "dateAdded": "2026-10-10T12:00:00.000Z"
   },
   {
@@ -2768,7 +2816,9 @@ export const INITIAL_WORDS = [
     ],
     "definition": "The wishbone, in birds",
     "source": "toby ferris's short life in a strange world",
-    "tags": [],
+    "tags": [
+      "botany and zoology"
+    ],
     "dateAdded": "2021-04-04T12:00:00.000Z"
   },
   {
@@ -2779,7 +2829,9 @@ export const INITIAL_WORDS = [
     ],
     "definition": "A kind of speech or writing that's high-flown, affected, pretentious, or heavy cotton cloth used for menswear",
     "source": "",
-    "tags": [],
+    "tags": [
+      "textiles"
+    ],
     "dateAdded": "2021-03-28T12:00:00.000Z"
   },
   {
@@ -2791,7 +2843,8 @@ export const INITIAL_WORDS = [
     "definition": "A cage or box filled with rocks, used in building walls (to protect soldiers) and other construction/engineering",
     "source": "war and peace",
     "tags": [
-      "architecture"
+      "architecture",
+      "military"
     ],
     "dateAdded": "2023-11-18T12:00:00.000Z"
   },
@@ -2816,7 +2869,9 @@ export const INITIAL_WORDS = [
     ],
     "definition": "A gum resin produced by trees that grow in southeast asia; the yellowish pigment made from the resin (used to dye buddhist monks' robes)",
     "source": "",
-    "tags": [],
+    "tags": [
+      "color"
+    ],
     "dateAdded": "2021-04-17T12:00:00.000Z"
   },
   {
@@ -2836,10 +2891,10 @@ export const INITIAL_WORDS = [
     "partOfSpeech": [
       "noun"
     ],
-    "definition": "A numerological system by which Hebrew letters correspond to numbers, developed by practitioners of Kabbalah (Jewish mysticism​) (the witness (video game) easter egg video at the end, 6/21/21)",
-    "source": "",
+    "definition": "A numerological system by which Hebrew letters correspond to numbers, developed by practitioners of Kabbalah (Jewish mysticism​)",
+    "source": "the witness (video game) easter egg video at the end",
     "tags": [],
-    "dateAdded": "2026-10-11T12:56:19.351192Z"
+    "dateAdded": "2021-06-21T12:00:00.000Z"
   },
   {
     "id": "geminal-246",
@@ -2871,7 +2926,9 @@ export const INITIAL_WORDS = [
     ],
     "definition": "British. a wooded ravine or narrow valley with a river at the bottom",
     "source": "burntcoat",
-    "tags": [],
+    "tags": [
+      "geology"
+    ],
     "dateAdded": "2022-02-06T12:00:00.000Z"
   },
   {
@@ -2892,7 +2949,7 @@ export const INITIAL_WORDS = [
       "noun",
       "adjective"
     ],
-    "definition": "A flashy but useless object, something flimsy or poorly made but deceptively attractive. cheap or shoddy",
+    "definition": "a flashy but useless object, something flimsy or poorly made but deceptively attractive. cheap or shoddy",
     "source": "art of the personal essay",
     "tags": [],
     "dateAdded": "2022-05-11T12:00:00.000Z"
@@ -2939,7 +2996,7 @@ export const INITIAL_WORDS = [
       "noun"
     ],
     "definition": "A banner or flag suspended from a crossbar, painted or with streamers at the end. mostly seen now at graduations, very medieval",
-    "source": "DFW's \"the view from mrs. thompson's",
+    "source": "DFW's \"the view from mrs. thompson's\"",
     "tags": [],
     "dateAdded": "2020-06-13T12:00:00.000Z"
   },
@@ -2947,9 +3004,10 @@ export const INITIAL_WORDS = [
     "id": "graith-255",
     "word": "graith",
     "partOfSpeech": [
+      "noun",
       "verb"
     ],
-    "definition": "Scottish. to make ready, put in order; to furnish or array. or n. gear, possessions, wealth",
+    "definition": "Scottish. as verb, to make ready, put in order; to furnish or array. as noun, gear, possessions, wealth",
     "source": "beowulf",
     "tags": [],
     "dateAdded": "2023-01-02T12:00:00.000Z"
@@ -2962,7 +3020,9 @@ export const INITIAL_WORDS = [
     ],
     "definition": "Eating grass or grass seeds",
     "source": "the guermantes way",
-    "tags": [],
+    "tags": [
+      "botany and zoology"
+    ],
     "dateAdded": "2026-10-10T12:00:00.000Z"
   },
   {
@@ -2991,9 +3051,10 @@ export const INITIAL_WORDS = [
     "id": "guerdon-259",
     "word": "guerdon",
     "partOfSpeech": [
-      "noun"
+      "noun",
+      "verb"
     ],
-    "definition": "A reward or recompense, v. to give a reward to someone, recompense them",
+    "definition": "as noun, a reward or recompense. as verb, to give a reward to someone, recompense them",
     "source": "",
     "tags": [],
     "dateAdded": "2021-05-16T12:00:00.000Z"
@@ -3005,9 +3066,22 @@ export const INITIAL_WORDS = [
       "noun"
     ],
     "definition": "The rope, in sailing, used to haul ladders, sails, or flags--\"to haul yards.\"",
-    "source": "DFW's \"the view from mrs. thompson's",
-    "tags": [],
+    "source": "DFW's \"the view from mrs. thompson's\"",
+    "tags": [
+      "nautical"
+    ],
     "dateAdded": "2020-06-13T12:00:00.000Z"
+  },
+  {
+    "id": "haplography-263",
+    "word": "haplography",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A type of typo where you accidentally omit repeating similar letters or words or lines",
+    "source": "geoffrey monmouth's history of the kings of britain",
+    "tags": [],
+    "dateAdded": "2023-09-17T12:00:00.000Z"
   },
   {
     "id": "hardstand-262",
@@ -3023,17 +3097,6 @@ export const INITIAL_WORDS = [
     "dateAdded": "2025-04-21T12:00:00.000Z"
   },
   {
-    "id": "haplography-263",
-    "word": "haplography",
-    "partOfSpeech": [
-      "noun"
-    ],
-    "definition": "A type of typo where you accidentally omit repeating similar letters or words or lines",
-    "source": "geoffrey monmouth's history of the kings of britain",
-    "tags": [],
-    "dateAdded": "2023-09-17T12:00:00.000Z"
-  },
-  {
     "id": "hawser-264",
     "word": "hawser",
     "partOfSpeech": [
@@ -3041,7 +3104,9 @@ export const INITIAL_WORDS = [
     ],
     "definition": "Those giant ropes used for mooring and towing ships",
     "source": "annie proulx's fen bog and swamp",
-    "tags": [],
+    "tags": [
+      "nautical"
+    ],
     "dateAdded": "2026-10-11T12:56:19.351861Z"
   },
   {
@@ -3109,7 +3174,9 @@ export const INITIAL_WORDS = [
     ],
     "definition": "Smelling like a goat, or goat-y in any other way",
     "source": "armpit bacteria NYT Kids how-to research",
-    "tags": [],
+    "tags": [
+      "botany and zoology"
+    ],
     "dateAdded": "2021-12-12T12:00:00.000Z"
   },
   {
@@ -3144,7 +3211,9 @@ export const INITIAL_WORDS = [
     ],
     "definition": "Scottish. hollow, valley",
     "source": "beowulf",
-    "tags": [],
+    "tags": [
+      "geology"
+    ],
     "dateAdded": "2023-01-02T12:00:00.000Z"
   },
   {
@@ -3188,9 +3257,7 @@ export const INITIAL_WORDS = [
     ],
     "definition": "Relating to a very northerly place, which the greeks thought was actually very sunny. but now the word also refers to cold northerly places because...that's actually what's in the far north (greek: hyper=beyond, borean=boreas, the north wind!)",
     "source": "the guermantes way",
-    "tags": [
-      "latin"
-    ],
+    "tags": [],
     "dateAdded": "2026-10-10T12:00:00.000Z"
   },
   {
@@ -3216,6 +3283,28 @@ export const INITIAL_WORDS = [
     "dateAdded": "2021-06-13T12:00:00.000Z"
   },
   {
+    "id": "in-petto-284",
+    "word": "in petto",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Secretly or privately, in one's heart of hearts. from italian for \"in the breast\"",
+    "source": "the guermantes way",
+    "tags": [],
+    "dateAdded": "2026-10-10T12:00:00.000Z"
+  },
+  {
+    "id": "in-spate-285",
+    "word": "in spate",
+    "partOfSpeech": [
+      "phrase"
+    ],
+    "definition": "A river overflowing because of sudden flood, or proceeding vigorously, continuing without pause",
+    "source": "annie dillard's \"seeing\"",
+    "tags": [],
+    "dateAdded": "2020-10-24T12:00:00.000Z"
+  },
+  {
     "id": "infusoria-281",
     "word": "infusoria",
     "partOfSpeech": [
@@ -3223,8 +3312,23 @@ export const INITIAL_WORDS = [
     ],
     "definition": "Freshwater microorganisms",
     "source": "thomas mann's the magic mountain",
-    "tags": [],
+    "tags": [
+      "botany and zoology"
+    ],
     "dateAdded": "2024-11-21T12:00:00.000Z"
+  },
+  {
+    "id": "inter-pocula-286",
+    "word": "inter pocula",
+    "partOfSpeech": [
+      "phrase"
+    ],
+    "definition": "Latin for \"between the cups\"--during a drinking session",
+    "source": "the guermantes way",
+    "tags": [
+      "latin"
+    ],
+    "dateAdded": "2026-10-10T12:00:00.000Z"
   },
   {
     "id": "interpellation-282",
@@ -3244,48 +3348,11 @@ export const INITIAL_WORDS = [
       "adjective"
     ],
     "definition": "Curled spirally or inward, like a leaf, or a kind of mathematical curve; involved, intricate",
-    "source": "DFW's \"authority and american usage,\"",
-    "tags": [],
+    "source": "DFW's \"authority and american usage\"",
+    "tags": [
+      "botany and zoology"
+    ],
     "dateAdded": "2020-06-22T12:00:00.000Z"
-  },
-  {
-    "id": "in-petto-284",
-    "word": "in petto",
-    "partOfSpeech": [
-      "adjective"
-    ],
-    "definition": "Secretly or privately, in one's heart of hearts. from italian for \"in the breast\"",
-    "source": "the guermantes way",
-    "tags": [
-      "latin"
-    ],
-    "dateAdded": "2026-10-10T12:00:00.000Z"
-  },
-  {
-    "id": "in-spate-285",
-    "word": "in spate",
-    "partOfSpeech": [
-      "phrase"
-    ],
-    "definition": "A river overflowing because of sudden flood, or proceeding vigorously, continuing without pause",
-    "source": "annie dillard's \"seeing,\"",
-    "tags": [
-      "latin"
-    ],
-    "dateAdded": "2020-10-24T12:00:00.000Z"
-  },
-  {
-    "id": "inter-pocula-286",
-    "word": "inter pocula",
-    "partOfSpeech": [
-      "phrase"
-    ],
-    "definition": "Latin for \"between the cups\"--during a drinking session",
-    "source": "the guermantes way",
-    "tags": [
-      "latin"
-    ],
-    "dateAdded": "2026-10-10T12:00:00.000Z"
   },
   {
     "id": "irenic-287",
@@ -3317,7 +3384,9 @@ export const INITIAL_WORDS = [
     ],
     "definition": "The frilly lace attached to the front of a blouse, historically worn by men in the 18th century",
     "source": "war and peace",
-    "tags": [],
+    "tags": [
+      "textiles"
+    ],
     "dateAdded": "2023-11-18T12:00:00.000Z"
   },
   {
@@ -3328,7 +3397,9 @@ export const INITIAL_WORDS = [
     ],
     "definition": "A kind of plant fiber that's like cotton, used for stuffing mattress and pillows and as insulation",
     "source": "making of the atomic bomb",
-    "tags": [],
+    "tags": [
+      "textiles"
+    ],
     "dateAdded": "2025-04-21T12:00:00.000Z"
   },
   {
@@ -3431,10 +3502,11 @@ export const INITIAL_WORDS = [
     "id": "lapidary-302",
     "word": "lapidary",
     "partOfSpeech": [
-      "noun"
+      "noun",
+      "adjective"
     ],
-    "definition": "The art of cutting gems, or someone who cuts, polishes or engraves precious stones that aren't diamonds. adj. as elegant and precise as cut stone",
-    "source": "DFW's \"authority and american usage,\"",
+    "definition": "The art of cutting gems, or someone who cuts, polishes or engraves precious stones that aren't diamonds. as adjective, as elegant and precise as cut stone",
+    "source": "DFW's \"authority and american usage\"",
     "tags": [],
     "dateAdded": "2020-06-22T12:00:00.000Z"
   },
@@ -3505,9 +3577,7 @@ export const INITIAL_WORDS = [
     ],
     "definition": "Culinary: the lungs of game or livestock (like pork)",
     "source": "",
-    "tags": [
-      "medical"
-    ],
+    "tags": [],
     "dateAdded": "2026-10-11T12:56:19.353605Z"
   },
   {
@@ -3614,7 +3684,9 @@ export const INITIAL_WORDS = [
     ],
     "definition": "A greenish/brownish yellow--it looks kind of warm but not quite mustard",
     "source": "",
-    "tags": [],
+    "tags": [
+      "color"
+    ],
     "dateAdded": "2021-05-16T12:00:00.000Z"
   },
   {
@@ -3650,7 +3722,8 @@ export const INITIAL_WORDS = [
     "definition": "Describing a castle that has openings on its walls (machicolations) where people could drop stuff (stones, boiling oil) on invaders",
     "source": "the turn of the screw",
     "tags": [
-      "architecture"
+      "architecture",
+      "military"
     ],
     "dateAdded": "2021-11-07T12:00:00.000Z"
   },
@@ -3669,23 +3742,13 @@ export const INITIAL_WORDS = [
     "id": "malapert-323",
     "word": "malapert",
     "partOfSpeech": [
+      "noun",
       "adjective"
     ],
-    "definition": "Impudently bold, saucy, literally: honest in a bad way. also n. a bold and impudent person",
+    "definition": "Impudently bold, saucy, literally: honest in a bad way. as noun, a bold and impudent person",
     "source": "",
     "tags": [],
     "dateAdded": "2021-06-21T12:00:00.000Z"
-  },
-  {
-    "id": "malinger-324",
-    "word": "malinger",
-    "partOfSpeech": [
-      "verb"
-    ],
-    "definition": "To pretend to be sick to avoid work or other obligations",
-    "source": "jeopardy!",
-    "tags": [],
-    "dateAdded": "2022-01-08T12:00:00.000Z"
   },
   {
     "id": "malgre-325",
@@ -3699,6 +3762,17 @@ export const INITIAL_WORDS = [
       "french"
     ],
     "dateAdded": "2023-01-02T12:00:00.000Z"
+  },
+  {
+    "id": "malinger-324",
+    "word": "malinger",
+    "partOfSpeech": [
+      "verb"
+    ],
+    "definition": "To pretend to be sick to avoid work or other obligations",
+    "source": "jeopardy!",
+    "tags": [],
+    "dateAdded": "2022-01-08T12:00:00.000Z"
   },
   {
     "id": "mandorla-326",
@@ -3822,9 +3896,7 @@ export const INITIAL_WORDS = [
     ],
     "definition": "Armpit fetish",
     "source": "jeremy atherton lin's gay bar",
-    "tags": [
-      "medical"
-    ],
+    "tags": [],
     "dateAdded": "2022-01-09T12:00:00.000Z"
   },
   {
@@ -3836,7 +3908,7 @@ export const INITIAL_WORDS = [
     "definition": "A sailor (in british), but also possibly the sailor's uniform",
     "source": "jeremy atherton lin's gay bar",
     "tags": [
-      "french"
+      "nautical"
     ],
     "dateAdded": "2022-01-09T12:00:00.000Z"
   },
@@ -3940,9 +4012,7 @@ export const INITIAL_WORDS = [
     ],
     "definition": "The branch of math concerned with calculating lengths, areas and volumes of shapes",
     "source": "the penguin history of the world",
-    "tags": [
-      "latin"
-    ],
+    "tags": [],
     "dateAdded": "2026-10-10T12:00:00.000Z"
   },
   {
@@ -3952,7 +4022,7 @@ export const INITIAL_WORDS = [
       "adjective"
     ],
     "definition": "Foul-smelling, noxious, mostly of gases",
-    "source": "\"pink triangles and yellow stars,\"",
+    "source": "\"pink triangles and yellow stars\"",
     "tags": [],
     "dateAdded": "2020-10-24T12:00:00.000Z"
   },
@@ -3964,16 +4034,19 @@ export const INITIAL_WORDS = [
     ],
     "definition": "British, a lake or pool",
     "source": "beowulf",
-    "tags": [],
+    "tags": [
+      "geology"
+    ],
     "dateAdded": "2023-01-02T12:00:00.000Z"
   },
   {
     "id": "meridional-349",
     "word": "meridional",
     "partOfSpeech": [
+      "noun",
       "adjective"
     ],
-    "definition": "Related to the south, southern, particularly the south of france; someone who lives in or is from the south of france",
+    "definition": "Related to the south, southern, particularly the south of france; as noun, someone who lives in or is from the south of france",
     "source": "within a budding grove",
     "tags": [],
     "dateAdded": "2026-10-10T12:00:00.000Z"
@@ -4008,7 +4081,9 @@ export const INITIAL_WORDS = [
     ],
     "definition": "An image within an image (esp. in art history) or a story within a story. lit. \"put in the abyss\"",
     "source": "an Alison Bechdel book",
-    "tags": [],
+    "tags": [
+      "french"
+    ],
     "dateAdded": "2020-06-14T12:00:00.000Z"
   },
   {
@@ -4052,7 +4127,9 @@ export const INITIAL_WORDS = [
     ],
     "definition": "An isolated hill of bedrock standing conspicuously above the general level of the surrounding area, because made of rock that's harder to weather than its surroundings. named after the mountain in new jersey",
     "source": "annie dillard's an american childhood",
-    "tags": [],
+    "tags": [
+      "geology"
+    ],
     "dateAdded": "2022-03-26T12:00:00.000Z"
   },
   {
@@ -4121,8 +4198,10 @@ export const INITIAL_WORDS = [
       "noun"
     ],
     "definition": "An old general term that refers to plague/infectious disease that particularly affects cattle and sheep",
-    "source": "robert louis stevenson's \"the lantern-bearers,\"",
-    "tags": [],
+    "source": "robert louis stevenson's \"the lantern-bearers\"",
+    "tags": [
+      "botany and zoology"
+    ],
     "dateAdded": "2022-04-17T12:00:00.000Z"
   },
   {
@@ -4133,7 +4212,9 @@ export const INITIAL_WORDS = [
     ],
     "definition": "Household linen, especially a tablecloth",
     "source": "the guermantes way",
-    "tags": [],
+    "tags": [
+      "textiles"
+    ],
     "dateAdded": "2026-10-10T12:00:00.000Z"
   },
   {
@@ -4158,7 +4239,7 @@ export const INITIAL_WORDS = [
     "definition": "Nostrils (zoology)",
     "source": "an orchestra of minorities",
     "tags": [
-      "medical"
+      "botany and zoology"
     ],
     "dateAdded": "2020-06-22T12:00:00.000Z"
   },
@@ -4206,7 +4287,7 @@ export const INITIAL_WORDS = [
       "phrase"
     ],
     "definition": "Fr. lit. \"nostalgia for mud,\" attraction to what is crude, depraved or degrading",
-    "source": "\"stalking the billion-footed beast",
+    "source": "\"stalking the billion-footed beast\"",
     "tags": [
       "french"
     ],
@@ -4291,7 +4372,6 @@ export const INITIAL_WORDS = [
     "definition": "The area/bone at the back and bottom of the skull. comes from latin \"caput\"",
     "source": "an issue of vqr",
     "tags": [
-      "latin",
       "medical"
     ],
     "dateAdded": "2022-04-10T12:00:00.000Z"
@@ -4302,9 +4382,11 @@ export const INITIAL_WORDS = [
     "partOfSpeech": [
       "noun"
     ],
-    "definition": "The part of the deep sea seen from shore, used to describe where approaching ships are",
+    "definition": "The part of the deep sea seen from shore, used to describe where approaching ships are. \"in the offing\" = literally on the horizon",
     "source": "beowulf",
-    "tags": [],
+    "tags": [
+      "nautical"
+    ],
     "dateAdded": "2023-01-02T12:00:00.000Z"
   },
   {
@@ -4338,7 +4420,7 @@ export const INITIAL_WORDS = [
     "definition": "Of, relating to, or resembling snakes",
     "source": "",
     "tags": [
-      "latin"
+      "botany and zoology"
     ],
     "dateAdded": "2023-01-02T12:00:00.000Z"
   },
@@ -4373,7 +4455,8 @@ export const INITIAL_WORDS = [
     "definition": "Elaborate embroidery, a piece of elaborate embroidery, or a fat ornamental band on like, priest's robes that has this embroidery on it",
     "source": "erec and enide",
     "tags": [
-      "christian"
+      "christian",
+      "textiles"
     ],
     "dateAdded": "2021-05-23T12:00:00.000Z"
   },
@@ -4517,7 +4600,9 @@ export const INITIAL_WORDS = [
     ],
     "definition": "The part of a horse's foot that's basically its ankle, right above the hoof",
     "source": "probably angle of repose",
-    "tags": [],
+    "tags": [
+      "botany and zoology"
+    ],
     "dateAdded": "2023-01-02T12:00:00.000Z"
   },
   {
@@ -4539,7 +4624,9 @@ export const INITIAL_WORDS = [
     ],
     "definition": "The fur, hair or wool of a mammal",
     "source": "",
-    "tags": [],
+    "tags": [
+      "botany and zoology"
+    ],
     "dateAdded": "2021-05-16T12:00:00.000Z"
   },
   {
@@ -4618,8 +4705,8 @@ export const INITIAL_WORDS = [
     "partOfSpeech": [
       "noun"
     ],
-    "definition": "The greek word for lighthouse",
-    "source": "so often used to refer to the lighthouse of alexandria (",
+    "definition": "The greek word for lighthouse, so often used to refer to the lighthouse of alexandria",
+    "source": "",
     "tags": [],
     "dateAdded": "2021-03-28T12:00:00.000Z"
   },
@@ -4664,9 +4751,7 @@ export const INITIAL_WORDS = [
     ],
     "definition": "Something that requires atoning for, sinful or heinous; or sacrificial, making atonement",
     "source": "",
-    "tags": [
-      "latin"
-    ],
+    "tags": [],
     "dateAdded": "2021-03-28T12:00:00.000Z"
   },
   {
@@ -4712,7 +4797,9 @@ export const INITIAL_WORDS = [
     ],
     "definition": "Trees that have been trained to weave together so that all the branches intertwine",
     "source": "within a budding grove",
-    "tags": [],
+    "tags": [
+      "botany and zoology"
+    ],
     "dateAdded": "2026-10-10T12:00:00.000Z"
   },
   {
@@ -4722,7 +4809,7 @@ export const INITIAL_WORDS = [
       "noun"
     ],
     "definition": "Using more words than is necessary to convey meaning; redundancy",
-    "source": "DFW's \"authority and american usage,\"",
+    "source": "DFW's \"authority and american usage\"",
     "tags": [],
     "dateAdded": "2020-06-22T12:00:00.000Z"
   },
@@ -4803,7 +4890,7 @@ export const INITIAL_WORDS = [
       "noun"
     ],
     "definition": "A discussion before negotiations, ex. for agreements or treaties",
-    "source": "DFW's \"authority and american usage,\"",
+    "source": "DFW's \"authority and american usage\"",
     "tags": [
       "french"
     ],
@@ -4900,7 +4987,6 @@ export const INITIAL_WORDS = [
     "definition": "Of, relating to, or marked by itching",
     "source": "talking to jennie about moe's catne woes",
     "tags": [
-      "latin",
       "medical"
     ],
     "dateAdded": "2021-05-10T12:00:00.000Z"
@@ -4924,7 +5010,9 @@ export const INITIAL_WORDS = [
     ],
     "definition": "Germinate, sprout, or breed",
     "source": "swann's way",
-    "tags": [],
+    "tags": [
+      "botany and zoology"
+    ],
     "dateAdded": "2026-10-10T12:00:00.000Z"
   },
   {
@@ -5027,9 +5115,7 @@ export const INITIAL_WORDS = [
     ],
     "definition": "The inherent essence or nature of something, its \"what-ness\" (from latin quid)",
     "source": "who will pay reparations on my soul",
-    "tags": [
-      "latin"
-    ],
+    "tags": [],
     "dateAdded": "2022-02-13T12:00:00.000Z"
   },
   {
@@ -5062,9 +5148,7 @@ export const INITIAL_WORDS = [
     ],
     "definition": "Former, sometime, at-one-point",
     "source": "",
-    "tags": [
-      "latin"
-    ],
+    "tags": [],
     "dateAdded": "2021-05-16T12:00:00.000Z"
   },
   {
@@ -5160,7 +5244,9 @@ export const INITIAL_WORDS = [
     ],
     "definition": "A kind of ribbed, corded fabric, apparently associated with elegance and formality",
     "source": "swann's way",
-    "tags": [],
+    "tags": [
+      "textiles"
+    ],
     "dateAdded": "2026-10-10T12:00:00.000Z"
   },
   {
@@ -5323,7 +5409,9 @@ export const INITIAL_WORDS = [
     ],
     "definition": "In marine geology, dark sediments on ocean, estuary, or lake floors rich in organic matter (greek \"sapros,\" rotten, see \"saprogenic\"!)",
     "source": "",
-    "tags": [],
+    "tags": [
+      "geology"
+    ],
     "dateAdded": "2021-03-28T12:00:00.000Z"
   },
   {
@@ -5412,7 +5500,8 @@ export const INITIAL_WORDS = [
     "definition": "Basically dandruff, or a flaky covering on a surface (on plants, some sort of bad fungal infection)",
     "source": "death comes for the archbishop",
     "tags": [
-      "medical"
+      "medical",
+      "botany and zoology"
     ],
     "dateAdded": "2021-06-06T12:00:00.000Z"
   },
@@ -5420,6 +5509,7 @@ export const INITIAL_WORDS = [
     "id": "semblable-479",
     "word": "semblable",
     "partOfSpeech": [
+      "noun",
       "adjective"
     ],
     "definition": "Similar or seeming to be; as noun, someone like oneself, one's fellow",
@@ -5435,9 +5525,7 @@ export const INITIAL_WORDS = [
     ],
     "definition": "Eternal",
     "source": "frank kermode's the sense of an ending",
-    "tags": [
-      "latin"
-    ],
+    "tags": [],
     "dateAdded": "2021-06-13T12:00:00.000Z"
   },
   {
@@ -5452,17 +5540,6 @@ export const INITIAL_WORDS = [
     "dateAdded": "2021-05-23T12:00:00.000Z"
   },
   {
-    "id": "serac-482",
-    "word": "serac",
-    "partOfSpeech": [
-      "noun"
-    ],
-    "definition": "A spike of ice on a glacier, often created by intersecting crevasses; can collapse and kill mountaineers",
-    "source": "paige mcclanahan's the new tourist",
-    "tags": [],
-    "dateAdded": "2024-04-11T12:00:00.000Z"
-  },
-  {
     "id": "sequacious-483",
     "word": "sequacious",
     "partOfSpeech": [
@@ -5472,6 +5549,19 @@ export const INITIAL_WORDS = [
     "source": "john gardner's on moral fiction",
     "tags": [],
     "dateAdded": "2026-10-10T12:00:00.000Z"
+  },
+  {
+    "id": "serac-482",
+    "word": "serac",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A spike of ice on a glacier, often created by intersecting crevasses; can collapse and kill mountaineers",
+    "source": "paige mcclanahan's the new tourist",
+    "tags": [
+      "geology"
+    ],
+    "dateAdded": "2024-04-11T12:00:00.000Z"
   },
   {
     "id": "shako-484",
@@ -5526,9 +5616,8 @@ export const INITIAL_WORDS = [
       "noun"
     ],
     "definition": "The forehead; the front, top half of the skull. comes from latin \"caput\"",
-    "source": "looking up \"occiput,\"",
+    "source": "looking up \"occiput\"",
     "tags": [
-      "latin",
       "medical"
     ],
     "dateAdded": "2022-04-10T12:00:00.000Z"
@@ -5541,7 +5630,9 @@ export const INITIAL_WORDS = [
     ],
     "definition": "A dark reddish pigment. later, in heraldry, it switched to mean \"green\" (from a black sea port called sinope)",
     "source": "the guermantes way",
-    "tags": [],
+    "tags": [
+      "color"
+    ],
     "dateAdded": "2026-10-10T12:00:00.000Z"
   },
   {
@@ -5563,7 +5654,9 @@ export const INITIAL_WORDS = [
     ],
     "definition": "The same color as/somehow like emeralds",
     "source": "research on obscure colors",
-    "tags": [],
+    "tags": [
+      "color"
+    ],
     "dateAdded": "2021-03-28T12:00:00.000Z"
   },
   {
@@ -5574,7 +5667,9 @@ export const INITIAL_WORDS = [
     ],
     "definition": "A young salmon or trout, at the life stage when it turns silver and is ready to migrate to the sea",
     "source": "",
-    "tags": [],
+    "tags": [
+      "botany and zoology"
+    ],
     "dateAdded": "2023-01-02T12:00:00.000Z"
   },
   {
@@ -5597,7 +5692,7 @@ export const INITIAL_WORDS = [
       "noun"
     ],
     "definition": "An instance of bad grammar, or a blunder/breach of etiquette",
-    "source": "DFW's \"authority and american usage,\"",
+    "source": "DFW's \"authority and american usage\"",
     "tags": [],
     "dateAdded": "2020-06-22T12:00:00.000Z"
   },
@@ -5635,7 +5730,8 @@ export const INITIAL_WORDS = [
     "source": "fintan o'toole's we don’t know ourselves",
     "tags": [
       "christian",
-      "french"
+      "french",
+      "textiles"
     ],
     "dateAdded": "2026-10-10T12:00:00.000Z"
   },
@@ -5648,7 +5744,7 @@ export const INITIAL_WORDS = [
     "definition": "Old and decrepit--literally, afflicted with spavin, which is a bone swelling in a horse's leg from strain",
     "source": "michael chabon's wonder boys",
     "tags": [
-      "medical"
+      "botany and zoology"
     ],
     "dateAdded": "2024-05-30T12:00:00.000Z"
   },
@@ -5671,19 +5767,10 @@ export const INITIAL_WORDS = [
     ],
     "definition": "A small british forest with undergrowth",
     "source": "lev grossman's the magicians",
-    "tags": [],
-    "dateAdded": "2026-10-10T12:00:00.000Z"
-  },
-  {
-    "id": "spoor-501",
-    "word": "spoor",
-    "partOfSpeech": [
-      "noun"
+    "tags": [
+      "geology"
     ],
-    "definition": "The tracks, trail, or droppings of a wild animal, with which it can be tracked; a trace in which something can be followed",
-    "source": "james wood's how fiction works",
-    "tags": [],
-    "dateAdded": "2021-05-23T12:00:00.000Z"
+    "dateAdded": "2026-10-10T12:00:00.000Z"
   },
   {
     "id": "sponson-502",
@@ -5693,8 +5780,24 @@ export const INITIAL_WORDS = [
     ],
     "definition": "A projection from the side of a ship or plane, like a gun platform",
     "source": "making of the atomic bomb",
-    "tags": [],
+    "tags": [
+      "military",
+      "nautical"
+    ],
     "dateAdded": "2025-04-21T12:00:00.000Z"
+  },
+  {
+    "id": "spoor-501",
+    "word": "spoor",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "The tracks, trail, or droppings of a wild animal, with which it can be tracked; a trace in which something can be followed",
+    "source": "james wood's how fiction works",
+    "tags": [
+      "botany and zoology"
+    ],
+    "dateAdded": "2021-05-23T12:00:00.000Z"
   },
   {
     "id": "sporran-503",
@@ -5762,7 +5865,7 @@ export const INITIAL_WORDS = [
       "adjective"
     ],
     "definition": "Something that stops bleeding/constricts stuff, like flesh",
-    "source": "DFW's \"authority and american usage,\"",
+    "source": "DFW's \"authority and american usage\"",
     "tags": [
       "medical"
     ],
@@ -5823,7 +5926,7 @@ export const INITIAL_WORDS = [
       "verb"
     ],
     "definition": "To form pus, fester",
-    "source": "DFW's \"authority and american usage,\"",
+    "source": "DFW's \"authority and american usage\"",
     "tags": [
       "medical"
     ],
@@ -5858,7 +5961,7 @@ export const INITIAL_WORDS = [
       "noun"
     ],
     "definition": "Extreme agitation, a fluster or panic",
-    "source": "DFW's \"authority and american usage,\"",
+    "source": "DFW's \"authority and american usage\"",
     "tags": [],
     "dateAdded": "2020-06-22T12:00:00.000Z"
   },
@@ -5870,7 +5973,9 @@ export const INITIAL_WORDS = [
     ],
     "definition": "Providing a general view of the whole, or taking the same view (like the first three gospels, which all have similar stories)",
     "source": "",
-    "tags": [],
+    "tags": [
+      "christian"
+    ],
     "dateAdded": "2021-04-17T12:00:00.000Z"
   },
   {
@@ -5881,9 +5986,7 @@ export const INITIAL_WORDS = [
     ],
     "definition": "A historical scribe (from tabella, tablet in latin)",
     "source": "swann's way",
-    "tags": [
-      "latin"
-    ],
+    "tags": [],
     "dateAdded": "2026-10-10T12:00:00.000Z"
   },
   {
@@ -5893,10 +5996,8 @@ export const INITIAL_WORDS = [
       "adjective"
     ],
     "definition": "Wasting away",
-    "source": "\"whichy thickets,\"",
-    "tags": [
-      "medical"
-    ],
+    "source": "\"whichy thickets\"",
+    "tags": [],
     "dateAdded": "2020-06-21T12:00:00.000Z"
   },
   {
@@ -5907,7 +6008,9 @@ export const INITIAL_WORDS = [
     ],
     "definition": "A small mountain lake formed by glacial erosion",
     "source": "burntcoat",
-    "tags": [],
+    "tags": [
+      "geology"
+    ],
     "dateAdded": "2022-02-06T12:00:00.000Z"
   },
   {
@@ -5918,7 +6021,9 @@ export const INITIAL_WORDS = [
     ],
     "definition": "A termite's nest",
     "source": "john fowles' the magus",
-    "tags": [],
+    "tags": [
+      "botany and zoology"
+    ],
     "dateAdded": "2024-05-30T12:00:00.000Z"
   },
   {
@@ -5986,7 +6091,9 @@ export const INITIAL_WORDS = [
     ],
     "definition": "A male hawk, especially a male peregrine falcon. used, obviously, in falconry",
     "source": "erec and enide",
-    "tags": [],
+    "tags": [
+      "botany and zoology"
+    ],
     "dateAdded": "2021-05-23T12:00:00.000Z"
   },
   {
@@ -5997,7 +6104,9 @@ export const INITIAL_WORDS = [
     ],
     "definition": "Cultivated land or prepared surface soil, the level of soil suitability for growing stuff",
     "source": "o pioneers!",
-    "tags": [],
+    "tags": [
+      "geology"
+    ],
     "dateAdded": "2021-08-08T12:00:00.000Z"
   },
   {
@@ -6054,11 +6163,9 @@ export const INITIAL_WORDS = [
     "partOfSpeech": [
       "adjective"
     ],
-    "definition": "Thunderous, fulminating",
-    "source": "literally from the latin for thunder, \"tonitrus\" (old in art school",
-    "tags": [
-      "latin"
-    ],
+    "definition": "Thunderous, fulminating. literally from the latin for thunder, \"tonitrus\"",
+    "source": "old in art school",
+    "tags": [],
     "dateAdded": "2021-05-23T12:00:00.000Z"
   },
   {
@@ -6102,7 +6209,9 @@ export const INITIAL_WORDS = [
     ],
     "definition": "The greenish glassy substance left on the desert floor after the plutonium-based Trinity nuclear bomb test on July 16, 1945, near Alamogordo, New Mexico, formed when sand was kicked up and liquefied in the heat of the blast",
     "source": "a recent rich cohen nyrb piece about white sands",
-    "tags": [],
+    "tags": [
+      "geology"
+    ],
     "dateAdded": "2021-04-04T12:00:00.000Z"
   },
   {
@@ -6126,7 +6235,9 @@ export const INITIAL_WORDS = [
     ],
     "definition": "An animal that lives only underground or in caves/is specially adapted to lightless cave life",
     "source": "",
-    "tags": [],
+    "tags": [
+      "botany and zoology"
+    ],
     "dateAdded": "2021-05-23T12:00:00.000Z"
   },
   {
@@ -6154,6 +6265,20 @@ export const INITIAL_WORDS = [
     "dateAdded": "2020-11-14T12:00:00.000Z"
   },
   {
+    "id": "tuque-544",
+    "word": "tuque",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A knit cap, VERY canadian--according to fast company, \"a symbol of French-Canadian nationalism since at least the 1837 Patriotes Rebellion\"",
+    "source": "",
+    "tags": [
+      "french",
+      "textiles"
+    ],
+    "dateAdded": "2021-05-16T12:00:00.000Z"
+  },
+  {
     "id": "turophile-543",
     "word": "turophile",
     "partOfSpeech": [
@@ -6163,19 +6288,6 @@ export const INITIAL_WORDS = [
     "source": "",
     "tags": [],
     "dateAdded": "2021-04-17T12:00:00.000Z"
-  },
-  {
-    "id": "tuque-544",
-    "word": "tuque",
-    "partOfSpeech": [
-      "noun"
-    ],
-    "definition": "A knit cap, VERY canadian--according to fast company, \"a symbol of French-Canadian nationalism since at least the 1837 Patriotes Rebellion\"",
-    "source": "",
-    "tags": [
-      "french"
-    ],
-    "dateAdded": "2021-05-16T12:00:00.000Z"
   },
   {
     "id": "ukase-546",
@@ -6220,7 +6332,9 @@ export const INITIAL_WORDS = [
     ],
     "definition": "Fur from squirrels, usually bluish-gray, that was used to line clothes in the 13th and 14th centuries, and also the name of a heraldic pattern that mimics the pattern the pelts made. also consider miniver, which is just the white part (the fur on the squirrel's belly) and not the gray",
     "source": "erec and enide",
-    "tags": [],
+    "tags": [
+      "textiles"
+    ],
     "dateAdded": "2021-05-23T12:00:00.000Z"
   },
   {
@@ -6240,11 +6354,9 @@ export const INITIAL_WORDS = [
     "partOfSpeech": [
       "noun"
     ],
-    "definition": "A prophecy or prediction",
-    "source": "related to \"vatic,\" from the latin vates, \"prophet or seer\" (",
-    "tags": [
-      "latin"
-    ],
+    "definition": "A prophecy or prediction, related to \"vatic,\" from the latin vates, \"prophet or seer\"",
+    "source": "",
+    "tags": [],
     "dateAdded": "2023-01-02T12:00:00.000Z"
   },
   {
@@ -6265,8 +6377,10 @@ export const INITIAL_WORDS = [
       "noun"
     ],
     "definition": "Southern african grasslands",
-    "source": "DFW's \"authority and american usage,\"",
-    "tags": [],
+    "source": "DFW's \"authority and american usage\"",
+    "tags": [
+      "geology"
+    ],
     "dateAdded": "2020-06-22T12:00:00.000Z"
   },
   {
@@ -6311,7 +6425,8 @@ export const INITIAL_WORDS = [
     "definition": "The eucharist (bread and wine) given to a person before she dies--part of last rites. also, an ancient roman allowance for traveling, like an expense account for officials on public missions. \"something with you on your way.\"",
     "source": "madame bovary",
     "tags": [
-      "christian"
+      "christian",
+      "latin"
     ],
     "dateAdded": "2020-04-28T12:00:00.000Z"
   },
@@ -6373,7 +6488,9 @@ export const INITIAL_WORDS = [
     ],
     "definition": "A type of historical turkish headcovering kind of like a niqab, where only the eyes are revealed",
     "source": "john fowles' the magus",
-    "tags": [],
+    "tags": [
+      "textiles"
+    ],
     "dateAdded": "2024-05-30T12:00:00.000Z"
   },
   {
@@ -6393,7 +6510,7 @@ export const INITIAL_WORDS = [
     "partOfSpeech": [
       "noun"
     ],
-    "definition": "After a character in a 1983 woody allen movie, a nondescript person who is able to change their appearance, behavior, or attitudes and shows up in a wide variety of situations",
+    "definition": "after a character in a 1983 woody allen movie, a nondescript person who is able to change their appearance, behavior, or attitudes and shows up in a wide variety of situations.",
     "source": "",
     "tags": [],
     "dateAdded": "2021-05-16T12:00:00.000Z"
