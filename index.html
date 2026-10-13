@@ -29,6 +29,9 @@
             <option value="date-desc">Newest first</option>
             <option value="date-asc">Oldest first</option>
           </select>
+          <button id="open-sync-modal-btn" class="sync-btn" aria-label="GitHub Cloud Sync" title="GitHub Cloud Sync">
+            ☁ Sync
+          </button>
           <button id="open-export-modal-btn" class="export-btn" aria-label="Export dictionary words">
             Export
           </button>
@@ -292,6 +295,79 @@
       <div class="modal-actions">
         <button type="button" id="cancel-export-modal-btn" class="btn-cancel">Cancel</button>
         <button type="button" id="download-export-btn" class="btn-save">Download .txt</button>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- GitHub Cloud Sync Modal -->
+  <dialog id="sync-dialog" class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title">GitHub Cloud Sync</h2>
+        <button id="close-sync-modal-btn" class="modal-close-icon" aria-label="Close dialog">✕</button>
+      </div>
+
+      <div class="sync-status-card" id="sync-status-card">
+        <div class="sync-status-header">
+          <span class="sync-status-dot" id="sync-status-dot"></span>
+          <span class="sync-status-text" id="sync-status-text">Checking connection...</span>
+        </div>
+        <p class="sync-status-detail" id="sync-status-detail">
+          Connect your GitHub Personal Access Token to sync dictionary edits between your phone and computer.
+        </p>
+      </div>
+
+      <div class="sync-actions-row">
+        <button type="button" id="push-github-btn" class="btn-save sync-action-btn" title="Push current dictionary words to GitHub">
+          ↑ Push to GitHub
+        </button>
+        <button type="button" id="pull-github-btn" class="btn-secondary sync-action-btn" title="Pull latest words from GitHub">
+          ↓ Pull from GitHub
+        </button>
+      </div>
+
+      <div class="form-field" style="margin-top: 1.25rem;">
+        <label for="gh-token-input">Fine-Grained Personal Access Token</label>
+        <div class="token-input-wrapper">
+          <input
+            type="password"
+            id="gh-token-input"
+            class="form-input"
+            placeholder="github_pat_11..."
+            autocomplete="off"
+            spellcheck="false"
+          >
+          <button type="button" id="toggle-token-visibility-btn" class="token-toggle-btn" title="Show or hide token">👁</button>
+        </div>
+        <span class="field-hint">
+          Saved exclusively on this device's private storage. Never committed to code.
+        </span>
+      </div>
+
+      <div class="sync-options-row">
+        <label class="sync-checkbox-label">
+          <input type="checkbox" id="gh-autosync-checkbox">
+          <span>Automatically push when adding or editing words</span>
+        </label>
+      </div>
+
+      <details class="sync-instructions-accordion">
+        <summary>How to create a Fine-Grained Token (1 minute)</summary>
+        <div class="instructions-content">
+          <ol>
+            <li>On GitHub, go to <strong>Settings &rarr; Developer Settings &rarr; Personal access tokens &rarr; Fine-grained tokens</strong>.</li>
+            <li>Click <strong>Generate new token</strong>.</li>
+            <li>Name it (e.g. <em>Dictionary Sync</em>) and set an expiration.</li>
+            <li>Under <strong>Repository access</strong>, select <strong>Only select repositories</strong> and choose <strong>personal_dictionary</strong>.</li>
+            <li>Under <strong>Repository permissions</strong>, find <strong>Contents</strong> and set it to <strong>Read and write</strong>.</li>
+            <li>Click <strong>Generate token</strong>, copy it, and paste it into the box above.</li>
+          </ol>
+        </div>
+      </details>
+
+      <div class="modal-actions">
+        <button type="button" id="clear-token-btn" class="btn-cancel" title="Remove saved token from this device">Clear Token</button>
+        <button type="button" id="save-token-btn" class="btn-save" title="Save token and test connection">Save &amp; Test</button>
       </div>
     </div>
   </dialog>

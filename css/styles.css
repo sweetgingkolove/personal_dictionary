@@ -129,7 +129,8 @@ body {
   background-color: #f2e7cc;
 }
 
-.export-btn {
+.export-btn,
+.sync-btn {
   background-color: var(--bg-card-highlight);
   color: var(--text);
   border: 1px solid var(--border-dark);
@@ -143,7 +144,8 @@ body {
   transition: all 0.15s ease;
 }
 
-.export-btn:hover {
+.export-btn:hover,
+.sync-btn:hover {
   border-color: var(--text-muted);
   background-color: #f2e7cc;
   color: var(--ink-black);
@@ -751,6 +753,177 @@ body {
   overflow-y: auto;
   white-space: pre-wrap;
   word-break: break-word;
+}
+
+/* GitHub Cloud Sync Dialog */
+.sync-status-card {
+  background: var(--bg-card-highlight);
+  border: 1px solid var(--border-dark);
+  border-radius: 4px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.15rem;
+}
+
+.sync-status-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--ink-black);
+}
+
+.sync-status-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: #9e9e9e;
+  transition: background-color 0.2s ease;
+}
+
+.sync-status-dot.dot-connected {
+  background-color: #2e7d32;
+  box-shadow: 0 0 0 2px rgba(46, 125, 50, 0.25);
+}
+
+.sync-status-dot.dot-syncing {
+  background-color: #c67d00;
+  box-shadow: 0 0 0 2px rgba(198, 125, 0, 0.25);
+  animation: pulse-sync 1s infinite alternate;
+}
+
+@keyframes pulse-sync {
+  from { opacity: 0.4; }
+  to { opacity: 1; }
+}
+
+.sync-status-dot.dot-disconnected {
+  background-color: #8a661c;
+}
+
+.sync-status-dot.dot-error {
+  background-color: #b71c1c;
+  box-shadow: 0 0 0 2px rgba(183, 28, 28, 0.25);
+}
+
+.sync-status-detail {
+  font-family: var(--font-serif);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin: 0.35rem 0 0 0;
+  line-height: 1.45;
+}
+
+.sync-actions-row {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.sync-action-btn {
+  flex: 1;
+  padding: 0.65rem 0.85rem;
+  font-size: 0.875rem;
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.15s ease;
+}
+
+.btn-secondary {
+  background: var(--bg-card);
+  color: var(--text);
+  border: 1px solid var(--border-dark);
+}
+
+.btn-secondary:hover {
+  background: #f2e7cc;
+  border-color: var(--text);
+  color: var(--ink-black);
+}
+
+.token-input-wrapper {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+}
+
+.token-input-wrapper input {
+  flex: 1;
+}
+
+.token-toggle-btn {
+  background: var(--bg-card);
+  border: 1px solid var(--border-dark);
+  color: var(--text);
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: all 0.15s ease;
+}
+
+.token-toggle-btn:hover {
+  background: #f2e7cc;
+  border-color: var(--text);
+}
+
+.sync-options-row {
+  margin-top: 0.75rem;
+}
+
+.sync-checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-serif);
+  font-size: 0.875rem;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.sync-checkbox-label input[type="checkbox"] {
+  width: auto;
+  accent-color: var(--accent-crimson);
+  cursor: pointer;
+}
+
+.sync-instructions-accordion {
+  margin-top: 1rem;
+  border: 1px dashed var(--border-dark);
+  border-radius: 4px;
+  padding: 0.6rem 0.85rem;
+  background: rgba(246, 236, 220, 0.4);
+  font-family: var(--font-serif);
+  font-size: 0.85rem;
+}
+
+.sync-instructions-accordion summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--accent-crimson);
+  outline: none;
+}
+
+.instructions-content {
+  margin-top: 0.65rem;
+  padding-left: 0.25rem;
+  line-height: 1.5;
+  color: var(--text);
+}
+
+.instructions-content ol {
+  padding-left: 1.25rem;
+  margin: 0.35rem 0 0 0;
+}
+
+.instructions-content li {
+  margin-bottom: 0.35rem;
 }
 
 .modal-actions {
@@ -2019,7 +2192,8 @@ body {
     padding: 0.45rem 0.65rem;
   }
 
-  .export-btn {
+  .export-btn,
+  .sync-btn {
     flex-shrink: 0;
     min-height: 42px;
     padding: 0.5rem 0.75rem;

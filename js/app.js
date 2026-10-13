@@ -466,6 +466,31 @@ const exportAllCountLabel = document.getElementById('export-all-count-label');
 const exportFilteredOption = document.getElementById('export-filtered-option');
 const exportFilteredCountLabel = document.getElementById('export-filtered-count-label');
 
+// GitHub Cloud Sync Elements
+const syncDialog = document.getElementById('sync-dialog');
+const openSyncModalBtn = document.getElementById('open-sync-modal-btn');
+const closeSyncModalBtn = document.getElementById('close-sync-modal-btn');
+const syncStatusCard = document.getElementById('sync-status-card');
+const syncStatusDot = document.getElementById('sync-status-dot');
+const syncStatusText = document.getElementById('sync-status-text');
+const syncStatusDetail = document.getElementById('sync-status-detail');
+const pushGithubBtn = document.getElementById('push-github-btn');
+const pullGithubBtn = document.getElementById('pull-github-btn');
+const ghTokenInput = document.getElementById('gh-token-input');
+const toggleTokenVisibilityBtn = document.getElementById('toggle-token-visibility-btn');
+const ghAutosyncCheckbox = document.getElementById('gh-autosync-checkbox');
+const clearTokenBtn = document.getElementById('clear-token-btn');
+const saveTokenBtn = document.getElementById('save-token-btn');
+
+// GitHub Sync Constants
+const GITHUB_REPO_OWNER = 'sweetgingkolove';
+const GITHUB_REPO_NAME = 'personal_dictionary';
+const GITHUB_BRANCH = 'main';
+const GITHUB_WORDS_FILE = 'js/words.js';
+const GITHUB_TOKEN_STORAGE_KEY = 'personal_dictionary_gh_token';
+const GITHUB_AUTOSYNC_STORAGE_KEY = 'personal_dictionary_gh_autosync';
+const GITHUB_LAST_SYNC_STORAGE_KEY = 'personal_dictionary_gh_last_sync';
+
 /**
  * Format ISO date string into readable text.
  */
@@ -549,6 +574,7 @@ function deleteWord(id) {
     renderTagFilterBar();
     renderAddTagPicker();
     render();
+    triggerAutoSync();
   }
 }
 
@@ -1128,6 +1154,348 @@ function handleDownloadExport() {
   closeExportModal();
 }
 
+// ==========================================
+// GitHub Cloud Sync Logic
+// ==========================================
+
+export function getGitHubToken() {
+  try {
+    return localStorage.getItem(GITHUB_TOKEN_STORAGE_KEY) || '';
+  } catch {
+    return '';
+  }
+}
+
+export function saveGitHubToken(token) {
+  try {
+    if (token) {
+      localStorage.setItem(GITHUB_TOKEN_STORAGE_KEY, token.trim());
+    } else {
+      localStorage.removeItem(GITHUB_TOKEN_STORAGE_KEY);
+    }
+  } catch (err) {
+    console.error('Failed to save GitHub token:', err);
+  }
+}
+
+export function clearGitHubToken() {
+  try {
+    localStorage.removeItem(GITHUB_TOKEN_STORAGE_KEY);
+  } catch {}
+}
+
+export function isAutoSyncEnabled() {
+  try {
+    return localStorage.getItem(GITHUB_AUTOSYNC_STORAGE_KEY) === 'true';
+  } catch {
+    return false;
+  }
+}
+
+export function setAutoSyncEnabled(enabled) {
+  try {
+    localStorage.setItem(GITHUB_AUTOSYNC_STORAGE_KEY, enabled ? 'true' : 'false');
+  } catch {}
+}
+
+export function getLastSyncTime() {
+  try {
+    return localStorage.getItem(GITHUB_LAST_SYNC_STORAGE_KEY) || '';
+  } catch {
+    return '';
+  }
+}
+
+export function setLastSyncTime(isoStr) {
+  try {
+    localStorage.setItem(GITHUB_LAST_SYNC_STORAGE_KEY, isoStr);
+  } catch {}
+}
+
+function utf8ToBase64(str) {
+  const encoder = new TextEncoder();
+  const bytes = encoder.encode(str);
+  let binary = '';
+  for (let i = 0; i < bytes.length; i++) {
+    binary += String.fromCharCode(bytes[i]);
+  }
+  return btoa(binary);
+}
+
+function base64ToUtf8(base64) {
+  const binary = atob(base64.replace(/\s/g, ''));
+  const bytes = new Uint8Array(binary.length);
+  for (let i = 0; i < binary.length; i++) {
+    bytes[i] = binary.charCodeAt(i);
+  }
+  return new TextDecoder().decode(bytes);
+}
+
+function formatRelativeTime(isoStr) {
+  if (!isoStr) return '';
+  try {
+    const diffMs = Date.now() - new Date(isoStr).getTime();
+    const diffMins = Math.floor(diffMs / 60000);
+    if (diffMins < 1) return 'just now';
+    if (diffMins === 1) return '1 minute ago';
+    if (diffMins < 60) return `${diffMins} minutes ago`;
+    const diffHours = Math.floor(diffMins / 60);
+    if (diffHours === 1) return '1 hour ago';
+    if (diffHours < 24) return `${diffHours} hours ago`;
+    return new Date(isoStr).toLocaleDateString(undefined, { month: 'short', day: 'numeric' });
+  } catch {
+    return '';
+  }
+}
+
+function updateSyncModalStatusUI(type, message, detail) {
+  if (!syncStatusDot || !syncStatusText) return;
+  syncStatusDot.className = 'sync-status-dot';
+  if (type === 'connected') {
+    syncStatusDot.classList.add('dot-connected');
+  } else if (type === 'syncing') {
+    syncStatusDot.classList.add('dot-syncing');
+  } else if (type === 'error') {
+    syncStatusDot.classList.add('dot-error');
+  } else {
+    syncStatusDot.classList.add('dot-disconnected');
+  }
+
+  syncStatusText.textContent = message || '';
+  if (syncStatusDetail && detail !== undefined) {
+    syncStatusDetail.textContent = detail;
+  }
+}
+
+function updateHeaderSyncButtonBadge(text = '☁ Sync') {
+  if (!openSyncModalBtn) return;
+  openSyncModalBtn.textContent = text;
+}
+
+async function testGitHubConnection(token) {
+  if (!token) {
+    return { ok: false, error: 'No token provided' };
+  }
+  try {
+    const res = await fetch(`https://api.github.com/repos/${GITHUB_REPO_OWNER}/${GITHUB_REPO_NAME}`, {
+      headers: {
+        'Authorization': `Bearer ${token.trim()}`,
+        'Accept': 'application/vnd.github+json',
+        'X-GitHub-Api-Version': '2022-11-28'
+      }
+    });
+
+    if (res.ok) {
+      const data = await res.json();
+      const canPush = Boolean(data.permissions ? data.permissions.push : true);
+      return { ok: true, data, canPush };
+    } else {
+      let errMsg = `GitHub API Error (${res.status})`;
+      try {
+        const errJson = await res.json();
+        if (errJson.message) errMsg = errJson.message;
+      } catch {}
+      return { ok: false, error: errMsg, status: res.status };
+    }
+  } catch (err) {
+    return { ok: false, error: err.message || 'Network connection failed' };
+  }
+}
+
+export async function pushToGitHub({ silent = false } = {}) {
+  const token = getGitHubToken();
+  if (!token) {
+    if (!silent) openSyncModal();
+    return false;
+  }
+
+  updateSyncModalStatusUI('syncing', 'Pushing changes to GitHub...', 'Creating automated commit on branch main...');
+  updateHeaderSyncButtonBadge('☁ Syncing...');
+  if (pushGithubBtn) pushGithubBtn.disabled = true;
+
+  try {
+    const fileRes = await fetch(
+      `https://api.github.com/repos/${GITHUB_REPO_OWNER}/${GITHUB_REPO_NAME}/contents/${GITHUB_WORDS_FILE}?ref=${GITHUB_BRANCH}&_t=${Date.now()}`,
+      {
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Accept': 'application/vnd.github+json',
+          'X-GitHub-Api-Version': '2022-11-28'
+        }
+      }
+    );
+
+    let sha = '';
+    if (fileRes.ok) {
+      const fileData = await fileRes.json();
+      sha = fileData.sha;
+    } else if (fileRes.status === 401) {
+      throw new Error('Invalid or expired GitHub token. Please verify your token.');
+    } else if (fileRes.status === 404) {
+      // File doesn't exist yet, sha can remain empty
+    } else {
+      const errData = await fileRes.json().catch(() => ({}));
+      throw new Error(errData.message || `Failed to fetch file SHA (${fileRes.status})`);
+    }
+
+    const sortedWords = [...state.words].sort((a, b) =>
+      (a.word || '').localeCompare(b.word || '', undefined, { sensitivity: 'base' })
+    );
+    const wordsJson = JSON.stringify(sortedWords, null, 2);
+    const contentText = `/**\n * Curated Personal Dictionary entries.\n */\nexport const INITIAL_WORDS = ${wordsJson};\n`;
+    const base64Content = utf8ToBase64(contentText);
+
+    const putRes = await fetch(
+      `https://api.github.com/repos/${GITHUB_REPO_OWNER}/${GITHUB_REPO_NAME}/contents/${GITHUB_WORDS_FILE}`,
+      {
+        method: 'PUT',
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Accept': 'application/vnd.github+json',
+          'Content-Type': 'application/json',
+          'X-GitHub-Api-Version': '2022-11-28'
+        },
+        body: JSON.stringify({
+          message: `Update dictionary entries (${state.words.length} words)`,
+          content: base64Content,
+          sha: sha || undefined,
+          branch: GITHUB_BRANCH
+        })
+      }
+    );
+
+    if (!putRes.ok) {
+      const putErr = await putRes.json().catch(() => ({}));
+      if (putRes.status === 409) {
+        throw new Error('Conflict detected: Remote repository was updated elsewhere. Pull first before pushing.');
+      }
+      throw new Error(putErr.message || `Push failed (${putRes.status})`);
+    }
+
+    const nowIso = new Date().toISOString();
+    setLastSyncTime(nowIso);
+
+    updateSyncModalStatusUI(
+      'connected',
+      '✓ Synced to GitHub just now',
+      `Successfully committed ${state.words.length} words to GitHub. GitHub Pages will refresh with latest entries within 1-2 minutes.`
+    );
+    updateHeaderSyncButtonBadge('☁ Synced');
+    setTimeout(() => updateHeaderSyncButtonBadge('☁ Sync'), 4000);
+
+    return true;
+  } catch (err) {
+    console.error('GitHub Push error:', err);
+    updateSyncModalStatusUI('error', 'Push failed', err.message);
+    updateHeaderSyncButtonBadge('☁ Sync Error');
+    if (!silent) {
+      alert(`GitHub Push error: ${err.message}`);
+    }
+    return false;
+  } finally {
+    if (pushGithubBtn) pushGithubBtn.disabled = false;
+  }
+}
+
+export async function pullFromGitHub() {
+  const token = getGitHubToken();
+  updateSyncModalStatusUI('syncing', 'Pulling latest from GitHub...', 'Downloading js/words.js from branch main...');
+  if (pullGithubBtn) pullGithubBtn.disabled = true;
+
+  try {
+    const headers = {
+      'Accept': 'application/vnd.github+json',
+      'X-GitHub-Api-Version': '2022-11-28'
+    };
+    if (token) headers['Authorization'] = `Bearer ${token}`;
+
+    const res = await fetch(
+      `https://api.github.com/repos/${GITHUB_REPO_OWNER}/${GITHUB_REPO_NAME}/contents/${GITHUB_WORDS_FILE}?ref=${GITHUB_BRANCH}&_t=${Date.now()}`,
+      { headers }
+    );
+
+    if (!res.ok) {
+      const errData = await res.json().catch(() => ({}));
+      throw new Error(errData.message || `Download failed (${res.status})`);
+    }
+
+    const fileData = await res.json();
+    if (!fileData.content) {
+      throw new Error('No content returned from repository file.');
+    }
+
+    const decoded = base64ToUtf8(fileData.content);
+    const bracketStart = decoded.indexOf('[');
+    const bracketEnd = decoded.lastIndexOf(']');
+    if (bracketStart === -1 || bracketEnd === -1) {
+      throw new Error('Could not find INITIAL_WORDS array in downloaded file.');
+    }
+
+    const wordsArray = JSON.parse(decoded.substring(bracketStart, bracketEnd + 1));
+    if (!Array.isArray(wordsArray)) {
+      throw new Error('Parsed data is not an array.');
+    }
+
+    state.words = wordsArray.map(normalizeEntry);
+    persistWords(state.words);
+    renderTagFilterBar();
+    renderAddTagPicker();
+    render();
+
+    const nowIso = new Date().toISOString();
+    setLastSyncTime(nowIso);
+
+    updateSyncModalStatusUI(
+      'connected',
+      '✓ Pulled latest words',
+      `Loaded ${state.words.length} words directly from GitHub into this device.`
+    );
+    updateHeaderSyncButtonBadge('☁ Synced');
+    setTimeout(() => updateHeaderSyncButtonBadge('☁ Sync'), 4000);
+    alert(`Successfully loaded ${state.words.length} words from GitHub!`);
+  } catch (err) {
+    console.error('GitHub Pull error:', err);
+    updateSyncModalStatusUI('error', 'Pull failed', err.message);
+    alert(`Pull failed: ${err.message}`);
+  } finally {
+    if (pullGithubBtn) pullGithubBtn.disabled = false;
+  }
+}
+
+function openSyncModal() {
+  if (!syncDialog) return;
+  const token = getGitHubToken();
+  if (ghTokenInput) ghTokenInput.value = token;
+  if (ghAutosyncCheckbox) ghAutosyncCheckbox.checked = isAutoSyncEnabled();
+
+  const lastSync = getLastSyncTime();
+  if (token) {
+    const detail = lastSync
+      ? `Connected to ${GITHUB_REPO_OWNER}/${GITHUB_REPO_NAME}. Last synced: ${formatRelativeTime(lastSync)}.`
+      : `Connected to ${GITHUB_REPO_OWNER}/${GITHUB_REPO_NAME}. Ready to push or pull.`;
+    updateSyncModalStatusUI('connected', 'Token configured', detail);
+  } else {
+    updateSyncModalStatusUI(
+      'disconnected',
+      'Not connected to GitHub',
+      'Enter your Fine-Grained Personal Access Token below to enable pushing and pulling from this device.'
+    );
+  }
+
+  syncDialog.showModal();
+}
+
+function closeSyncModal() {
+  if (!syncDialog) return;
+  syncDialog.close();
+}
+
+function triggerAutoSync() {
+  if (isAutoSyncEnabled() && getGitHubToken()) {
+    pushToGitHub({ silent: true });
+  }
+}
+
 /**
  * Initialize event listeners.
  */
@@ -1310,6 +1678,7 @@ function initEvents() {
     renderAddTagPicker();
     render();
     closeAddModal();
+    triggerAutoSync();
   });
 
   // Edit Modal interactions
@@ -1389,6 +1758,7 @@ function initEvents() {
     renderAddTagPicker();
     render();
     closeEditModal();
+    triggerAutoSync();
   });
 
   // Back to Top button
@@ -1429,9 +1799,79 @@ function initEvents() {
   if (downloadExportBtn) {
     downloadExportBtn.addEventListener('click', handleDownloadExport);
   }
+
+  // GitHub Cloud Sync interactions
+  if (openSyncModalBtn) {
+    openSyncModalBtn.addEventListener('click', openSyncModal);
+  }
+  if (closeSyncModalBtn) {
+    closeSyncModalBtn.addEventListener('click', closeSyncModal);
+  }
+  if (syncDialog) {
+    syncDialog.addEventListener('click', (e) => {
+      if (e.target === syncDialog) {
+        closeSyncModal();
+      }
+    });
+  }
+  if (toggleTokenVisibilityBtn && ghTokenInput) {
+    toggleTokenVisibilityBtn.addEventListener('click', () => {
+      const isPass = ghTokenInput.type === 'password';
+      ghTokenInput.type = isPass ? 'text' : 'password';
+      toggleTokenVisibilityBtn.textContent = isPass ? '🔒' : '👁';
+    });
+  }
+  if (ghAutosyncCheckbox) {
+    ghAutosyncCheckbox.addEventListener('change', (e) => {
+      setAutoSyncEnabled(e.target.checked);
+    });
+  }
+  if (saveTokenBtn && ghTokenInput) {
+    saveTokenBtn.addEventListener('click', async () => {
+      const val = ghTokenInput.value.trim();
+      if (!val) {
+        alert('Please enter a GitHub token or click Clear Token.');
+        return;
+      }
+      saveTokenBtn.disabled = true;
+      saveTokenBtn.textContent = 'Testing...';
+      updateSyncModalStatusUI('syncing', 'Testing token with GitHub API...');
+      const res = await testGitHubConnection(val);
+      saveTokenBtn.disabled = false;
+      saveTokenBtn.textContent = 'Save & Test';
+      if (res.ok) {
+        saveGitHubToken(val);
+        updateSyncModalStatusUI('connected', '✓ Connected successfully', `Authenticated with repository ${GITHUB_REPO_OWNER}/${GITHUB_REPO_NAME}.`);
+        updateHeaderSyncButtonBadge('☁ Ready');
+        alert('Connected successfully to GitHub!');
+      } else {
+        updateSyncModalStatusUI('error', 'Authentication failed', res.error);
+        alert(`Authentication failed: ${res.error}\n\nPlease ensure your token has "Contents: Read and write" permission for ${GITHUB_REPO_OWNER}/${GITHUB_REPO_NAME}.`);
+      }
+    });
+  }
+  if (clearTokenBtn && ghTokenInput) {
+    clearTokenBtn.addEventListener('click', () => {
+      if (confirm('Clear saved GitHub token from this device?')) {
+        clearGitHubToken();
+        ghTokenInput.value = '';
+        updateSyncModalStatusUI('disconnected', 'Not connected to GitHub', 'Token removed from this device.');
+        updateHeaderSyncButtonBadge('☁ Sync');
+      }
+    });
+  }
+  if (pushGithubBtn) {
+    pushGithubBtn.addEventListener('click', () => pushToGitHub());
+  }
+  if (pullGithubBtn) {
+    pullGithubBtn.addEventListener('click', () => pullFromGitHub());
+  }
 }
 
 initEvents();
 renderTagFilterBar();
 renderAddTagPicker();
 render();
+if (getGitHubToken()) {
+  updateHeaderSyncButtonBadge('☁ Ready');
+}
