@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#e2d2ae">
+  <meta name="description" content="A personal dictionary of curious and erudite terms.">
+  <title>Chelsea's Dictionary &bull; A Personal Lexicon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=EB+Garamond:ital,wght@0,400..700;1,400..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="app-container">
+    <header class="header">
+      <div class="header-row">
+        <div>
+          <div class="title-with-nav">
+            <h1 class="site-title">Chelsea's Dictionary</h1>
+            <a href="practice.html" class="practice-nav-btn" title="Test & Practice Vocabulary">Practice &amp; Quiz &rarr;</a>
+          </div>
+          <span class="word-count" id="total-count-badge">0 words</span>
+        </div>
+        <div class="header-actions">
+          <select id="sort-select" class="sort-select" aria-label="Sort words">
+            <option value="alpha-asc" selected>A &rarr; Z</option>
+            <option value="alpha-desc">Z &rarr; A</option>
+            <option value="date-desc">Newest first</option>
+            <option value="date-asc">Oldest first</option>
+          </select>
+          <button id="open-export-modal-btn" class="export-btn" aria-label="Export dictionary words">
+            Export
+          </button>
+          <button id="open-add-modal-btn" class="add-word-btn" aria-label="Add new word">
+            + Add word
+          </button>
+        </div>
+      </div>
+
+      <div class="search-box">
+        <input
+          type="text"
+          id="search-input"
+          class="search-input"
+          placeholder="Search words, definitions, tags..."
+          aria-label="Search dictionary"
+          autocomplete="off"
+          spellcheck="false"
+        >
+        <button id="clear-search-btn" class="clear-btn" aria-label="Clear search">✕</button>
+      </div>
+
+      <div class="filter-group" id="pos-filter-container">
+        <button class="filter-link active" data-pos="all">all</button>
+        <button class="filter-link" data-pos="noun">nouns</button>
+        <button class="filter-link" data-pos="verb">verbs</button>
+        <button class="filter-link" data-pos="adjective">adjectives</button>
+        <button class="filter-link" data-pos="adverb">adverbs</button>
+        <button class="filter-link" data-pos="preposition">prepositions</button>
+        <button class="filter-link" data-pos="phrase">phrases</button>
+      </div>
+
+      <div class="tag-filter-row" id="tag-filter-container">
+        <span class="tag-filter-label">Tags:</span>
+        <button class="tag-filter-btn active" data-tag="all">all</button>
+        <button class="tag-filter-btn" data-tag="medical">medical</button>
+        <button class="tag-filter-btn" data-tag="architecture">architecture</button>
+        <button class="tag-filter-btn" data-tag="christian">christian</button>
+        <button class="tag-filter-btn" data-tag="french">french</button>
+        <button class="tag-filter-btn" data-tag="latin">latin</button>
+      </div>
+    </header>
+
+    <main>
+      <div id="words-container" class="words-list" aria-live="polite">
+        <!-- Rendered by app.js -->
+      </div>
+    </main>
+  </div>
+
+  <!-- Smart Add Word Modal -->
+  <dialog id="add-word-dialog" class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title">Add Word</h2>
+        <button id="close-modal-btn" class="modal-close-icon" aria-label="Close dialog">✕</button>
+      </div>
+      <form id="add-word-form" method="dialog">
+        <div class="form-field">
+          <label for="smart-text-input">Type or paste word details</label>
+          <textarea
+            id="smart-text-input"
+            rows="5"
+            required
+            placeholder="Type naturally, for example:&#10;&#10;basilica (noun) - a large hall or church #architecture #christian [Rome Guide]&#10;&#10;or:&#10;tachycardia&#10;noun&#10;abnormally rapid heart rate&#10;tags: medical, latin&#10;found in: Medical Notes"
+            autofocus
+          ></textarea>
+        </div>
+
+        <!-- Part of Speech -->
+        <div class="form-field">
+          <label>Part of Speech (optional / select multiple)</label>
+          <div class="pos-picker" id="add-pos-picker">
+            <button type="button" class="pos-choice-btn" data-pos="noun">+ noun</button>
+            <button type="button" class="pos-choice-btn" data-pos="verb">+ verb</button>
+            <button type="button" class="pos-choice-btn" data-pos="adjective">+ adjective</button>
+            <button type="button" class="pos-choice-btn" data-pos="adverb">+ adverb</button>
+            <button type="button" class="pos-choice-btn" data-pos="phrase">+ phrase</button>
+            <button type="button" class="pos-choice-btn" data-pos="preposition">+ preposition</button>
+            <button type="button" class="pos-choice-btn" data-pos="other">+ other</button>
+          </div>
+        </div>
+
+        <!-- Quick Tags -->
+        <div class="form-field">
+          <label>Tags</label>
+          <div class="tag-picker" id="add-tag-picker">
+            <button type="button" class="tag-choice-btn" data-tag="medical">+ medical</button>
+            <button type="button" class="tag-choice-btn" data-tag="architecture">+ architecture</button>
+            <button type="button" class="tag-choice-btn" data-tag="christian">+ christian</button>
+            <button type="button" class="tag-choice-btn" data-tag="french">+ french</button>
+            <button type="button" class="tag-choice-btn" data-tag="latin">+ latin</button>
+          </div>
+          <input type="text" id="add-custom-tags" placeholder="Additional custom tags (comma-separated)...">
+        </div>
+
+        <!-- Live Parsed Preview -->
+        <div class="parsed-preview" id="parsed-preview" aria-live="polite">
+          <div class="preview-header">Detected Fields:</div>
+          <div class="preview-row">
+            <span class="preview-label">Word:</span>
+            <span class="preview-val" id="preview-word">—</span>
+          </div>
+          <div class="preview-row">
+            <span class="preview-label">Part of Speech:</span>
+            <span class="preview-val" id="preview-pos">—</span>
+          </div>
+          <div class="preview-row">
+            <span class="preview-label">Definition:</span>
+            <span class="preview-val" id="preview-def">—</span>
+          </div>
+          <div class="preview-row">
+            <span class="preview-label">Found In:</span>
+            <span class="preview-val" id="preview-source">—</span>
+          </div>
+          <div class="preview-row">
+            <span class="preview-label">Tags:</span>
+            <span class="preview-val" id="preview-tags">—</span>
+          </div>
+          <div class="preview-row">
+            <span class="preview-label">Date:</span>
+            <span class="preview-val" id="preview-date">—</span>
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label for="add-date-input">Date Added (optional)</label>
+          <input type="date" id="add-date-input">
+        </div>
+
+        <div class="modal-actions">
+          <button type="button" id="cancel-modal-btn" class="btn-cancel">Cancel</button>
+          <button type="submit" id="submit-word-btn" class="btn-save">Save word</button>
+        </div>
+      </form>
+    </div>
+  </dialog>
+
+  <!-- Edit Word Modal -->
+  <dialog id="edit-word-dialog" class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title">Edit Entry</h2>
+        <button id="close-edit-modal-btn" class="modal-close-icon" aria-label="Close dialog">✕</button>
+      </div>
+      <form id="edit-word-form" method="dialog">
+        <input type="hidden" id="edit-word-id">
+
+        <div class="form-field">
+          <label for="edit-word-input">Word</label>
+          <input type="text" id="edit-word-input" required autocomplete="off">
+        </div>
+
+        <div class="form-field">
+          <label>Part of Speech</label>
+          <div class="pos-picker" id="edit-pos-picker">
+            <button type="button" class="pos-choice-btn" data-pos="noun">noun</button>
+            <button type="button" class="pos-choice-btn" data-pos="verb">verb</button>
+            <button type="button" class="pos-choice-btn" data-pos="adjective">adjective</button>
+            <button type="button" class="pos-choice-btn" data-pos="adverb">adverb</button>
+            <button type="button" class="pos-choice-btn" data-pos="phrase">phrase</button>
+            <button type="button" class="pos-choice-btn" data-pos="preposition">preposition</button>
+            <button type="button" class="pos-choice-btn" data-pos="other">other</button>
+          </div>
+          <input type="text" id="edit-custom-pos" placeholder="Other part of speech (optional)...">
+        </div>
+
+        <div class="form-field">
+          <label for="edit-def-input">Definition</label>
+          <textarea id="edit-def-input" rows="3" required></textarea>
+        </div>
+
+        <div class="form-field">
+          <label for="edit-source-input">Where did you find it?</label>
+          <input type="text" id="edit-source-input" placeholder="e.g. The New Yorker, Book title...">
+        </div>
+
+        <!-- Edit Tags -->
+        <div class="form-field">
+          <label>Tags</label>
+          <div class="tag-picker" id="edit-tag-picker">
+            <button type="button" class="tag-choice-btn" data-tag="medical">+ medical</button>
+            <button type="button" class="tag-choice-btn" data-tag="architecture">+ architecture</button>
+            <button type="button" class="tag-choice-btn" data-tag="christian">+ christian</button>
+            <button type="button" class="tag-choice-btn" data-tag="french">+ french</button>
+            <button type="button" class="tag-choice-btn" data-tag="latin">+ latin</button>
+          </div>
+          <input type="text" id="edit-custom-tags" placeholder="Additional custom tags (comma-separated)...">
+        </div>
+
+        <div class="form-field">
+          <label for="edit-date-input">Date Added</label>
+          <input type="date" id="edit-date-input">
+        </div>
+
+        <div class="modal-actions">
+          <button type="button" id="cancel-edit-modal-btn" class="btn-cancel">Cancel</button>
+          <button type="submit" class="btn-save">Save changes</button>
+        </div>
+      </form>
+    </div>
+  </dialog>
+
+  <!-- Export Words Modal -->
+  <dialog id="export-dialog" class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title">Export Dictionary</h2>
+        <button id="close-export-modal-btn" class="modal-close-icon" aria-label="Close dialog">✕</button>
+      </div>
+
+      <div class="form-field">
+        <label>Format</label>
+        <div class="export-options">
+          <label class="radio-option">
+            <input type="radio" name="export-format" value="standard" checked>
+            <div>
+              <span class="option-title">Standard Dictionary</span>
+              <span class="option-desc">Structured entries with A&ndash;Z sections</span>
+            </div>
+          </label>
+          <label class="radio-option">
+            <input type="radio" name="export-format" value="compact">
+            <div>
+              <span class="option-title">Compact Notes</span>
+              <span class="option-desc">One line per word, matching original notebook notes</span>
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label>Words to Include</label>
+        <div class="export-options">
+          <label class="radio-option">
+            <input type="radio" name="export-scope" value="all" checked>
+            <div>
+              <span class="option-title" id="export-all-count-label">All words (0 words)</span>
+            </div>
+          </label>
+          <label class="radio-option" id="export-filtered-option">
+            <input type="radio" name="export-scope" value="filtered">
+            <div>
+              <span class="option-title" id="export-filtered-count-label">Current filtered words (0 words)</span>
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label>Preview</label>
+        <pre class="export-preview" id="export-preview"></pre>
+      </div>
+
+      <div class="modal-actions">
+        <button type="button" id="cancel-export-modal-btn" class="btn-cancel">Cancel</button>
+        <button type="button" id="download-export-btn" class="btn-save">Download .txt</button>
+      </div>
+    </div>
+  </dialog>
+
+  <button id="back-to-top-btn" class="back-to-top-btn" aria-label="Back to top" title="Back to top">↑</button>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

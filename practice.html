@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#e2d2ae">
+  <meta name="description" content="Test and practice your vocabulary from Chelsea's Dictionary.">
+  <title>Practice &amp; Quizzes &bull; Chelsea's Dictionary</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=EB+Garamond:ital,wght@0,400..700;1,400..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="app-container">
+    <header class="header">
+      <div class="practice-top-nav">
+        <a href="index.html" class="back-link">&larr; Back to Dictionary</a>
+        <span class="pool-badge" id="practice-pool-badge">Loading words...</span>
+      </div>
+
+      <div class="practice-header-main">
+        <h1 class="site-title">Practice &amp; Quiz</h1>
+        <p class="practice-subtitle">Test and strengthen your memory of words from your dictionary.</p>
+      </div>
+
+      <!-- Mode Switcher Tabs -->
+      <div class="mode-tabs" id="mode-tabs" role="tablist" aria-label="Game Modes">
+        <button class="mode-tab-btn active" data-mode="quiz" role="tab" aria-selected="true">
+          Definition Match
+        </button>
+        <button class="mode-tab-btn" data-mode="flashcards" role="tab" aria-selected="false">
+          Flashcards
+        </button>
+        <button class="mode-tab-btn" data-mode="forge" role="tab" aria-selected="false">
+          Word Forge
+        </button>
+      </div>
+
+      <!-- Practice Controls & Filter Bar -->
+      <div class="practice-controls-card">
+        <div class="practice-controls-grid">
+          <div class="control-col">
+            <label for="practice-tag-select">Tag Focus</label>
+            <select id="practice-tag-select" class="practice-select">
+              <option value="all">All Tags</option>
+              <option value="medical">medical</option>
+              <option value="architecture">architecture</option>
+              <option value="christian">christian</option>
+              <option value="french">french</option>
+              <option value="latin">latin</option>
+            </select>
+          </div>
+
+          <div class="control-col">
+            <label for="practice-pos-select">Part of Speech</label>
+            <select id="practice-pos-select" class="practice-select">
+              <option value="all">All Types</option>
+              <option value="noun">noun</option>
+              <option value="verb">verb</option>
+              <option value="adjective">adjective</option>
+              <option value="adverb">adverb</option>
+              <option value="preposition">preposition</option>
+              <option value="phrase">phrase</option>
+            </select>
+          </div>
+
+          <div class="control-col">
+            <label for="practice-round-size">Round Size</label>
+            <select id="practice-round-size" class="practice-select">
+              <option value="5">5 words</option>
+              <option value="10" selected>10 words</option>
+              <option value="20">20 words</option>
+              <option value="all">All matching</option>
+            </select>
+          </div>
+
+          <div class="control-col control-col-btn">
+            <button id="practice-restart-btn" class="practice-action-btn" title="Restart with current settings">
+              New Round
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Round Stats Bar -->
+      <div class="round-status-bar" id="round-status-bar">
+        <div class="status-left">
+          <span class="status-progress-text" id="status-progress-text">Word 1 of 10</span>
+        </div>
+        <div class="status-right">
+          <span class="stat-pill" id="score-pill">Score: 0</span>
+          <span class="stat-pill streak-pill" id="streak-pill">Streak: 0 🔥</span>
+        </div>
+      </div>
+
+      <!-- Progress Meter -->
+      <div class="progress-meter" id="progress-meter">
+        <div class="progress-meter-fill" id="progress-meter-fill" style="width: 0%"></div>
+      </div>
+
+      <!-- Game Arena (Displays Active Mode Screen) -->
+      <div id="game-arena" class="game-arena" aria-live="polite">
+        <!-- Injected dynamically by practice.js -->
+      </div>
+    </main>
+  </div>
+
+  <button id="back-to-top-btn" class="back-to-top-btn" aria-label="Back to top" title="Back to top">↑</button>
+
+  <script type="module" src="js/practice.js"></script>
+</body>
+</html>

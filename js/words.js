@@ -1,0 +1,6401 @@
+/**
+ * Curated Personal Dictionary entries.
+ */
+export const INITIAL_WORDS = [
+  {
+    "id": "abscission-1",
+    "word": "abscission",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "In botany, when parts of a plant naturally detach themselves, mostly dead leaves (autumn) or ripe fruit",
+    "source": "erin winseman's rumpus review of wintering",
+    "tags": [
+      "medical"
+    ],
+    "dateAdded": "2021-03-28T12:00:00.000Z"
+  },
+  {
+    "id": "abseil-2",
+    "word": "abseil",
+    "partOfSpeech": [
+      "verb"
+    ],
+    "definition": "British. to rappel down a rock face/surface",
+    "source": "toby ferris's short life in a strange world",
+    "tags": [],
+    "dateAdded": "2021-04-04T12:00:00.000Z"
+  },
+  {
+    "id": "absterge-3",
+    "word": "absterge",
+    "partOfSpeech": [
+      "verb"
+    ],
+    "definition": "To wipe away, clean by wiping, purge",
+    "source": "tom rachman's the italian teacher",
+    "tags": [],
+    "dateAdded": "2021-06-21T12:00:00.000Z"
+  },
+  {
+    "id": "accipitral-4",
+    "word": "accipitral",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Hawk-like",
+    "source": "john fowles' the magus",
+    "tags": [],
+    "dateAdded": "2024-05-30T12:00:00.000Z"
+  },
+  {
+    "id": "acedia-5",
+    "word": "acedia",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Boredom, apathy, listlessness, torpor, spiritual or mental sloth (classical/medieval)",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2021-03-28T12:00:00.000Z"
+  },
+  {
+    "id": "acroterion-6",
+    "word": "acroterion",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "An architectural decoration at the peaks of classical pediments",
+    "source": "john fowles' the magus",
+    "tags": [
+      "architecture"
+    ],
+    "dateAdded": "2024-05-30T12:00:00.000Z"
+  },
+  {
+    "id": "adumbrate-7",
+    "word": "adumbrate",
+    "partOfSpeech": [
+      "verb"
+    ],
+    "definition": "To foreshadow vaguely, or sketch out (as a plan); overshadow or obscure",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2021-04-17T12:00:00.000Z"
+  },
+  {
+    "id": "adytum-8",
+    "word": "adytum",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Latin or adyton (greek) the innermost sanctuary in an ancient greek temple open only to priests, the inner sanctum that houses the cult image of the god",
+    "source": "villette",
+    "tags": [
+      "architecture",
+      "latin"
+    ],
+    "dateAdded": "2022-02-06T12:00:00.000Z"
+  },
+  {
+    "id": "aleatory-9",
+    "word": "aleatory",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Related to the roll of a dice or on chance, random (alia iacta est!)",
+    "source": "",
+    "tags": [
+      "latin"
+    ],
+    "dateAdded": "2021-05-16T12:00:00.000Z"
+  },
+  {
+    "id": "algedonic-10",
+    "word": "algedonic",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Related to pain associated with pleasure",
+    "source": "john fowles' the magus",
+    "tags": [
+      "medical"
+    ],
+    "dateAdded": "2024-05-30T12:00:00.000Z"
+  },
+  {
+    "id": "amaranthine-11",
+    "word": "amaranthine",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Undying, after an amaranth, a mythical flower that was never supposed to fade. also a dark purple color",
+    "source": "the guermantes way",
+    "tags": [],
+    "dateAdded": "2026-10-10T12:00:00.000Z"
+  },
+  {
+    "id": "ambage-12",
+    "word": "ambage",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Ambiguity or circumlocution, pl. winding, roundabout ways or proceedings",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2021-05-16T12:00:00.000Z"
+  },
+  {
+    "id": "ambuscade-13",
+    "word": "ambuscade",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "An ambush",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2023-01-02T12:00:00.000Z"
+  },
+  {
+    "id": "amphibology-14",
+    "word": "amphibology",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A grammatically ambiguous sentence; a sentence that can be interpreted in more than one way",
+    "source": "anna burns' milkman",
+    "tags": [],
+    "dateAdded": "2021-06-13T12:00:00.000Z"
+  },
+  {
+    "id": "ampliate-15",
+    "word": "ampliate",
+    "partOfSpeech": [
+      "verb"
+    ],
+    "definition": "To widen and enlarge",
+    "source": "barbara pym's a glass of blessings",
+    "tags": [],
+    "dateAdded": "2025-11-11T12:00:00.000Z"
+  },
+  {
+    "id": "anadromous-16",
+    "word": "anadromous",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Describing animals that swim from the sea into rivers to breed, like salmon and other fish (moving the opposite way--from freshwater to the sea--is called catadromous, like freshwater eels)",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2021-06-13T12:00:00.000Z"
+  },
+  {
+    "id": "anamnesis-17",
+    "word": "anamnesis",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A christian idea where worshippers remember jesus; also a patient recounting their medical history. general reminiscence",
+    "source": "",
+    "tags": [
+      "christian",
+      "medical"
+    ],
+    "dateAdded": "2021-05-23T12:00:00.000Z"
+  },
+  {
+    "id": "anamorphic-18",
+    "word": "anamorphic",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Distortion of an image, often by shrinking it (there's some film technique?)",
+    "source": "lev grossman's the magicians",
+    "tags": [],
+    "dateAdded": "2026-10-10T12:00:00.000Z"
+  },
+  {
+    "id": "andarte-19",
+    "word": "andarte",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Rebels in greek, used to refer to greek resistance fighters against the nazi occupation",
+    "source": "john fowles' the magus",
+    "tags": [],
+    "dateAdded": "2024-05-30T12:00:00.000Z"
+  },
+  {
+    "id": "andiron-20",
+    "word": "andiron",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "The metal supports that are used to hold logs in a fireplace (also known as firedogs)",
+    "source": "annie dillard's an american childhood",
+    "tags": [
+      "architecture"
+    ],
+    "dateAdded": "2022-03-26T12:00:00.000Z"
+  },
+  {
+    "id": "anfractuosity-21",
+    "word": "anfractuosity",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Being full of twists and turns, winding (like a thought process or a shoreline)",
+    "source": "swann's way",
+    "tags": [],
+    "dateAdded": "2026-10-10T12:00:00.000Z"
+  },
+  {
+    "id": "anodyne-22",
+    "word": "anodyne",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A painkiller! a literal type of drug",
+    "source": "",
+    "tags": [
+      "medical"
+    ],
+    "dateAdded": "2020-02-03T12:00:00.000Z"
+  },
+  {
+    "id": "antinomy-23",
+    "word": "antinomy",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A contradiction between two principles/ideas that are reasonable; a paradox",
+    "source": "thomas mann's the magic mountain",
+    "tags": [],
+    "dateAdded": "2024-11-21T12:00:00.000Z"
+  },
+  {
+    "id": "antinomian-24",
+    "word": "antinomian",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Someone who rejects established morality. came from some christian sects who believed that the grace of god meant that they didn't have to follow older rules",
+    "source": "an article about circumcision man",
+    "tags": [
+      "christian"
+    ],
+    "dateAdded": "2026-10-10T12:00:00.000Z"
+  },
+  {
+    "id": "apercu-25",
+    "word": "apercu",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A brief sketch or description of something, usually witty; an immediate impression",
+    "source": "",
+    "tags": [
+      "french"
+    ],
+    "dateAdded": "2021-05-16T12:00:00.000Z"
+  },
+  {
+    "id": "aperient-26",
+    "word": "aperient",
+    "partOfSpeech": [
+      "noun",
+      "adjective"
+    ],
+    "definition": "A mild laxative",
+    "source": "",
+    "tags": [
+      "medical"
+    ],
+    "dateAdded": "2020-01-30T12:00:00.000Z"
+  },
+  {
+    "id": "apodictic-27",
+    "word": "apodictic",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "From aristotelian logic: necessarily true, absolutely certain, self-evident, irrefutable. (according to m-w, \"It's a handy word that can describe a conclusive concept, a conclusive person, or even that conclusive person's conclusive remarks.\")",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2021-05-23T12:00:00.000Z"
+  },
+  {
+    "id": "apologue-28",
+    "word": "apologue",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A fable used to illustrate or convey a moral or a lesson. it often involves animals, as in aesop",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2021-03-28T12:00:00.000Z"
+  },
+  {
+    "id": "apophatic-29",
+    "word": "apophatic",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Understanding something (like god) by saying what it isn't. a greek word that means \"negation\"",
+    "source": "vinson cunningham's great expectations",
+    "tags": [
+      "christian"
+    ],
+    "dateAdded": "2026-10-10T12:00:00.000Z"
+  },
+  {
+    "id": "aporetic-30",
+    "word": "aporetic",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Skeptical or expressing doubt; in philosophy, a conundrum or state of puzzlement, perplexity or difficulty",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2026-10-11T12:56:19.341888Z"
+  },
+  {
+    "id": "apotropaic-31",
+    "word": "apotropaic",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Something that wards off bad luck, like evil eye charms, a type of magic--in greek, literally \"turn away\"",
+    "source": "bookforum dec/jan 2019 review of elaine pagels' why religion?",
+    "tags": [],
+    "dateAdded": "2020-01-23T12:00:00.000Z"
+  },
+  {
+    "id": "appanage-32",
+    "word": "appanage",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Giving land or a title to the younger kid of a king/queen, who otherwise wouldn't get anything; or a necessary accompaniment",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2020-06-22T12:00:00.000Z"
+  },
+  {
+    "id": "aqua-fortis-33",
+    "word": "aqua fortis",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "In alchemy, nitric acid--a corrosive liquid that dissolves all metals except gold",
+    "source": "villette",
+    "tags": [
+      "latin"
+    ],
+    "dateAdded": "2022-02-06T12:00:00.000Z"
+  },
+  {
+    "id": "armamentarium-34",
+    "word": "armamentarium",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "The stuff/resources you use for a specific activity, but especially the equipment, methods, and pharmaceuticals used in medicine",
+    "source": "covid vaccine reporting",
+    "tags": [
+      "latin",
+      "medical"
+    ],
+    "dateAdded": "2021-10-30T12:00:00.000Z"
+  },
+  {
+    "id": "arquebus-35",
+    "word": "arquebus",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A historical (15th-17th c.) long gun that preceded the musket and rifle, fired from a support and used in europe, the ottoman empire and japan",
+    "source": "hyouge mono",
+    "tags": [],
+    "dateAdded": "2021-08-22T12:00:00.000Z"
+  },
+  {
+    "id": "ashlar-36",
+    "word": "ashlar",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Stone that's been cut into rectangles, or the structures built with it. it's essentially stone bricks, but bigger?",
+    "source": "swann's way",
+    "tags": [
+      "architecture"
+    ],
+    "dateAdded": "2026-10-10T12:00:00.000Z"
+  },
+  {
+    "id": "asseverate-37",
+    "word": "asseverate",
+    "partOfSpeech": [
+      "verb"
+    ],
+    "definition": "To aver, assert or declare",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2020-06-22T12:00:00.000Z"
+  },
+  {
+    "id": "ataraxy-38",
+    "word": "ataraxy",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Also/more commonly ataraxia. a mood of tranquility, calmness untroubled by mental or emotional disquiet, what greek philosophers wanted to cultivate",
+    "source": "molloy",
+    "tags": [],
+    "dateAdded": "2021-06-06T12:00:00.000Z"
+  },
+  {
+    "id": "attar-39",
+    "word": "attar",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A fragrant essential oil, often made from rose petals (attar of roses)",
+    "source": "vis and ramin",
+    "tags": [],
+    "dateAdded": "2021-08-15T12:00:00.000Z"
+  },
+  {
+    "id": "auberge-40",
+    "word": "auberge",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "An inn or a hostel, but in french (so, french-speaking countries)",
+    "source": "anelise chen's clam down",
+    "tags": [
+      "french"
+    ],
+    "dateAdded": "2025-11-11T12:00:00.000Z"
+  },
+  {
+    "id": "autarky-41",
+    "word": "autarky",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Self-sufficiency, independence; often used to describe countries that are economically self-sufficient and independent, or a policy that will get a country there",
+    "source": "the atlantic",
+    "tags": [],
+    "dateAdded": "2021-10-03T12:00:00.000Z"
+  },
+  {
+    "id": "baldachin-43",
+    "word": "baldachin",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A ceremonial canopy fixed or carried over an important person or a sacred object, initially made of cloth but later stone or metal",
+    "source": "toby ferris's short life in a strange world",
+    "tags": [
+      "architecture",
+      "christian"
+    ],
+    "dateAdded": "2021-04-04T12:00:00.000Z"
+  },
+  {
+    "id": "ballista-44",
+    "word": "ballista",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "An ancient missile-firing siege weapon that fired bolts (like a crossbow) or heavy balls",
+    "source": "",
+    "tags": [
+      "architecture"
+    ],
+    "dateAdded": "2021-05-16T12:00:00.000Z"
+  },
+  {
+    "id": "ballotin-45",
+    "word": "ballotin",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "The fancy box that chocolates come in",
+    "source": "the incendiaries",
+    "tags": [
+      "french"
+    ],
+    "dateAdded": "2020-06-22T12:00:00.000Z"
+  },
+  {
+    "id": "barbican-46",
+    "word": "barbican",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A defensive structure that protected a castle, usually a tower at a gate or bridge",
+    "source": "",
+    "tags": [
+      "architecture"
+    ],
+    "dateAdded": "2021-05-16T12:00:00.000Z"
+  },
+  {
+    "id": "barbotine-47",
+    "word": "barbotine",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "The french term for slip (in ceramics)--a mixture of clay and water used to make raised patterns on pottery",
+    "source": "handmade in england",
+    "tags": [
+      "french"
+    ],
+    "dateAdded": "2025-11-11T12:00:00.000Z"
+  },
+  {
+    "id": "barrow-48",
+    "word": "barrow",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A mountain or mound, used in the names of english hills, or a mound of earth over a grave",
+    "source": "beowulf",
+    "tags": [],
+    "dateAdded": "2023-01-02T12:00:00.000Z"
+  },
+  {
+    "id": "bastinado-49",
+    "word": "bastinado",
+    "partOfSpeech": [
+      "noun",
+      "verb"
+    ],
+    "definition": "A blow with a stick or a cudgel; a punishment where someone canes the soles of your feet",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2026-10-11T12:56:19.342750Z"
+  },
+  {
+    "id": "batrachian-50",
+    "word": "batrachian",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Frog or toad-like",
+    "source": "john fowles' the magus",
+    "tags": [],
+    "dateAdded": "2024-05-30T12:00:00.000Z"
+  },
+  {
+    "id": "baud-51",
+    "word": "baud",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A unit of measurement in telecoms/electronics--per wikipedia, it's \"the number of distinct symbol changes (signaling events) made to the transmission medium per second in a digitally modulated signals\"--units are symbols per second or pulses per second",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2021-05-16T12:00:00.000Z"
+  },
+  {
+    "id": "bawn-52",
+    "word": "bawn",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "An enclosure of mud or stone walls around a farmhouse or castle in ireland, or the fortified court of a castle, originally used to protect cows from attack",
+    "source": "beowulf",
+    "tags": [
+      "architecture"
+    ],
+    "dateAdded": "2023-01-02T12:00:00.000Z"
+  },
+  {
+    "id": "beard-53",
+    "word": "beard",
+    "partOfSpeech": [
+      "verb"
+    ],
+    "definition": "To confront boldly or defy",
+    "source": "john fowles' the magus",
+    "tags": [],
+    "dateAdded": "2024-05-30T12:00:00.000Z"
+  },
+  {
+    "id": "bedizened-54",
+    "word": "bedizened",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Dressed up or decorated gaudily",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2021-05-16T12:00:00.000Z"
+  },
+  {
+    "id": "behovely-55",
+    "word": "behovely",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Necessary or advantageous; suitable or right. [related to \"behoove\"]",
+    "source": "a rumpus review about john l'heureux",
+    "tags": [],
+    "dateAdded": "2020-06-13T12:00:00.000Z"
+  },
+  {
+    "id": "beldame-56",
+    "word": "beldame",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Or beldam. old woman, or a malicious and ugly woman, especially an old one; a witch",
+    "source": "villette",
+    "tags": [],
+    "dateAdded": "2022-02-06T12:00:00.000Z"
+  },
+  {
+    "id": "belvedere-57",
+    "word": "belvedere",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Architecture: a structure--a cupola, turret, terrace, open gallery, etc.--that takes advantage of a good view",
+    "source": "robert louis stevenson's \"apology for idlers,\"",
+    "tags": [
+      "architecture"
+    ],
+    "dateAdded": "2022-04-17T12:00:00.000Z"
+  },
+  {
+    "id": "besom-58",
+    "word": "besom",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A broom, especially one made of twigs",
+    "source": "nathaniel hawthorne's short stories",
+    "tags": [],
+    "dateAdded": "2023-01-02T12:00:00.000Z"
+  },
+  {
+    "id": "bezant-59",
+    "word": "bezant",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "An ancient roman gold coin minted at byzantium (introduced 4th c. and used until fall of byzantine empire, 15th c); in heraldry a round gold circle. in architecture, flat disks",
+    "source": "erec and enide",
+    "tags": [
+      "architecture"
+    ],
+    "dateAdded": "2021-05-23T12:00:00.000Z"
+  },
+  {
+    "id": "bibelot-60",
+    "word": "bibelot",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A small ornamental object, a trinket",
+    "source": "",
+    "tags": [
+      "french"
+    ],
+    "dateAdded": "2021-04-17T12:00:00.000Z"
+  },
+  {
+    "id": "bis-61",
+    "word": "bis",
+    "partOfSpeech": [
+      "adverb"
+    ],
+    "definition": "Again or twice--used in music to repeat",
+    "source": "\"natives on the boat,\"",
+    "tags": [
+      "latin"
+    ],
+    "dateAdded": "2020-10-24T12:00:00.000Z"
+  },
+  {
+    "id": "bise-62",
+    "word": "bise",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A cold, dry wind from the northeast in switzerland, and the areas of france and italy around lake geneva",
+    "source": "art of personal essay",
+    "tags": [
+      "french"
+    ],
+    "dateAdded": "2026-10-11T12:56:19.343358Z"
+  },
+  {
+    "id": "bister-63",
+    "word": "bister",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A dark brownish yellowish pigment made from the soot of burned wood",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2021-03-28T12:00:00.000Z"
+  },
+  {
+    "id": "bleb-64",
+    "word": "bleb",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A blister or small bubble filled with fluid in tissues (medical)",
+    "source": "making of the atomic bomb",
+    "tags": [
+      "medical"
+    ],
+    "dateAdded": "2025-04-21T12:00:00.000Z"
+  },
+  {
+    "id": "blind-hole-65",
+    "word": "blind hole",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "As opposed to a through hole; a hole that doesn’t go all the way through a material",
+    "source": "making of the atomic bomb",
+    "tags": [],
+    "dateAdded": "2025-04-21T12:00:00.000Z"
+  },
+  {
+    "id": "blivet-66",
+    "word": "blivet",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A drawing of an impossible trident (the one that has two prongs if you look at it one way and three from another)",
+    "source": "a video i watched with d about optical illusions",
+    "tags": [],
+    "dateAdded": "2024-05-30T12:00:00.000Z"
+  },
+  {
+    "id": "bolide-67",
+    "word": "bolide",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A large meteor or fireball, especially one that explodes",
+    "source": "andre aciman's homo irrealis",
+    "tags": [],
+    "dateAdded": "2022-05-01T12:00:00.000Z"
+  },
+  {
+    "id": "bolster-68",
+    "word": "bolster",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A long, often cylindrical pillow or cushion",
+    "source": "beowulf",
+    "tags": [],
+    "dateAdded": "2023-01-02T12:00:00.000Z"
+  },
+  {
+    "id": "boscage-69",
+    "word": "boscage",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A thicket; a growth of massed trees or shrubs",
+    "source": "the tetris effect soundtrack",
+    "tags": [],
+    "dateAdded": "2021-03-28T12:00:00.000Z"
+  },
+  {
+    "id": "bothy-70",
+    "word": "bothy",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Scottish. rustic hut or cottage, free for anyone to use",
+    "source": "beowulf",
+    "tags": [
+      "architecture"
+    ],
+    "dateAdded": "2023-01-02T12:00:00.000Z"
+  },
+  {
+    "id": "brachiate-71",
+    "word": "brachiate",
+    "partOfSpeech": [
+      "verb"
+    ],
+    "definition": "Swing from branch to branch, as a monkey",
+    "source": "\"reading aloud,\" nicholson baker",
+    "tags": [],
+    "dateAdded": "2020-10-24T12:00:00.000Z"
+  },
+  {
+    "id": "breastwork-72",
+    "word": "breastwork",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A temporary fortification, like earth piled up to breast height to protect people standing behind it",
+    "source": "",
+    "tags": [
+      "architecture"
+    ],
+    "dateAdded": "2026-10-11T12:56:19.343837Z"
+  },
+  {
+    "id": "brehon-73",
+    "word": "brehon",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A type of judge in ancient irish law",
+    "source": "beowulf",
+    "tags": [],
+    "dateAdded": "2023-01-02T12:00:00.000Z"
+  },
+  {
+    "id": "brevet-74",
+    "word": "brevet",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "When military officers get a higher title as a reward, but not the pay associated with that reward",
+    "source": "kate bolick's spinster",
+    "tags": [],
+    "dateAdded": "2026-10-10T12:00:00.000Z"
+  },
+  {
+    "id": "bridewell-75",
+    "word": "bridewell",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A common name for prisons back in the day, after an old royal house that later became a prison (mostly england)",
+    "source": "personal essay reading, classic british essays",
+    "tags": [
+      "architecture"
+    ],
+    "dateAdded": "2020-01-30T12:00:00.000Z"
+  },
+  {
+    "id": "brightwork-76",
+    "word": "brightwork",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "The shiny parts on a boat (varnished woodwork, polished metal)",
+    "source": "DFW's \"a supposedly fun thing i'll never do again,\"",
+    "tags": [],
+    "dateAdded": "2021-03-28T12:00:00.000Z"
+  },
+  {
+    "id": "bris-77",
+    "word": "bris",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "The jewish ceremony of circumcision",
+    "source": "a rumpus review of eduardo halfon's mourning",
+    "tags": [],
+    "dateAdded": "2020-06-22T12:00:00.000Z"
+  },
+  {
+    "id": "burnous-78",
+    "word": "burnous",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A cape with a hood, worn by arabs in northwest africa (the maghreb)",
+    "source": "i capture the castle",
+    "tags": [
+      "french"
+    ],
+    "dateAdded": "2021-04-11T12:00:00.000Z"
+  },
+  {
+    "id": "cadastre-80",
+    "word": "cadastre",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "An official register of the quantity, value, and ownership of real estate used in apportioning taxes",
+    "source": "deirdre mask's the address book",
+    "tags": [],
+    "dateAdded": "2022-05-28T12:00:00.000Z"
+  },
+  {
+    "id": "caisson-81",
+    "word": "caisson",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A large watertight box in which construction can be done underwater, or (historically) a chest or wagon for holding/transporting ammo",
+    "source": "",
+    "tags": [
+      "architecture"
+    ],
+    "dateAdded": "2021-05-16T12:00:00.000Z"
+  },
+  {
+    "id": "calenture-82",
+    "word": "calenture",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A feverish delirium formerly supposed to affect sailors in the tropics",
+    "source": "",
+    "tags": [
+      "medical"
+    ],
+    "dateAdded": "2021-06-06T12:00:00.000Z"
+  },
+  {
+    "id": "caliche-83",
+    "word": "caliche",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A layer of soil with a lot of calcium carbonate, found in older soils near the surface, and also in dry areas (like deserts)",
+    "source": "making of the atomic bomb",
+    "tags": [],
+    "dateAdded": "2025-04-21T12:00:00.000Z"
+  },
+  {
+    "id": "calumet-84",
+    "word": "calumet",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A highly ornamented native american ceremonial pipe",
+    "source": "walter johnson's the broken heart of america",
+    "tags": [],
+    "dateAdded": "2021-03-28T12:00:00.000Z"
+  },
+  {
+    "id": "camarilla-85",
+    "word": "camarilla",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A group of scheming advisors around a ruler, usually nefarious",
+    "source": "\"a girl of the zeitgeist\"",
+    "tags": [],
+    "dateAdded": "2026-10-11T12:56:19.345009Z"
+  },
+  {
+    "id": "cantabrigian-86",
+    "word": "Cantabrigian",
+    "partOfSpeech": [
+      "noun",
+      "adjective"
+    ],
+    "definition": "Anything relating to Cambridge, the place in england (or massachussetts) or the university, particularly students/people affiliated with Cambridge. from the latin name for Cambridge. also see Oxonian, which is the same except for Oxford (latin name and all--oxonia)",
+    "source": "david price's geniuses of war",
+    "tags": [
+      "latin"
+    ],
+    "dateAdded": "2021-06-14T12:00:00.000Z"
+  },
+  {
+    "id": "cantillate-87",
+    "word": "cantillate",
+    "partOfSpeech": [
+      "verb"
+    ],
+    "definition": "To intone, chant, recite with musical tones, particularly a religious text",
+    "source": "an emerging critic application",
+    "tags": [
+      "latin"
+    ],
+    "dateAdded": "2021-06-14T12:00:00.000Z"
+  },
+  {
+    "id": "capirote-88",
+    "word": "capirote",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "The pointy hoods that some catholic sects dedicated to penitence wear; the kkk appropriated them",
+    "source": "the netanyahus",
+    "tags": [
+      "christian"
+    ],
+    "dateAdded": "2022-02-13T12:00:00.000Z"
+  },
+  {
+    "id": "capstan-89",
+    "word": "capstan",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A machine that lifts heavy things by rotating a cable around a vertical drum (like for rope on a ship). also a similar part on a tape recorder",
+    "source": "the lies of locke lamora",
+    "tags": [],
+    "dateAdded": "2020-01-16T12:00:00.000Z"
+  },
+  {
+    "id": "caracul-90",
+    "word": "caracul",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Wool from a kind of sheep in central asia",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2026-10-11T12:56:19.345333Z"
+  },
+  {
+    "id": "carboy-91",
+    "word": "carboy",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A glass container with a capacity of 1 to 16 gallons, usually for brewing beer or wine; as a unit of measurement, a 5 gallon bottle. (also known as a demijohn or lady jeanne)",
+    "source": "alex ross's the rest is noise",
+    "tags": [],
+    "dateAdded": "2023-02-05T12:00:00.000Z"
+  },
+  {
+    "id": "carking-92",
+    "word": "carking",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Burdensome, annoying, causing distress",
+    "source": "becca rothfeld's all things are too small",
+    "tags": [],
+    "dateAdded": "2025-11-11T12:00:00.000Z"
+  },
+  {
+    "id": "carrack-93",
+    "word": "carrack",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A three or four-masted portuguese sailing ship in the 14th-17th c.--big merchant and exploration ships (caravels were smaller)",
+    "source": "marc david baer's the ottomans",
+    "tags": [],
+    "dateAdded": "2021-10-24T12:00:00.000Z"
+  },
+  {
+    "id": "catafalque-94",
+    "word": "catafalque",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A raised platform for coffins to sit on during a funeral, often for famous people (like lincoln)",
+    "source": "sexual politics",
+    "tags": [
+      "architecture"
+    ],
+    "dateAdded": "2020-06-21T12:00:00.000Z"
+  },
+  {
+    "id": "catalepsy-95",
+    "word": "catalepsy",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A medical condition where a person becomes rigid, unresponsive and insensitive to pain, and you can rearrange their limbs like a puppet",
+    "source": "darkness visible",
+    "tags": [
+      "medical"
+    ],
+    "dateAdded": "2022-04-10T12:00:00.000Z"
+  },
+  {
+    "id": "catamite-96",
+    "word": "catamite",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A boy, usually in ancient greece or rome, kept by an older man for sex",
+    "source": "ender's shadow",
+    "tags": [],
+    "dateAdded": "2020-06-13T12:00:00.000Z"
+  },
+  {
+    "id": "catechumen-97",
+    "word": "catechumen",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "An unbaptized person who's working on becoming baptized (by studying christian doctrine)",
+    "source": "the guermantes way",
+    "tags": [
+      "christian"
+    ],
+    "dateAdded": "2026-10-10T12:00:00.000Z"
+  },
+  {
+    "id": "cauteries-98",
+    "word": "cauteries",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Tools or chemicals used to cauterize",
+    "source": "within a budding grove",
+    "tags": [
+      "medical"
+    ],
+    "dateAdded": "2026-10-10T12:00:00.000Z"
+  },
+  {
+    "id": "cenacle-99",
+    "word": "cenacle",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "The room where the last supper was held, or a literary clique, or a house of retreat",
+    "source": "rachel duffy-campos's stay home, stay happy",
+    "tags": [
+      "christian"
+    ],
+    "dateAdded": "2024-11-21T12:00:00.000Z"
+  },
+  {
+    "id": "cerise-100",
+    "word": "cerise",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A bright, vivid reddish pink (from the french for \"cherry\")",
+    "source": "",
+    "tags": [
+      "french"
+    ],
+    "dateAdded": "2021-03-28T12:00:00.000Z"
+  },
+  {
+    "id": "chantry-101",
+    "word": "chantry",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "An endowment for priests to celebrate masses for the founder's soul",
+    "source": "barbara tuchman's a distant mirror",
+    "tags": [
+      "christian"
+    ],
+    "dateAdded": "2024-11-21T12:00:00.000Z"
+  },
+  {
+    "id": "charivari-102",
+    "word": "charivari",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Pronounced \"shivaree,\" a european and north american custom of a mock parade and public serenade, to punish/shame someone who violated norms",
+    "source": "probably angle of repose",
+    "tags": [],
+    "dateAdded": "2023-01-02T12:00:00.000Z"
+  },
+  {
+    "id": "cheroot-103",
+    "word": "cheroot",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A cigar, but open at both ends and not tapered, rolled up like a tube of paper (and thus cheaper)--originating in india",
+    "source": "dorthe nors' wild swims",
+    "tags": [],
+    "dateAdded": "2021-06-21T12:00:00.000Z"
+  },
+  {
+    "id": "cheval-de-frise-plural-chevaux-104",
+    "word": "cheval de frise (plural: chevaux)",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A movable barrier made of a bunch of spikes or stakes, used to defend against cavalry (lit. frisian horses)",
+    "source": "john fowles' the magus",
+    "tags": [],
+    "dateAdded": "2024-05-30T12:00:00.000Z"
+  },
+  {
+    "id": "chicane-105",
+    "word": "chicane",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "An extra turn or bend in a road put in by design instead of geography (to slow down cars, for example)",
+    "source": "",
+    "tags": [
+      "french"
+    ],
+    "dateAdded": "2021-03-28T12:00:00.000Z"
+  },
+  {
+    "id": "chiliast-106",
+    "word": "chiliast",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Pronounced KILL-ee-ast. a synonym for a millenarian but specifically a christian one; someone who believes the second coming/apocalypse (a chiliad is a group of 1,000, from the greek chilioi)",
+    "source": "",
+    "tags": [
+      "christian"
+    ],
+    "dateAdded": "2021-06-06T12:00:00.000Z"
+  },
+  {
+    "id": "chirography-107",
+    "word": "chirography",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Handwriting or penmanship, or the study of same",
+    "source": "who will pay reparations on my soul?",
+    "tags": [],
+    "dateAdded": "2022-02-20T12:00:00.000Z"
+  },
+  {
+    "id": "chlorotic-108",
+    "word": "chlorotic",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Describing yellowed leaves from lack of chlorophyll, being afflicted with a plant disease",
+    "source": "john fowles' the magus",
+    "tags": [
+      "medical"
+    ],
+    "dateAdded": "2024-05-30T12:00:00.000Z"
+  },
+  {
+    "id": "choropleth-109",
+    "word": "choropleth",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A type of map where areas are shaded according to some metric",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2020-04-04T12:00:00.000Z"
+  },
+  {
+    "id": "chrism-110",
+    "word": "chrism",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Holy/consecrated oil used in christian rites like baptism for anointing",
+    "source": "the family roe",
+    "tags": [
+      "christian"
+    ],
+    "dateAdded": "2022-03-13T12:00:00.000Z"
+  },
+  {
+    "id": "ciborium-111",
+    "word": "ciborium",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A goblet for holding the bread of the eucharist",
+    "source": "the guermantes way",
+    "tags": [
+      "christian"
+    ],
+    "dateAdded": "2026-10-10T12:00:00.000Z"
+  },
+  {
+    "id": "cicisbeo-112",
+    "word": "cicisbeo",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A male companion--often extramarital--of an italian woman in 18th and 19th century italy; they would go to concerts and parties together",
+    "source": "sodom and gomorrah",
+    "tags": [],
+    "dateAdded": "2026-10-10T12:00:00.000Z"
+  },
+  {
+    "id": "cincture-113",
+    "word": "cincture",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A girdle or a belt; the ring around the base or top of a column, the act of encircling",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2021-03-28T12:00:00.000Z"
+  },
+  {
+    "id": "cinq-a-sept-114",
+    "word": "cinq a sept",
+    "partOfSpeech": [
+      "phrase"
+    ],
+    "definition": "Anything that happens between 5pm and 7pm, mostly trysts/visits to one's mistress",
+    "source": "anna burns' milkman",
+    "tags": [
+      "french"
+    ],
+    "dateAdded": "2021-06-13T12:00:00.000Z"
+  },
+  {
+    "id": "claque-115",
+    "word": "claque",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A group of sycophants, a group of people hired to heckle or applaud at performances",
+    "source": "",
+    "tags": [
+      "french"
+    ],
+    "dateAdded": "2021-04-17T12:00:00.000Z"
+  },
+  {
+    "id": "claustral-116",
+    "word": "claustral",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Enclosed, confining, like a cloister",
+    "source": "DFW's \"authority and american usage,\"",
+    "tags": [],
+    "dateAdded": "2020-06-22T12:00:00.000Z"
+  },
+  {
+    "id": "cleat-nautical-117",
+    "word": "cleat (nautical)",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "That metal thing with two horns that's used to secure ropes",
+    "source": "annie dillard's an american childhood",
+    "tags": [],
+    "dateAdded": "2022-03-26T12:00:00.000Z"
+  },
+  {
+    "id": "clerisy-118",
+    "word": "clerisy",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "The intelligentsia, \"a distinct class of learned or literary people.\" according to merriam-webster: \"English philosopher-poet Samuel Taylor Coleridge (1772-1834) believed that if humanity was to flourish, it was necessary to create a secular organization of learned individuals, 'whether poets, or philosophers, or scholars' to 'diffuse through the whole community … that quantity and quality of knowledge which was indispensable.' Coleridge named this hypothetical group the clerisy, a term he adapted from Klerisei, a German word for clergy (in preference, it seems, to the Russian term intelligentsia which we borrowed later, in the early 1900s).\"",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2021-06-06T12:00:00.000Z"
+  },
+  {
+    "id": "cicatrize-119",
+    "word": "cicatrize",
+    "partOfSpeech": [
+      "verb"
+    ],
+    "definition": "To heal by forming a scar (cicatrix=scar, or a mark that looks like a scar)",
+    "source": "jane eyre",
+    "tags": [
+      "medical"
+    ],
+    "dateAdded": "2021-06-06T12:00:00.000Z"
+  },
+  {
+    "id": "cinerarium-120",
+    "word": "cinerarium",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A place to put cremated remains",
+    "source": "the beak of the finch",
+    "tags": [
+      "architecture",
+      "latin"
+    ],
+    "dateAdded": "2026-10-10T12:00:00.000Z"
+  },
+  {
+    "id": "circumvallation-121",
+    "word": "circumvallation",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "To surround with walls or ramparts or siegeworks (as an attack in war)",
+    "source": "robert louis stevenson's \"on marriage,\"",
+    "tags": [
+      "architecture"
+    ],
+    "dateAdded": "2022-04-17T12:00:00.000Z"
+  },
+  {
+    "id": "coffle-122",
+    "word": "coffle",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A line of slaves, prisoners or animals bound and driven together",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2021-03-28T12:00:00.000Z"
+  },
+  {
+    "id": "coign-123",
+    "word": "coign",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A projecting corner of a wall or building, often somewhere you can gain a vantage point",
+    "source": "(from toby ferris's short life in a strange world",
+    "tags": [
+      "architecture"
+    ],
+    "dateAdded": "2021-04-04T12:00:00.000Z"
+  },
+  {
+    "id": "coir-124",
+    "word": "coir",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "The fiber from the outside of a coconut, used to make ropes, etc",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2021-03-28T12:00:00.000Z"
+  },
+  {
+    "id": "collation-125",
+    "word": "collation",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A light meal (what you could eat on fast days)",
+    "source": "john fowles' the magus",
+    "tags": [],
+    "dateAdded": "2024-05-30T12:00:00.000Z"
+  },
+  {
+    "id": "collyrium-126",
+    "word": "collyrium",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "An old word for eyewash (as a kind of medicine)",
+    "source": "villette",
+    "tags": [
+      "medical"
+    ],
+    "dateAdded": "2022-02-06T12:00:00.000Z"
+  },
+  {
+    "id": "commissure-127",
+    "word": "commissure",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A point of union between two anatomical parts (ex. where heart valves join, or the joint between two bones); a connecting band of nerve tissue between the two halves of the brain or spinal cord",
+    "source": "",
+    "tags": [
+      "medical"
+    ],
+    "dateAdded": "2021-03-28T12:00:00.000Z"
+  },
+  {
+    "id": "condign-128",
+    "word": "condign",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Appropriate to a crime (of punishments), deserved",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2021-04-17T12:00:00.000Z"
+  },
+  {
+    "id": "condyle-129",
+    "word": "condyle",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Rounded parts at the ends of some bones, which form joints",
+    "source": "",
+    "tags": [
+      "medical"
+    ],
+    "dateAdded": "2021-04-17T12:00:00.000Z"
+  },
+  {
+    "id": "constringe-130",
+    "word": "constringe",
+    "partOfSpeech": [
+      "verb"
+    ],
+    "definition": "To cause to shrink, like \"constrict\"",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2020-02-02T12:00:00.000Z"
+  },
+  {
+    "id": "contemn-131",
+    "word": "contemn",
+    "partOfSpeech": [
+      "verb"
+    ],
+    "definition": "The verb form of contempt--to scorn or treat with contempt",
+    "source": "within a budding grove",
+    "tags": [],
+    "dateAdded": "2026-10-10T12:00:00.000Z"
+  },
+  {
+    "id": "conte-philosophique-132",
+    "word": "conte philosophique",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Philosophical tale, but in french, like candide",
+    "source": "",
+    "tags": [
+      "french"
+    ],
+    "dateAdded": "2023-01-02T12:00:00.000Z"
+  },
+  {
+    "id": "contumacious-133",
+    "word": "contumacious",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Stubbornly disobedient, rebellious (particularly to the law)--not to be confused with \"contumely\"",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2021-04-25T12:00:00.000Z"
+  },
+  {
+    "id": "cordon-sanitaire-134",
+    "word": "cordon sanitaire",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A barrier to prevent the spread of disease/other stuff to be contained",
+    "source": "\"comforting myths\" harper's essay",
+    "tags": [
+      "french"
+    ],
+    "dateAdded": "2026-10-11T12:56:19.347123Z"
+  },
+  {
+    "id": "cordovan-135",
+    "word": "cordovan",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Leather made from horsehide, or shoes made from that leather, or the reddish-brown color of that leather",
+    "source": "annie dillard's an american childhood",
+    "tags": [],
+    "dateAdded": "2022-03-26T12:00:00.000Z"
+  },
+  {
+    "id": "corniche-136",
+    "word": "corniche",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A road on the side of a coast, especially a cliff--often used in middle eastern countries",
+    "source": "peter hessler and wendell steavenson pieces",
+    "tags": [],
+    "dateAdded": "2020-11-14T12:00:00.000Z"
+  },
+  {
+    "id": "corrida-137",
+    "word": "corrida",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A bullfight",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2021-04-17T12:00:00.000Z"
+  },
+  {
+    "id": "cosmoline-138",
+    "word": "cosmoline",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A brown waxy substance used to prevent firearms and other metal tools from rusting (including the atomic bombs??)",
+    "source": "making of the atomic bomb",
+    "tags": [],
+    "dateAdded": "2025-04-21T12:00:00.000Z"
+  },
+  {
+    "id": "costiveness-139",
+    "word": "costiveness",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "The state of being constipated, but also stingy/ungenerous, or slow in action and expression",
+    "source": "",
+    "tags": [
+      "medical"
+    ],
+    "dateAdded": "2021-05-16T12:00:00.000Z"
+  },
+  {
+    "id": "cotta-140",
+    "word": "cotta",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A short drapey robe thing worn by catholic priests",
+    "source": "barbara pym's a glass of blessings",
+    "tags": [
+      "christian"
+    ],
+    "dateAdded": "2025-11-11T12:00:00.000Z"
+  },
+  {
+    "id": "coulee-141",
+    "word": "coulee",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A word used to describe landforms that are kind of like valleys or canyons or drainage flows (like lava flows)",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2021-05-16T12:00:00.000Z"
+  },
+  {
+    "id": "coup-de-foudre-142",
+    "word": "coup de foudre",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "An astonishing occurrence, mostly love at first sight (in french, literally \"lightning bolt\")",
+    "source": "dorothy armstrong's threads of empire",
+    "tags": [
+      "french"
+    ],
+    "dateAdded": "2025-11-11T12:00:00.000Z"
+  },
+  {
+    "id": "couvade-143",
+    "word": "couvade",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Rituals in some cultures where the partners of pregnant women act like they're giving birth/experiencing the same symptoms",
+    "source": "sexual politics",
+    "tags": [],
+    "dateAdded": "2020-06-21T12:00:00.000Z"
+  },
+  {
+    "id": "crapulous-144",
+    "word": "crapulous",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Obviously drunk, or marked by excessive eating",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2020-06-13T12:00:00.000Z"
+  },
+  {
+    "id": "crazing-145",
+    "word": "crazing",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A pattern of cracks over a surface, as in pottery (or anything else)",
+    "source": "cheryl mendelson's home comforts",
+    "tags": [],
+    "dateAdded": "2023-02-12T12:00:00.000Z"
+  },
+  {
+    "id": "cr-che-146",
+    "word": "crèche",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A nativity tableau (like where jesus is in a manger and stuff) displayed at christmas, or a day nursery, somewhere where babies are gathered to be looked after",
+    "source": "geoff dyer's out of sheer rage",
+    "tags": [
+      "christian"
+    ],
+    "dateAdded": "2021-03-28T12:00:00.000Z"
+  },
+  {
+    "id": "crepitus-147",
+    "word": "crepitus",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "The sound of creaky joints, or in general bone and cartilage rubbing together",
+    "source": "the netanyahus",
+    "tags": [
+      "medical"
+    ],
+    "dateAdded": "2022-02-13T12:00:00.000Z"
+  },
+  {
+    "id": "croupier-148",
+    "word": "croupier",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "The dealer at a gambling table, especially someone who helps deal with bets and payouts",
+    "source": "",
+    "tags": [
+      "french"
+    ],
+    "dateAdded": "2021-05-23T12:00:00.000Z"
+  },
+  {
+    "id": "cursorial-149",
+    "word": "cursorial",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Adapted to running (as an animal like a cheetah), or anything related to running",
+    "source": "a typo in ella fox-marten's rumpus review of fake accounts",
+    "tags": [],
+    "dateAdded": "2021-03-28T12:00:00.000Z"
+  },
+  {
+    "id": "cyma-curve-150",
+    "word": "cyma curve",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "An s-shaped curve made up of a concave and convex curve stuck together, used in architecture and furniture (kyma in greek means \"wave\")",
+    "source": "handmade in england",
+    "tags": [
+      "architecture"
+    ],
+    "dateAdded": "2025-11-11T12:00:00.000Z"
+  },
+  {
+    "id": "dado-152",
+    "word": "dado",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "The lower part of an interior wall, especially when it's decorative/covered in something; or part of a column's pedestal above the base",
+    "source": "",
+    "tags": [
+      "architecture"
+    ],
+    "dateAdded": "2021-03-28T12:00:00.000Z"
+  },
+  {
+    "id": "daedal-153",
+    "word": "daedal",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Intricate, skillful, artistic (from daedalus, obvs)",
+    "source": "the incendiaries",
+    "tags": [],
+    "dateAdded": "2020-06-22T12:00:00.000Z"
+  },
+  {
+    "id": "damascened-154",
+    "word": "damascened",
+    "partOfSpeech": [
+      "verb"
+    ],
+    "definition": "Ornamented with wavy patterns or inlaid with gold or silver, damascening=the art of inlaying different metals into one another, usually gold or silver onto steel",
+    "source": "beowulf",
+    "tags": [],
+    "dateAdded": "2023-01-02T12:00:00.000Z"
+  },
+  {
+    "id": "davening-155",
+    "word": "davening",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "When jews move their lips as in prayer (or to recite the prescribed liturgical prayers)",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2020-06-13T12:00:00.000Z"
+  },
+  {
+    "id": "davit-156",
+    "word": "davit",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A small crane on a ship to lower lifeboats",
+    "source": "john fowles' the magus",
+    "tags": [],
+    "dateAdded": "2024-05-30T12:00:00.000Z"
+  },
+  {
+    "id": "debouch-157",
+    "word": "debouch",
+    "partOfSpeech": [
+      "verb"
+    ],
+    "definition": "To emerge or discharge (as rivers do, or troops)--from the latin for \"cheek\", like a squirrel freeing a nut from its mouth, spitting it out",
+    "source": "",
+    "tags": [
+      "french",
+      "latin"
+    ],
+    "dateAdded": "2020-02-03T12:00:00.000Z"
+  },
+  {
+    "id": "debouchement-158",
+    "word": "debouchement",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "The act of marching from a confined space into the open (in warfare) or where runoff from a small, confined space emerges into a larger, broader space (in river geography). anything coming out of the mouth of something, because that's literally what the word means (bouche!)",
+    "source": "jennifer egan's a visit from the goon squad",
+    "tags": [
+      "french"
+    ],
+    "dateAdded": "2021-06-13T12:00:00.000Z"
+  },
+  {
+    "id": "decalcomania-159",
+    "word": "decalcomania",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "An art technique where ink or paint is put on paper to transfer onto another material, like glass or porcelain or ceramic; decal--something printed that can be transferred onto another surface",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2020-06-13T12:00:00.000Z"
+  },
+  {
+    "id": "deglutition-160",
+    "word": "deglutition",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Swallowing, but medical",
+    "source": "sodom and gomorrah",
+    "tags": [
+      "medical"
+    ],
+    "dateAdded": "2026-10-10T12:00:00.000Z"
+  },
+  {
+    "id": "demarche-161",
+    "word": "demarche",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "In diplomacy, the way one government makes its opinions and requests known to another government",
+    "source": "fintan o'toole's we don’t know ourselves",
+    "tags": [
+      "french"
+    ],
+    "dateAdded": "2026-10-10T12:00:00.000Z"
+  },
+  {
+    "id": "demimonde-162",
+    "word": "demimonde",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Fr. \"half world,\" the class of women on the edges of respectable society (prostitutes), or any low-prestige class",
+    "source": "milk blood heat",
+    "tags": [
+      "french"
+    ],
+    "dateAdded": "2021-04-24T12:00:00.000Z"
+  },
+  {
+    "id": "dernier-cri-163",
+    "word": "dernier cri",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "The very latest fashion, the last word in ___. Fr. lit. \"the last cry.\"",
+    "source": "",
+    "tags": [
+      "french"
+    ],
+    "dateAdded": "2021-03-28T12:00:00.000Z"
+  },
+  {
+    "id": "descant-164",
+    "word": "descant",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "The soprano line above/embellishing a melody; v. talking tediously and at length",
+    "source": "at the stranger's gate",
+    "tags": [],
+    "dateAdded": "2020-06-22T12:00:00.000Z"
+  },
+  {
+    "id": "desipience-165",
+    "word": "desipience",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Time-wasting with silly things",
+    "source": "john fowles' the magus",
+    "tags": [
+      "latin"
+    ],
+    "dateAdded": "2024-05-30T12:00:00.000Z"
+  },
+  {
+    "id": "de-trop-166",
+    "word": "de trop",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Too much, too many; superfluous, excessive (literally from the french)",
+    "source": "frank kermode's the sense of an ending",
+    "tags": [
+      "french"
+    ],
+    "dateAdded": "2021-06-13T12:00:00.000Z"
+  },
+  {
+    "id": "diapason-167",
+    "word": "diapason",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "An organ stop, a \"grand swelling burst of harmony\"",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2026-10-11T12:56:19.348393Z"
+  },
+  {
+    "id": "dibber-168",
+    "word": "dibber",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A pointed stick to make holes in the ground to put seeds in",
+    "source": "would i lie to you",
+    "tags": [],
+    "dateAdded": "2026-10-10T12:00:00.000Z"
+  },
+  {
+    "id": "distich-169",
+    "word": "distich",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A unit of two lines in a poem, mostly couplets",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2020-06-13T12:00:00.000Z"
+  },
+  {
+    "id": "distrait-170",
+    "word": "distrait",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Distracted, divided or withdrawn in attention",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2021-03-28T12:00:00.000Z"
+  },
+  {
+    "id": "dithyramb-171",
+    "word": "dithyramb",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A choral song in honor of dionysus (paeans were for apollo, and \"more sober\"--encyclopedia brittanica)",
+    "source": "madame bovary",
+    "tags": [],
+    "dateAdded": "2020-04-28T12:00:00.000Z"
+  },
+  {
+    "id": "divagate-172",
+    "word": "divagate",
+    "partOfSpeech": [
+      "verb"
+    ],
+    "definition": "To stray or digress from a course or subject",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2021-05-16T12:00:00.000Z"
+  },
+  {
+    "id": "domdaniel-173",
+    "word": "Domdaniel",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A den of iniquity; originally an underwater cavernous hall where magicians and evil spirits hung out in arabic tales",
+    "source": "the house of the seven gables",
+    "tags": [],
+    "dateAdded": "2023-01-02T12:00:00.000Z"
+  },
+  {
+    "id": "donn-e-174",
+    "word": "donnée",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "The set of assumptions on which a work of fiction or drama proceeds, the theme of a narrative, a \"given\"",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2021-06-06T12:00:00.000Z"
+  },
+  {
+    "id": "doxa-175",
+    "word": "doxa",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A commonly accepted belief or opinion (in ancient greek, opposed to actual knowledge?)",
+    "source": "steven johnson's where good ideas come from",
+    "tags": [],
+    "dateAdded": "2024-05-30T12:00:00.000Z"
+  },
+  {
+    "id": "drugget-176",
+    "word": "drugget",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A coarse, cheap fabric mostly used for rugs",
+    "source": "barbara pym's a glass of blessings",
+    "tags": [],
+    "dateAdded": "2025-11-11T12:00:00.000Z"
+  },
+  {
+    "id": "druse-druzy-177",
+    "word": "druse/druzy",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A set of tiny crystals that forms on another stone. quartz is a common druzy type, and it's considered beautiful because it glitters (so many surfaces to catch the light!)",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2021-03-28T12:00:00.000Z"
+  },
+  {
+    "id": "dry-dock-178",
+    "word": "dry dock",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A basin that can be flooded to let a ship in, and then drained so people can build/repair/maintain the ship",
+    "source": "atul gawande's coaching essay",
+    "tags": [
+      "architecture"
+    ],
+    "dateAdded": "2020-04-20T12:00:00.000Z"
+  },
+  {
+    "id": "drumlin-179",
+    "word": "drumlin",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A kind of small hill left by glaciers, found in ireland, canada and northern parts of the US",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2020-01-21T12:00:00.000Z"
+  },
+  {
+    "id": "echt-181",
+    "word": "echt",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "True or genuine, often used to describe a person from a particular place",
+    "source": "in the freud archives",
+    "tags": [],
+    "dateAdded": "2026-10-11T12:56:19.348893Z"
+  },
+  {
+    "id": "claircissement-182",
+    "word": "éclaircissement",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "An explanation for something obscure, enlightenment",
+    "source": "",
+    "tags": [
+      "french"
+    ],
+    "dateAdded": "2021-06-21T12:00:00.000Z"
+  },
+  {
+    "id": "ecumenical-183",
+    "word": "ecumenical",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Relating to a bunch of churches combined, or promoting unity among christian churches. kinda similar to \"catholic,\" as far as i can tell",
+    "source": "the family roe",
+    "tags": [
+      "christian",
+      "latin"
+    ],
+    "dateAdded": "2022-03-13T12:00:00.000Z"
+  },
+  {
+    "id": "eidolon-184",
+    "word": "eidolon",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A phantom, specter; an idealized image of a person or thing",
+    "source": "in ancient greek literature, the spirit-image of a living or dead person (",
+    "tags": [],
+    "dateAdded": "2021-05-16T12:00:00.000Z"
+  },
+  {
+    "id": "eisegetical-185",
+    "word": "eisegetical",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "A very subjective interpretation of a text, \"the interpretation of a text (as of the Bible) by reading into it one's own ideas.\" the opposite of exigesis",
+    "source": "the netanyahus",
+    "tags": [
+      "christian"
+    ],
+    "dateAdded": "2022-02-13T12:00:00.000Z"
+  },
+  {
+    "id": "eleemosynary-186",
+    "word": "eleemosynary",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Related to or supported by charity, charitable",
+    "source": "house of the seven gables",
+    "tags": [],
+    "dateAdded": "2023-01-02T12:00:00.000Z"
+  },
+  {
+    "id": "embonpoint-187",
+    "word": "embonpoint",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Stoutness or plumpness, in a person--but like, in a good way (literally, from middle french, \"in good condition,\" and pronounced \"ahn-bahn-pwah\")",
+    "source": "old in art school",
+    "tags": [
+      "french"
+    ],
+    "dateAdded": "2021-05-23T12:00:00.000Z"
+  },
+  {
+    "id": "embrasure-188",
+    "word": "embrasure",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "In a castle or fort wall, an opening with slanted sides for cannons to shoot out of",
+    "source": "the guermantes way",
+    "tags": [
+      "architecture"
+    ],
+    "dateAdded": "2026-10-10T12:00:00.000Z"
+  },
+  {
+    "id": "emmet-189",
+    "word": "emmet",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "An old english way to say ant",
+    "source": "george eliot's mill on the floss",
+    "tags": [],
+    "dateAdded": "2025-11-11T12:00:00.000Z"
+  },
+  {
+    "id": "empery-190",
+    "word": "empery",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Wide dominion, empire",
+    "source": "beowulf",
+    "tags": [],
+    "dateAdded": "2023-01-02T12:00:00.000Z"
+  },
+  {
+    "id": "emunction-191",
+    "word": "emunction",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "The act of wiping or blowing one's nose",
+    "source": "molloy",
+    "tags": [],
+    "dateAdded": "2021-06-06T12:00:00.000Z"
+  },
+  {
+    "id": "entelechy-192",
+    "word": "entelechy",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "In greek philosophy, the realization of a potential",
+    "source": "the netanyahus",
+    "tags": [],
+    "dateAdded": "2022-02-13T12:00:00.000Z"
+  },
+  {
+    "id": "entrepot-193",
+    "word": "entrepot",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A port, city or trading post where goods are stored to be exported and imported, mostly during the \"age of sail.\" i think \"entry point,\" even though it means more like \"a place between.\"",
+    "source": "marc david baer's the ottomans",
+    "tags": [],
+    "dateAdded": "2021-10-24T12:00:00.000Z"
+  },
+  {
+    "id": "en-brosse-194",
+    "word": "en brosse",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A short men's hairstyle that sticks up. in french, this means \"like a brush\"",
+    "source": "the guermantes way",
+    "tags": [
+      "french"
+    ],
+    "dateAdded": "2026-10-10T12:00:00.000Z"
+  },
+  {
+    "id": "epergne-195",
+    "word": "epergne",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A decorative centerpiece (made of metal usually, but also glass or porcelain) with a central bowl and smaller bowls surrounding it, used in the 18th and 19th century",
+    "source": "buddenbrooks",
+    "tags": [
+      "french"
+    ],
+    "dateAdded": "2023-07-17T12:00:00.000Z"
+  },
+  {
+    "id": "epigone-196",
+    "word": "epigone",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Follower, disciple, inferior imitator",
+    "source": "DFW's \"authority and american usage,\"",
+    "tags": [],
+    "dateAdded": "2020-06-22T12:00:00.000Z"
+  },
+  {
+    "id": "eremitical-197",
+    "word": "eremitical",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Hermit-like",
+    "source": "the penguin history of the world",
+    "tags": [
+      "christian"
+    ],
+    "dateAdded": "2026-10-10T12:00:00.000Z"
+  },
+  {
+    "id": "eristic-198",
+    "word": "eristic",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Argument that merely seeks to dispute someone else's argument, instead of searching for truth; argumentative and logically invalid. n. a person devoted to disputing others' logic [eris, the goddess of strife]",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2020-06-13T12:00:00.000Z"
+  },
+  {
+    "id": "eruv-199",
+    "word": "eruv",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "An area, bound by wire suspended in the air, which lets jews consider the area inside it a \"private\" domain on the sabbath",
+    "source": "rumpus review of \"the lightness,\"",
+    "tags": [],
+    "dateAdded": "2020-10-24T12:00:00.000Z"
+  },
+  {
+    "id": "eschar-200",
+    "word": "eschar",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A piece of dead tissue that falls off the skin but is not a scab (which is just dried blood and pus), often from burn injuries",
+    "source": "john fowles' the magus",
+    "tags": [
+      "medical"
+    ],
+    "dateAdded": "2024-05-30T12:00:00.000Z"
+  },
+  {
+    "id": "esemplastic-201",
+    "word": "esemplastic",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Unifying, molding into one; shaping or having the power to shape disparate things into a unified whole (often used of poetic imaginations)",
+    "source": "frank kermode's the sense of an ending",
+    "tags": [],
+    "dateAdded": "2021-06-13T12:00:00.000Z"
+  },
+  {
+    "id": "esurient-202",
+    "word": "esurient",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Hungry, greedy",
+    "source": "ariel levy's the rules do not apply",
+    "tags": [],
+    "dateAdded": "2023-01-02T12:00:00.000Z"
+  },
+  {
+    "id": "etagere-203",
+    "word": "etagere",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Furniture with shelves for displaying ornaments",
+    "source": "an orchestra of minorities",
+    "tags": [
+      "architecture",
+      "french"
+    ],
+    "dateAdded": "2020-06-22T12:00:00.000Z"
+  },
+  {
+    "id": "etui-204",
+    "word": "etui",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A small ornamental case for holding needles and stuff",
+    "source": "thomas mann's the magic mountain",
+    "tags": [
+      "french"
+    ],
+    "dateAdded": "2024-11-21T12:00:00.000Z"
+  },
+  {
+    "id": "euphuism-205",
+    "word": "euphuism",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Language that's artificially elegant, an elizabethan literary style with too many devices in it--after a work by john lyly",
+    "source": "DFW's \"authority and american usage,\"",
+    "tags": [],
+    "dateAdded": "2020-06-22T12:00:00.000Z"
+  },
+  {
+    "id": "excelsior-206",
+    "word": "excelsior",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Wood shavings used for packing objects, named after a company of the same name that manufactured this",
+    "source": "michael chabon's wonder boys",
+    "tags": [],
+    "dateAdded": "2024-05-30T12:00:00.000Z"
+  },
+  {
+    "id": "exergue-207",
+    "word": "exergue",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A space on a coin's back below the central design (often to put a date or other minor inscription)",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2021-03-28T12:00:00.000Z"
+  },
+  {
+    "id": "exiguous-208",
+    "word": "exiguous",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Inadequate, scanty",
+    "source": "john fowles' the magus",
+    "tags": [],
+    "dateAdded": "2024-05-30T12:00:00.000Z"
+  },
+  {
+    "id": "exiguity-209",
+    "word": "exiguity",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "The state of being very scanty or inadequate",
+    "source": "the guermantes way",
+    "tags": [],
+    "dateAdded": "2026-10-10T12:00:00.000Z"
+  },
+  {
+    "id": "exogamy-210",
+    "word": "exogamy",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "The custom of marrying outside one's social group (clan, tribe, etc.)",
+    "source": "michael chabon's wonder boys",
+    "tags": [],
+    "dateAdded": "2024-05-30T12:00:00.000Z"
+  },
+  {
+    "id": "factitious-212",
+    "word": "factitious",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Produced by humans instead of naturally, formed from an artificial standard, not genuine in some way",
+    "source": "the age of innocence",
+    "tags": [],
+    "dateAdded": "2023-01-02T12:00:00.000Z"
+  },
+  {
+    "id": "facture-213",
+    "word": "facture",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "The quality of how a painting/work of art is made; an artist's characteristic handling of paint",
+    "source": "tom rachman's the italian teacher",
+    "tags": [],
+    "dateAdded": "2021-06-21T12:00:00.000Z"
+  },
+  {
+    "id": "fard-214",
+    "word": "fard",
+    "partOfSpeech": [
+      "verb"
+    ],
+    "definition": "To put makeup on one's face",
+    "source": "john fowles' the magus",
+    "tags": [],
+    "dateAdded": "2024-05-30T12:00:00.000Z"
+  },
+  {
+    "id": "farrow-215",
+    "word": "farrow",
+    "partOfSpeech": [
+      "noun",
+      "verb"
+    ],
+    "definition": "A litter of pigs, or to give birth as a pig",
+    "source": "the NYT crossword",
+    "tags": [],
+    "dateAdded": "2022-01-09T12:00:00.000Z"
+  },
+  {
+    "id": "fane-216",
+    "word": "fane",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A temple or shrine or church",
+    "source": "d attempts to spell \"feign\" in bananagrams and looks it up",
+    "tags": [
+      "christian"
+    ],
+    "dateAdded": "2021-08-08T12:00:00.000Z"
+  },
+  {
+    "id": "fanfaron-217",
+    "word": "fanfaron",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A braggart or empty boaster; or fanfare",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2021-06-06T12:00:00.000Z"
+  },
+  {
+    "id": "fauld-218",
+    "word": "fauld",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Part of medieval armor--the metal \"skirt\" below the breastplate, but only the front part",
+    "source": "neil shubin's some assembly required",
+    "tags": [],
+    "dateAdded": "2022-05-21T12:00:00.000Z"
+  },
+  {
+    "id": "faute-de-mieux-219",
+    "word": "faute de mieux",
+    "partOfSpeech": [
+      "phrase"
+    ],
+    "definition": "\"for lack of something better\"",
+    "source": "iris murdoch's existentialists and mystics",
+    "tags": [
+      "french"
+    ],
+    "dateAdded": "2024-05-30T12:00:00.000Z"
+  },
+  {
+    "id": "febrifuge-220",
+    "word": "febrifuge",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Something that reduces fever",
+    "source": "the guermantes way",
+    "tags": [
+      "medical"
+    ],
+    "dateAdded": "2026-10-10T12:00:00.000Z"
+  },
+  {
+    "id": "fellaheen-221",
+    "word": "fellaheen",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Pl. (singular is \"fellah\") a peasant or farm laborer in an arab country, especially egypt",
+    "source": "possibly angle of repose",
+    "tags": [],
+    "dateAdded": "2023-01-02T12:00:00.000Z"
+  },
+  {
+    "id": "ferruginous-222",
+    "word": "ferruginous",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Of, relating to, or containing iron; or rusty red (like ferruginous hawks)",
+    "source": "",
+    "tags": [
+      "latin"
+    ],
+    "dateAdded": "2021-06-13T12:00:00.000Z"
+  },
+  {
+    "id": "fetor-223",
+    "word": "fetor",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A strong, bad smell; stench",
+    "source": "a crossword",
+    "tags": [
+      "medical"
+    ],
+    "dateAdded": "2020-06-21T12:00:00.000Z"
+  },
+  {
+    "id": "firn-224",
+    "word": "firn",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Gray, old snow that's melted and refrozen and melted again",
+    "source": "paul bierman's when the ice is gone",
+    "tags": [],
+    "dateAdded": "2024-11-21T12:00:00.000Z"
+  },
+  {
+    "id": "fissiparous-225",
+    "word": "fissiparous",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Tending to break up into small parts; organisms that reproduce by splitting",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2021-04-17T12:00:00.000Z"
+  },
+  {
+    "id": "fistmele-226",
+    "word": "fistmele",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A unit of measurement equal to the width of a fist, used in archery to measure the distance between a bow and the string for proper tautness. somehow roughly 6.5 inches",
+    "source": "justin beal's sandfuture",
+    "tags": [],
+    "dateAdded": "2022-04-10T12:00:00.000Z"
+  },
+  {
+    "id": "flacon-227",
+    "word": "flacon",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A small ornamental bottle, often for perfume",
+    "source": "delayed rays of a star",
+    "tags": [
+      "french"
+    ],
+    "dateAdded": "2020-06-22T12:00:00.000Z"
+  },
+  {
+    "id": "flak-228",
+    "word": "flak",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Anti-aircraft fire from german anti-aircraft guns, which were called Flugabwehrkanone (i.e. flak)",
+    "source": "making of the atomic bomb",
+    "tags": [],
+    "dateAdded": "2025-04-21T12:00:00.000Z"
+  },
+  {
+    "id": "flatigious-229",
+    "word": "flatigious",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Villainous, marked by scandalous crime or vice. [related to the latin for whip, flagitium = shameful thing]",
+    "source": "",
+    "tags": [
+      "latin"
+    ],
+    "dateAdded": "2020-06-13T12:00:00.000Z"
+  },
+  {
+    "id": "flux-230",
+    "word": "flux",
+    "partOfSpeech": [
+      "verb"
+    ],
+    "definition": "To cause to become fluid",
+    "source": "john fowles' the magus",
+    "tags": [],
+    "dateAdded": "2024-05-30T12:00:00.000Z"
+  },
+  {
+    "id": "foehn-231",
+    "word": "foehn",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A warm wind that blows down the leeward slope of a mountain, like the alps",
+    "source": "thomas mann's the magic mountain",
+    "tags": [],
+    "dateAdded": "2024-11-21T12:00:00.000Z"
+  },
+  {
+    "id": "foible-232",
+    "word": "foible",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Sure, it means \"weakness,\" but the word originally comes from the fragile part of a fencing blade, between the middle and the tip (sort of like a foil, but different)",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2020-01-17T12:00:00.000Z"
+  },
+  {
+    "id": "friable-233",
+    "word": "friable",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Easily crumbled or reduced to powder, like kinds of rock",
+    "source": "cookie clicker",
+    "tags": [],
+    "dateAdded": "2020-06-13T12:00:00.000Z"
+  },
+  {
+    "id": "fugacious-234",
+    "word": "fugacious",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Fleeting, lasting a short time",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2021-06-13T12:00:00.000Z"
+  },
+  {
+    "id": "fugleman-235",
+    "word": "fugleman",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Someone at the front of soldiers to serve as a model for their exercises, or a leader/spokesman of a movement",
+    "source": "the guermantes way",
+    "tags": [],
+    "dateAdded": "2026-10-10T12:00:00.000Z"
+  },
+  {
+    "id": "fuliginous-236",
+    "word": "fuliginous",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Sooty, murky, dark and dusty (fuligo=latin for soot)",
+    "source": "the guermantes way",
+    "tags": [
+      "latin"
+    ],
+    "dateAdded": "2026-10-10T12:00:00.000Z"
+  },
+  {
+    "id": "fungating-237",
+    "word": "fungating",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "A skin lesion that starts growing as fast as/to look like a fungus, breaking the skin and killing tissue and generally causing a bad odor",
+    "source": "",
+    "tags": [
+      "medical"
+    ],
+    "dateAdded": "2021-05-23T12:00:00.000Z"
+  },
+  {
+    "id": "furcula-238",
+    "word": "furcula",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "The wishbone, in birds",
+    "source": "toby ferris's short life in a strange world",
+    "tags": [],
+    "dateAdded": "2021-04-04T12:00:00.000Z"
+  },
+  {
+    "id": "fustian-239",
+    "word": "fustian",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A kind of speech or writing that's high-flown, affected, pretentious, or heavy cotton cloth used for menswear",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2021-03-28T12:00:00.000Z"
+  },
+  {
+    "id": "gabion-241",
+    "word": "gabion",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A cage or box filled with rocks, used in building walls (to protect soldiers) and other construction/engineering",
+    "source": "war and peace",
+    "tags": [
+      "architecture"
+    ],
+    "dateAdded": "2023-11-18T12:00:00.000Z"
+  },
+  {
+    "id": "galactagogue-242",
+    "word": "galactagogue",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A substance that increases milk production (for breastfeeding mothers)",
+    "source": "doireann ni ghriofa's ghost in the throat",
+    "tags": [
+      "medical"
+    ],
+    "dateAdded": "2022-01-09T12:00:00.000Z"
+  },
+  {
+    "id": "gamboge-243",
+    "word": "gamboge",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A gum resin produced by trees that grow in southeast asia; the yellowish pigment made from the resin (used to dye buddhist monks' robes)",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2021-04-17T12:00:00.000Z"
+  },
+  {
+    "id": "gasconade-244",
+    "word": "gasconade",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Bravado, extravagant boasting",
+    "source": "villette",
+    "tags": [],
+    "dateAdded": "2022-02-06T12:00:00.000Z"
+  },
+  {
+    "id": "gematria-245",
+    "word": "gematria",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A numerological system by which Hebrew letters correspond to numbers, developed by practitioners of Kabbalah (Jewish mysticism​) (the witness (video game) easter egg video at the end, 6/21/21)",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2026-10-11T12:56:19.351192Z"
+  },
+  {
+    "id": "geminal-246",
+    "word": "geminal",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "In chemistry, describes groups of atoms/functional groups hanging off the same atom in a molecule (from the word \"twins\")",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2021-05-16T12:00:00.000Z"
+  },
+  {
+    "id": "gest-247",
+    "word": "gest",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A tale of adventure and/or a romance in verse, or an adventure/heroic exploit",
+    "source": "the new york times crossword",
+    "tags": [],
+    "dateAdded": "2021-11-14T12:00:00.000Z"
+  },
+  {
+    "id": "ghyll-or-gill-248",
+    "word": "ghyll (or gill)",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "British. a wooded ravine or narrow valley with a river at the bottom",
+    "source": "burntcoat",
+    "tags": [],
+    "dateAdded": "2022-02-06T12:00:00.000Z"
+  },
+  {
+    "id": "gig-lamps-249",
+    "word": "gig-lamps",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "The lamps on carriages, and old slang for glasses (they're very round, like headlights)",
+    "source": "john fowles' the magus",
+    "tags": [],
+    "dateAdded": "2024-05-30T12:00:00.000Z"
+  },
+  {
+    "id": "gimcrack-250",
+    "word": "gimcrack",
+    "partOfSpeech": [
+      "noun",
+      "adjective"
+    ],
+    "definition": "A flashy but useless object, something flimsy or poorly made but deceptively attractive. cheap or shoddy",
+    "source": "art of the personal essay",
+    "tags": [],
+    "dateAdded": "2022-05-11T12:00:00.000Z"
+  },
+  {
+    "id": "glabrous-251",
+    "word": "glabrous",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Smooth, having a surface without hair or down (mostly used in reference to skin or leaves)",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2021-03-28T12:00:00.000Z"
+  },
+  {
+    "id": "glebe-252",
+    "word": "glebe",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Land, especially cultivated, especially farmed to make money for a church",
+    "source": "sodom and gomorrah",
+    "tags": [
+      "christian"
+    ],
+    "dateAdded": "2026-10-10T12:00:00.000Z"
+  },
+  {
+    "id": "gnomic-253",
+    "word": "gnomic",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Aphoristic, pithy writing",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2020-06-22T12:00:00.000Z"
+  },
+  {
+    "id": "gonfalon-254",
+    "word": "gonfalon",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A banner or flag suspended from a crossbar, painted or with streamers at the end. mostly seen now at graduations, very medieval",
+    "source": "DFW's \"the view from mrs. thompson's",
+    "tags": [],
+    "dateAdded": "2020-06-13T12:00:00.000Z"
+  },
+  {
+    "id": "graith-255",
+    "word": "graith",
+    "partOfSpeech": [
+      "verb"
+    ],
+    "definition": "Scottish. to make ready, put in order; to furnish or array. or n. gear, possessions, wealth",
+    "source": "beowulf",
+    "tags": [],
+    "dateAdded": "2023-01-02T12:00:00.000Z"
+  },
+  {
+    "id": "graminivorous-256",
+    "word": "graminivorous",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Eating grass or grass seeds",
+    "source": "the guermantes way",
+    "tags": [],
+    "dateAdded": "2026-10-10T12:00:00.000Z"
+  },
+  {
+    "id": "grawlix-257",
+    "word": "grawlix",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "That series of punctuation marks used in comic strips to stand in for profanity",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2021-03-28T12:00:00.000Z"
+  },
+  {
+    "id": "groundbait-258",
+    "word": "groundbait",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Bait thrown into the water in balls to attract fish to an area, to then be hooked by other kinds of bait. (in ocean fishing, it's called chum)",
+    "source": "john fowles' the magus",
+    "tags": [],
+    "dateAdded": "2024-05-30T12:00:00.000Z"
+  },
+  {
+    "id": "guerdon-259",
+    "word": "guerdon",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A reward or recompense, v. to give a reward to someone, recompense them",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2021-05-16T12:00:00.000Z"
+  },
+  {
+    "id": "halyard-261",
+    "word": "halyard",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "The rope, in sailing, used to haul ladders, sails, or flags--\"to haul yards.\"",
+    "source": "DFW's \"the view from mrs. thompson's",
+    "tags": [],
+    "dateAdded": "2020-06-13T12:00:00.000Z"
+  },
+  {
+    "id": "hardstand-262",
+    "word": "hardstand",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A paved area for parking an airplane (that can withstand heavy things sitting on it for long periods of time)",
+    "source": "making of the atomic bomb",
+    "tags": [
+      "architecture"
+    ],
+    "dateAdded": "2025-04-21T12:00:00.000Z"
+  },
+  {
+    "id": "haplography-263",
+    "word": "haplography",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A type of typo where you accidentally omit repeating similar letters or words or lines",
+    "source": "geoffrey monmouth's history of the kings of britain",
+    "tags": [],
+    "dateAdded": "2023-09-17T12:00:00.000Z"
+  },
+  {
+    "id": "hawser-264",
+    "word": "hawser",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Those giant ropes used for mooring and towing ships",
+    "source": "annie proulx's fen bog and swamp",
+    "tags": [],
+    "dateAdded": "2026-10-11T12:56:19.351861Z"
+  },
+  {
+    "id": "hebetude-265",
+    "word": "hebetude",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "The state of being dull or lethargic",
+    "source": "art of personal essay",
+    "tags": [],
+    "dateAdded": "2022-04-24T12:00:00.000Z"
+  },
+  {
+    "id": "hennin-266",
+    "word": "hennin",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "The pointy cap with a veil that women in the 1400s wore, mostly in france (burgundy). there are also “divided hennins” (two points) and hennins with flat tops. it’s also the hat that fairytale princesses are often depicted wearing",
+    "source": "witold rybczynski’s home",
+    "tags": [
+      "french"
+    ],
+    "dateAdded": "2024-02-02T12:00:00.000Z"
+  },
+  {
+    "id": "heteroclite-267",
+    "word": "heteroclite",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Something that doesn't follow ordinary rules--like, for example, an irregular word",
+    "source": "within a budding grove",
+    "tags": [],
+    "dateAdded": "2026-10-10T12:00:00.000Z"
+  },
+  {
+    "id": "hiemal-268",
+    "word": "hiemal",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Wintry, of or related to winter",
+    "source": "the netanyahus",
+    "tags": [],
+    "dateAdded": "2022-02-13T12:00:00.000Z"
+  },
+  {
+    "id": "hieratic-269",
+    "word": "hieratic",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Having to do with priests, particularly egyptian ones, or a type of cursive egyptian script (used for religious texts); stylized or formal",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2021-05-16T12:00:00.000Z"
+  },
+  {
+    "id": "hircine-270",
+    "word": "hircine",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Smelling like a goat, or goat-y in any other way",
+    "source": "armpit bacteria NYT Kids how-to research",
+    "tags": [],
+    "dateAdded": "2021-12-12T12:00:00.000Z"
+  },
+  {
+    "id": "hirple-271",
+    "word": "hirple",
+    "partOfSpeech": [
+      "verb"
+    ],
+    "definition": "Scottish. to walk with a limp, hobble",
+    "source": "beowulf",
+    "tags": [],
+    "dateAdded": "2023-01-02T12:00:00.000Z"
+  },
+  {
+    "id": "horror-vacui-272",
+    "word": "horror vacui",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "In art: a \"horror of empty spaces,\" the filling of the entire surface of a space or an artwork with detail (ex. where's wally!)",
+    "source": "dorthe nors' wild swims",
+    "tags": [
+      "latin"
+    ],
+    "dateAdded": "2021-06-21T12:00:00.000Z"
+  },
+  {
+    "id": "howe-273",
+    "word": "howe",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Scottish. hollow, valley",
+    "source": "beowulf",
+    "tags": [],
+    "dateAdded": "2023-01-02T12:00:00.000Z"
+  },
+  {
+    "id": "hoyden-274",
+    "word": "hoyden",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A boisterous, carefree girl (or rude) [related to \"heathen\"]",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2020-06-22T12:00:00.000Z"
+  },
+  {
+    "id": "hustings-275",
+    "word": "hustings",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Campaign events for an election, an election platform",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2021-04-17T12:00:00.000Z"
+  },
+  {
+    "id": "hyperboloid-276",
+    "word": "hyperboloid",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "The shape/surface you get when you rotate a hyperbola around one of its axes; it's kind of shaped like the glass part of an hourglass",
+    "source": "justin beal's sandfuture",
+    "tags": [],
+    "dateAdded": "2022-04-10T12:00:00.000Z"
+  },
+  {
+    "id": "hyperborean-277",
+    "word": "hyperborean",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Relating to a very northerly place, which the greeks thought was actually very sunny. but now the word also refers to cold northerly places because...that's actually what's in the far north (greek: hyper=beyond, borean=boreas, the north wind!)",
+    "source": "the guermantes way",
+    "tags": [
+      "latin"
+    ],
+    "dateAdded": "2026-10-10T12:00:00.000Z"
+  },
+  {
+    "id": "hypogean-278",
+    "word": "hypogean",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Underground. greek roots: hypo for under, gaia for earth",
+    "source": "within a budding grove",
+    "tags": [],
+    "dateAdded": "2026-10-10T12:00:00.000Z"
+  },
+  {
+    "id": "identikit-280",
+    "word": "identikit",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "(british) a facial composite; a method of creating a portrait of someone wanted by the police by combining images of different facial features. adj.: produced by or as if by the routine assembly of stock materials, lacking variety or individuality",
+    "source": "anna burns' milkman",
+    "tags": [],
+    "dateAdded": "2021-06-13T12:00:00.000Z"
+  },
+  {
+    "id": "infusoria-281",
+    "word": "infusoria",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Freshwater microorganisms",
+    "source": "thomas mann's the magic mountain",
+    "tags": [],
+    "dateAdded": "2024-11-21T12:00:00.000Z"
+  },
+  {
+    "id": "interpellation-282",
+    "word": "interpellation",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "In philosophy, especially marxist philosophy, the process where we encounter cultural/societal values and internalize them. in politics, the official questioning of a government official about policy/their actions",
+    "source": "who will pay reparations on my soul",
+    "tags": [],
+    "dateAdded": "2022-02-13T12:00:00.000Z"
+  },
+  {
+    "id": "involute-283",
+    "word": "involute",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Curled spirally or inward, like a leaf, or a kind of mathematical curve; involved, intricate",
+    "source": "DFW's \"authority and american usage,\"",
+    "tags": [],
+    "dateAdded": "2020-06-22T12:00:00.000Z"
+  },
+  {
+    "id": "in-petto-284",
+    "word": "in petto",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Secretly or privately, in one's heart of hearts. from italian for \"in the breast\"",
+    "source": "the guermantes way",
+    "tags": [
+      "latin"
+    ],
+    "dateAdded": "2026-10-10T12:00:00.000Z"
+  },
+  {
+    "id": "in-spate-285",
+    "word": "in spate",
+    "partOfSpeech": [
+      "phrase"
+    ],
+    "definition": "A river overflowing because of sudden flood, or proceeding vigorously, continuing without pause",
+    "source": "annie dillard's \"seeing,\"",
+    "tags": [
+      "latin"
+    ],
+    "dateAdded": "2020-10-24T12:00:00.000Z"
+  },
+  {
+    "id": "inter-pocula-286",
+    "word": "inter pocula",
+    "partOfSpeech": [
+      "phrase"
+    ],
+    "definition": "Latin for \"between the cups\"--during a drinking session",
+    "source": "the guermantes way",
+    "tags": [
+      "latin"
+    ],
+    "dateAdded": "2026-10-10T12:00:00.000Z"
+  },
+  {
+    "id": "irenic-287",
+    "word": "irenic",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Conducive to/operating towards peace and reconciliation. eirene was the greek goddess of peace",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2021-03-28T12:00:00.000Z"
+  },
+  {
+    "id": "irredentism-288",
+    "word": "irredentism",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A policy of advocating the restoration to a country of any territory formerly belonging to it; a movement in which its members claim, reclaim (usually on behalf of their nation), and seek to occupy territory which they consider \"lost\" (or \"unredeemed\"), based on history or legend (like...taiwan)",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2021-06-21T12:00:00.000Z"
+  },
+  {
+    "id": "jabot-290",
+    "word": "jabot",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "The frilly lace attached to the front of a blouse, historically worn by men in the 18th century",
+    "source": "war and peace",
+    "tags": [],
+    "dateAdded": "2023-11-18T12:00:00.000Z"
+  },
+  {
+    "id": "kapok-292",
+    "word": "kapok",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A kind of plant fiber that's like cotton, used for stuffing mattress and pillows and as insulation",
+    "source": "making of the atomic bomb",
+    "tags": [],
+    "dateAdded": "2025-04-21T12:00:00.000Z"
+  },
+  {
+    "id": "kasbah-293",
+    "word": "kasbah",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A fortified/citadel area of a city, or the islamic quarter of a city",
+    "source": "john fowles' the magus",
+    "tags": [],
+    "dateAdded": "2024-05-30T12:00:00.000Z"
+  },
+  {
+    "id": "kenotic-294",
+    "word": "kenotic",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "A christian theological term that describes the \"self-emptying\" of jesus--this was the word used in the bible but people debate what it means",
+    "source": "david brooks' the second mountain",
+    "tags": [
+      "christian"
+    ],
+    "dateAdded": "2026-10-10T12:00:00.000Z"
+  },
+  {
+    "id": "kerygma-295",
+    "word": "kerygma",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "The proclamation of salvation through jesus by the apostles; something very greek and very christian",
+    "source": "annie dillard's pilgrim at tinker creek",
+    "tags": [
+      "christian"
+    ],
+    "dateAdded": "2021-03-28T12:00:00.000Z"
+  },
+  {
+    "id": "kiai-296",
+    "word": "kiai",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "In japanese martial arts, the yell when you're doing a move/attack--for breathing, to release energy, etc. it's like, \"HAH!\"--or, in pop culture, \"hi-yah!\"",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2021-05-23T12:00:00.000Z"
+  },
+  {
+    "id": "klepht-297",
+    "word": "klepht",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A greek independence fighter/bandit, especially during the 15th c. against the turks or in the 1820s war of independence",
+    "source": "john fowles' the magus",
+    "tags": [],
+    "dateAdded": "2024-05-30T12:00:00.000Z"
+  },
+  {
+    "id": "lallation-299",
+    "word": "lallation",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Baby talk, or substituting the \"el\" sound for another sound, like \"r\" (or vice versa). ex. \"sowwy\"",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2021-03-28T12:00:00.000Z"
+  },
+  {
+    "id": "lanugo-300",
+    "word": "lanugo",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "The soft white hair that covers fetuses and newborns",
+    "source": "thomas mann's the magic mountain",
+    "tags": [
+      "medical"
+    ],
+    "dateAdded": "2024-11-21T12:00:00.000Z"
+  },
+  {
+    "id": "laodicean-301",
+    "word": "laodicean",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Lukewarm or indifferent to matters of politics or religion (jesus reproached the church of laodicea for not being devoted enough)",
+    "source": "john gardner's on moral fiction",
+    "tags": [
+      "christian"
+    ],
+    "dateAdded": "2026-10-10T12:00:00.000Z"
+  },
+  {
+    "id": "lapidary-302",
+    "word": "lapidary",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "The art of cutting gems, or someone who cuts, polishes or engraves precious stones that aren't diamonds. adj. as elegant and precise as cut stone",
+    "source": "DFW's \"authority and american usage,\"",
+    "tags": [],
+    "dateAdded": "2020-06-22T12:00:00.000Z"
+  },
+  {
+    "id": "latigo-303",
+    "word": "latigo",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A long strap on a western saddle",
+    "source": "probably angle of repose",
+    "tags": [],
+    "dateAdded": "2023-01-02T12:00:00.000Z"
+  },
+  {
+    "id": "layette-304",
+    "word": "layette",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Baby's first wardrobe set",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2020-06-13T12:00:00.000Z"
+  },
+  {
+    "id": "leptosomatic-305",
+    "word": "leptosomatic",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Having a thin or slender body (\"leptos\" in greek means small; cf. \"lepton\")",
+    "source": "",
+    "tags": [
+      "medical"
+    ],
+    "dateAdded": "2021-03-28T12:00:00.000Z"
+  },
+  {
+    "id": "l-se-majest-306",
+    "word": "lèse-majesté",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Treason, insulting a monarch or another ruler",
+    "source": "lies of locke lamora",
+    "tags": [
+      "french"
+    ],
+    "dateAdded": "2026-10-11T12:56:19.353547Z"
+  },
+  {
+    "id": "lickerish-307",
+    "word": "lickerish",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Greedy, desirous, lecherous",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2020-06-13T12:00:00.000Z"
+  },
+  {
+    "id": "lights-308",
+    "word": "lights",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Culinary: the lungs of game or livestock (like pork)",
+    "source": "",
+    "tags": [
+      "medical"
+    ],
+    "dateAdded": "2026-10-11T12:56:19.353605Z"
+  },
+  {
+    "id": "liniment-309",
+    "word": "liniment",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A heat rub, an ointment or liquid mean to be rubbed on the body to relieve pain",
+    "source": "",
+    "tags": [
+      "medical"
+    ],
+    "dateAdded": "2021-03-28T12:00:00.000Z"
+  },
+  {
+    "id": "logomachy-310",
+    "word": "logomachy",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "An argument about words",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2023-01-02T12:00:00.000Z"
+  },
+  {
+    "id": "longueur-311",
+    "word": "longueur",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "The boring, tedious parts of a book or other media",
+    "source": "",
+    "tags": [
+      "french"
+    ],
+    "dateAdded": "2020-06-22T12:00:00.000Z"
+  },
+  {
+    "id": "lucullan-312",
+    "word": "Lucullan",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Extremely lavish and luxurious, used mostly to describe banquets, after a roman general who threw crazy dinner parties",
+    "source": "within a budding grove",
+    "tags": [
+      "latin"
+    ],
+    "dateAdded": "2026-10-10T12:00:00.000Z"
+  },
+  {
+    "id": "luftmensch-313",
+    "word": "luftmensch",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "An impractical, contemplative person unconcerned with earning a living; someone with their head in the clouds, an \"airman.\"",
+    "source": "the art of the personal essay, used to describe walter benjamin",
+    "tags": [],
+    "dateAdded": "2022-04-24T12:00:00.000Z"
+  },
+  {
+    "id": "lustration-314",
+    "word": "lustration",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Purification rites for ancient greeks and romans (through sacrifices), but also the purge of government officials in post-communist central and eastern europe \"of those associated with the abuses under the prior regime\"",
+    "source": "servant of the people",
+    "tags": [],
+    "dateAdded": "2022-04-02T12:00:00.000Z"
+  },
+  {
+    "id": "lustrum-315",
+    "word": "lustrum",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A period of five years; from the roman census, or the purification of the whole roman people that happened afterwards",
+    "source": "a wall at universal studios orlando",
+    "tags": [
+      "latin"
+    ],
+    "dateAdded": "2023-01-02T12:00:00.000Z"
+  },
+  {
+    "id": "lutefisk-316",
+    "word": "lutefisk",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Weird dried whitefish, eaten in norway, sweden and finland",
+    "source": "the netanyahus",
+    "tags": [],
+    "dateAdded": "2022-02-13T12:00:00.000Z"
+  },
+  {
+    "id": "luteous-317",
+    "word": "luteous",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "A greenish/brownish yellow--it looks kind of warm but not quite mustard",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2021-05-16T12:00:00.000Z"
+  },
+  {
+    "id": "luxate-318",
+    "word": "luxate",
+    "partOfSpeech": [
+      "verb"
+    ],
+    "definition": "To dislocate or put out of joint (mostly bones)",
+    "source": "",
+    "tags": [
+      "medical"
+    ],
+    "dateAdded": "2021-03-28T12:00:00.000Z"
+  },
+  {
+    "id": "lyddite-319",
+    "word": "lyddite",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "An explosive used by the british during WWI, yellow in color",
+    "source": "john fowles' the magus",
+    "tags": [],
+    "dateAdded": "2024-05-30T12:00:00.000Z"
+  },
+  {
+    "id": "machicolated-321",
+    "word": "machicolated",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Describing a castle that has openings on its walls (machicolations) where people could drop stuff (stones, boiling oil) on invaders",
+    "source": "the turn of the screw",
+    "tags": [
+      "architecture"
+    ],
+    "dateAdded": "2021-11-07T12:00:00.000Z"
+  },
+  {
+    "id": "maieutic-322",
+    "word": "maieutic",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Related to the socratic method, like midwifing an idea [from greek maieutikos, for \"of midwifery\"]",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2020-06-21T12:00:00.000Z"
+  },
+  {
+    "id": "malapert-323",
+    "word": "malapert",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Impudently bold, saucy, literally: honest in a bad way. also n. a bold and impudent person",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2021-06-21T12:00:00.000Z"
+  },
+  {
+    "id": "malinger-324",
+    "word": "malinger",
+    "partOfSpeech": [
+      "verb"
+    ],
+    "definition": "To pretend to be sick to avoid work or other obligations",
+    "source": "jeopardy!",
+    "tags": [],
+    "dateAdded": "2022-01-08T12:00:00.000Z"
+  },
+  {
+    "id": "malgre-325",
+    "word": "malgre",
+    "partOfSpeech": [
+      "preposition"
+    ],
+    "definition": "Despite (french)",
+    "source": "probably angle of repose",
+    "tags": [
+      "french"
+    ],
+    "dateAdded": "2023-01-02T12:00:00.000Z"
+  },
+  {
+    "id": "mandorla-326",
+    "word": "mandorla",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Italian for almond--in religious art, an almond shaped area of light, usually around Jesus",
+    "source": "",
+    "tags": [
+      "christian"
+    ],
+    "dateAdded": "2020-06-13T12:00:00.000Z"
+  },
+  {
+    "id": "manducate-327",
+    "word": "manducate",
+    "partOfSpeech": [
+      "verb"
+    ],
+    "definition": "To chew, eat or masticate",
+    "source": "the crossword",
+    "tags": [],
+    "dateAdded": "2023-01-02T12:00:00.000Z"
+  },
+  {
+    "id": "mansuetude-328",
+    "word": "mansuetude",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Being gentle, meek or tame",
+    "source": "swann's way",
+    "tags": [],
+    "dateAdded": "2026-10-10T12:00:00.000Z"
+  },
+  {
+    "id": "mantic-329",
+    "word": "mantic",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Related to divination or prophecy",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2021-04-17T12:00:00.000Z"
+  },
+  {
+    "id": "mantissa-330",
+    "word": "mantissa",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "The significant digits of a number in scientific notation or a floating point number (computer speak); M-W: \"the part of a logarithm to the right of the decimal point\"",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2020-06-13T12:00:00.000Z"
+  },
+  {
+    "id": "manumit-331",
+    "word": "manumit",
+    "partOfSpeech": [
+      "verb"
+    ],
+    "definition": "To free from slavery; when masters free their slaves voluntarily",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2021-05-23T12:00:00.000Z"
+  },
+  {
+    "id": "marcelled-332",
+    "word": "marcelled",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "As in \"marcelled hair.\" a Marcel wave is a way to curl hair that was really popular in the 1920s, often paired with a bob. it's like, textured ridges, but stuck to your head",
+    "source": "annie dillard's teaching a stone to talk",
+    "tags": [],
+    "dateAdded": "2021-09-01T12:00:00.000Z"
+  },
+  {
+    "id": "marennes-333",
+    "word": "marennes",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A type of fancy oyster",
+    "source": "john fowles' the magus",
+    "tags": [],
+    "dateAdded": "2024-05-30T12:00:00.000Z"
+  },
+  {
+    "id": "marouflage-334",
+    "word": "marouflage",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "(art) a way of adhering painted canvas, like a mural, to a wall with adhesive",
+    "source": "lauren oyler's no judgment",
+    "tags": [
+      "french"
+    ],
+    "dateAdded": "2025-11-11T12:00:00.000Z"
+  },
+  {
+    "id": "martingale-335",
+    "word": "martingale",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A device for steadying a horse's head, or a system of betting where you double your bet after every loss",
+    "source": "angle of repose",
+    "tags": [],
+    "dateAdded": "2023-01-02T12:00:00.000Z"
+  },
+  {
+    "id": "maschalagnia-336",
+    "word": "maschalagnia",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Armpit fetish",
+    "source": "jeremy atherton lin's gay bar",
+    "tags": [
+      "medical"
+    ],
+    "dateAdded": "2022-01-09T12:00:00.000Z"
+  },
+  {
+    "id": "matelot-337",
+    "word": "matelot",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A sailor (in british), but also possibly the sailor's uniform",
+    "source": "jeremy atherton lin's gay bar",
+    "tags": [
+      "french"
+    ],
+    "dateAdded": "2022-01-09T12:00:00.000Z"
+  },
+  {
+    "id": "matutinal-338",
+    "word": "matutinal",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Occurring in the morning, early",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2021-05-16T12:00:00.000Z"
+  },
+  {
+    "id": "maunder-339",
+    "word": "maunder",
+    "partOfSpeech": [
+      "verb"
+    ],
+    "definition": "Wander slowly and idly; meander; also to speak this way",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2020-06-22T12:00:00.000Z"
+  },
+  {
+    "id": "mavourneen-340",
+    "word": "mavourneen",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Irish for \"my darling\"",
+    "source": "SOME DFW essay in a supposedly fun thing",
+    "tags": [],
+    "dateAdded": "2021-03-28T12:00:00.000Z"
+  },
+  {
+    "id": "meeching-341",
+    "word": "meeching",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Cringing, sneaking, whining",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2023-01-02T12:00:00.000Z"
+  },
+  {
+    "id": "meed-342",
+    "word": "meed",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A deserved or fitting reward. a very old english word!",
+    "source": "the guermantes way",
+    "tags": [],
+    "dateAdded": "2026-10-10T12:00:00.000Z"
+  },
+  {
+    "id": "meerschaum-343",
+    "word": "meerschaum",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A clay-like mineral used to make tobacco pipes, or the pipe itself. the name means \"sea foam\" in german, because the mineral is white and can float",
+    "source": "hawthorne's short stories",
+    "tags": [],
+    "dateAdded": "2023-01-02T12:00:00.000Z"
+  },
+  {
+    "id": "megrim-344",
+    "word": "megrim",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Migraine/vertigo or dizziness, or fancies or whims",
+    "source": "middlemarch",
+    "tags": [
+      "medical"
+    ],
+    "dateAdded": "2020-06-22T12:00:00.000Z"
+  },
+  {
+    "id": "menhir-345",
+    "word": "menhir",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A single giant upright stone, used as a monument by ancient peoples",
+    "source": "justin beal's sandfuture",
+    "tags": [
+      "architecture"
+    ],
+    "dateAdded": "2022-04-10T12:00:00.000Z"
+  },
+  {
+    "id": "mensuration-346",
+    "word": "mensuration",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "The branch of math concerned with calculating lengths, areas and volumes of shapes",
+    "source": "the penguin history of the world",
+    "tags": [
+      "latin"
+    ],
+    "dateAdded": "2026-10-10T12:00:00.000Z"
+  },
+  {
+    "id": "mephitic-347",
+    "word": "mephitic",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Foul-smelling, noxious, mostly of gases",
+    "source": "\"pink triangles and yellow stars,\"",
+    "tags": [],
+    "dateAdded": "2020-10-24T12:00:00.000Z"
+  },
+  {
+    "id": "mere-348",
+    "word": "mere",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "British, a lake or pool",
+    "source": "beowulf",
+    "tags": [],
+    "dateAdded": "2023-01-02T12:00:00.000Z"
+  },
+  {
+    "id": "meridional-349",
+    "word": "meridional",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Related to the south, southern, particularly the south of france; someone who lives in or is from the south of france",
+    "source": "within a budding grove",
+    "tags": [],
+    "dateAdded": "2026-10-10T12:00:00.000Z"
+  },
+  {
+    "id": "mickey-finn-350",
+    "word": "Mickey Finn",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "As in \"slip him a mickey.\" a drink laced with a psychoactive drug or something that incapacitates/renders the drinker unconscious",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2020-06-13T12:00:00.000Z"
+  },
+  {
+    "id": "minyan-351",
+    "word": "minyan",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A quorum of ten men (or men and women) over age 13 to meet for public jewish worship",
+    "source": "james traub",
+    "tags": [],
+    "dateAdded": "2020-10-24T12:00:00.000Z"
+  },
+  {
+    "id": "mise-en-abyme-352",
+    "word": "mise en abyme",
+    "partOfSpeech": [
+      "phrase"
+    ],
+    "definition": "An image within an image (esp. in art history) or a story within a story. lit. \"put in the abyss\"",
+    "source": "an Alison Bechdel book",
+    "tags": [],
+    "dateAdded": "2020-06-14T12:00:00.000Z"
+  },
+  {
+    "id": "misologue-353",
+    "word": "misologue",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Someone who hates reasoning, logic, or enlightenment",
+    "source": "mark lilla's ignorance and bliss",
+    "tags": [],
+    "dateAdded": "2024-07-03T12:00:00.000Z"
+  },
+  {
+    "id": "misprision-354",
+    "word": "misprision",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Deliberately concealing knowledge of treason or a felony; neglecting or wrongly performing one's official duty; misunderstanding",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2021-04-17T12:00:00.000Z"
+  },
+  {
+    "id": "mizzle-355",
+    "word": "mizzle",
+    "partOfSpeech": [
+      "verb"
+    ],
+    "definition": "To rain lightly, drizzle",
+    "source": "beowulf",
+    "tags": [],
+    "dateAdded": "2023-01-02T12:00:00.000Z"
+  },
+  {
+    "id": "monadnock-356",
+    "word": "monadnock",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "An isolated hill of bedrock standing conspicuously above the general level of the surrounding area, because made of rock that's harder to weather than its surroundings. named after the mountain in new jersey",
+    "source": "annie dillard's an american childhood",
+    "tags": [],
+    "dateAdded": "2022-03-26T12:00:00.000Z"
+  },
+  {
+    "id": "monstrance-357",
+    "word": "monstrance",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A fancy transparent holder for catholic wafers (aka the consecrated host); also known as an ostensorium",
+    "source": "rachel duffy-campos's stay home, stay happy",
+    "tags": [
+      "christian"
+    ],
+    "dateAdded": "2024-11-21T12:00:00.000Z"
+  },
+  {
+    "id": "morganatic-358",
+    "word": "morganatic",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Describes a marriage between a man of high rank (prince, king, etc.) and a woman of lower rank, where the woman and her children don't get any of the high rank perks the man has (titles, land, etc.) an old german thing",
+    "source": "daniel mendelsohn's three rings",
+    "tags": [],
+    "dateAdded": "2021-09-01T12:00:00.000Z"
+  },
+  {
+    "id": "moulage-359",
+    "word": "moulage",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Either using makeup to imitate injuries (to train emergency response teams), or taking impressions of things for criminal investigations",
+    "source": "the sunnyvale buy nothing group",
+    "tags": [
+      "medical"
+    ],
+    "dateAdded": "2024-05-30T12:00:00.000Z"
+  },
+  {
+    "id": "muleta-360",
+    "word": "muleta",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "The small red cape a matador uses to guide a bull",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2020-04-27T12:00:00.000Z"
+  },
+  {
+    "id": "mung-361",
+    "word": "mung",
+    "partOfSpeech": [
+      "verb"
+    ],
+    "definition": "Adjusting/transforming data to make it easier to use for other applications",
+    "source": "jer thorp's living in data",
+    "tags": [],
+    "dateAdded": "2024-11-21T12:00:00.000Z"
+  },
+  {
+    "id": "murrain-362",
+    "word": "murrain",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "An old general term that refers to plague/infectious disease that particularly affects cattle and sheep",
+    "source": "robert louis stevenson's \"the lantern-bearers,\"",
+    "tags": [],
+    "dateAdded": "2022-04-17T12:00:00.000Z"
+  },
+  {
+    "id": "napery-364",
+    "word": "napery",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Household linen, especially a tablecloth",
+    "source": "the guermantes way",
+    "tags": [],
+    "dateAdded": "2026-10-10T12:00:00.000Z"
+  },
+  {
+    "id": "narcose-365",
+    "word": "narcose",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Marked by a condition of stupor (medical)",
+    "source": "old in art school",
+    "tags": [
+      "medical"
+    ],
+    "dateAdded": "2021-05-23T12:00:00.000Z"
+  },
+  {
+    "id": "nares-366",
+    "word": "nares",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Nostrils (zoology)",
+    "source": "an orchestra of minorities",
+    "tags": [
+      "medical"
+    ],
+    "dateAdded": "2020-06-22T12:00:00.000Z"
+  },
+  {
+    "id": "n-ant-367",
+    "word": "néant",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Fr. nothingness, nil",
+    "source": "",
+    "tags": [
+      "french"
+    ],
+    "dateAdded": "2021-06-21T12:00:00.000Z"
+  },
+  {
+    "id": "nef-368",
+    "word": "nef",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "One of those old decorative ships that historic europeans used to put on their tables; we saw one in the german museum in nuremberg",
+    "source": "onwards and upwards in the garden",
+    "tags": [],
+    "dateAdded": "2023-07-17T12:00:00.000Z"
+  },
+  {
+    "id": "newel-post-369",
+    "word": "newel post",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "The central supporting pillar of a staircase",
+    "source": "michael chabon's wonder boys",
+    "tags": [
+      "architecture"
+    ],
+    "dateAdded": "2024-05-30T12:00:00.000Z"
+  },
+  {
+    "id": "nostalgie-de-la-boue-370",
+    "word": "nostalgie de la boue",
+    "partOfSpeech": [
+      "phrase"
+    ],
+    "definition": "Fr. lit. \"nostalgia for mud,\" attraction to what is crude, depraved or degrading",
+    "source": "\"stalking the billion-footed beast",
+    "tags": [
+      "french"
+    ],
+    "dateAdded": "2020-09-26T12:00:00.000Z"
+  },
+  {
+    "id": "nugatory-371",
+    "word": "nugatory",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Having little/no importance or value, trifling",
+    "source": "the netanyahus",
+    "tags": [],
+    "dateAdded": "2022-02-13T12:00:00.000Z"
+  },
+  {
+    "id": "nuncio-372",
+    "word": "nuncio",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A catholic papal ambassador to foreign countries--basically a diplomat that represents the catholic church, usually an archbishop",
+    "source": "barbara tuchman's a distant mirror",
+    "tags": [
+      "christian"
+    ],
+    "dateAdded": "2024-11-21T12:00:00.000Z"
+  },
+  {
+    "id": "objurgatory-374",
+    "word": "objurgatory",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "In the manner of a harsh or severe scolding",
+    "source": "joyce carol oates paris review interview",
+    "tags": [],
+    "dateAdded": "2025-11-11T12:00:00.000Z"
+  },
+  {
+    "id": "oblate-375",
+    "word": "oblate",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A layman who lives in society but has attached themselves to a monastery and promises to follow the monastery's laws in their own lives",
+    "source": "annie dillard's an american childhood",
+    "tags": [
+      "christian"
+    ],
+    "dateAdded": "2022-03-26T12:00:00.000Z"
+  },
+  {
+    "id": "obloquy-376",
+    "word": "obloquy",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Strong public criticism or verbal abuse; bad repute, the state of being discredited",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2021-04-17T12:00:00.000Z"
+  },
+  {
+    "id": "obtund-377",
+    "word": "obtund",
+    "partOfSpeech": [
+      "verb"
+    ],
+    "definition": "To reduce the edge or violence of; dull, blunt, deaden",
+    "source": "an Alison Bechdel book",
+    "tags": [],
+    "dateAdded": "2020-06-13T12:00:00.000Z"
+  },
+  {
+    "id": "occiput-378",
+    "word": "occiput",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "The area/bone at the back and bottom of the skull. comes from latin \"caput\"",
+    "source": "an issue of vqr",
+    "tags": [
+      "latin",
+      "medical"
+    ],
+    "dateAdded": "2022-04-10T12:00:00.000Z"
+  },
+  {
+    "id": "offing-379",
+    "word": "offing",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "The part of the deep sea seen from shore, used to describe where approaching ships are",
+    "source": "beowulf",
+    "tags": [],
+    "dateAdded": "2023-01-02T12:00:00.000Z"
+  },
+  {
+    "id": "olla-podrida-380",
+    "word": "olla podrida",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A spiced spanish stew with meat and veggies; a hodgepodge",
+    "source": "some essay in DFW's collection a supposedly fun thing i'll never do again",
+    "tags": [],
+    "dateAdded": "2021-03-28T12:00:00.000Z"
+  },
+  {
+    "id": "oneirology-381",
+    "word": "oneirology",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "The scientific study of dreams",
+    "source": "who will pay reparations on my soul?",
+    "tags": [],
+    "dateAdded": "2022-02-20T12:00:00.000Z"
+  },
+  {
+    "id": "ophidian-382",
+    "word": "ophidian",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Of, relating to, or resembling snakes",
+    "source": "",
+    "tags": [
+      "latin"
+    ],
+    "dateAdded": "2023-01-02T12:00:00.000Z"
+  },
+  {
+    "id": "oriflamme-383",
+    "word": "oriflamme",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A knight's red banner; a banner, symbol or ideal inspiring devotion or courage; originally the battle standard of the king of france with pointy ends",
+    "source": "annie dillard's pilgrim at tinker creek",
+    "tags": [],
+    "dateAdded": "2021-03-28T12:00:00.000Z"
+  },
+  {
+    "id": "orotund-384",
+    "word": "orotund",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Marked by having a full, sonorous voice, or pompous and bombastic",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2021-05-16T12:00:00.000Z"
+  },
+  {
+    "id": "orphrey-385",
+    "word": "orphrey",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Elaborate embroidery, a piece of elaborate embroidery, or a fat ornamental band on like, priest's robes that has this embroidery on it",
+    "source": "erec and enide",
+    "tags": [
+      "christian"
+    ],
+    "dateAdded": "2021-05-23T12:00:00.000Z"
+  },
+  {
+    "id": "ort-386",
+    "word": "ort",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A morsel left at a meal, a scrap",
+    "source": "the ferryman",
+    "tags": [],
+    "dateAdded": "2023-05-11T12:00:00.000Z"
+  },
+  {
+    "id": "orthography-387",
+    "word": "orthography",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Proper spelling; the conventional spelling system of a language",
+    "source": "mansfield park",
+    "tags": [],
+    "dateAdded": "2022-03-20T12:00:00.000Z"
+  },
+  {
+    "id": "ortolan-388",
+    "word": "ortolan",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "That one french songbird that fancy people eat whole",
+    "source": "",
+    "tags": [
+      "french"
+    ],
+    "dateAdded": "2020-06-22T12:00:00.000Z"
+  },
+  {
+    "id": "ossature-389",
+    "word": "ossature",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Internal framework (for a building, say), skeleton",
+    "source": "swann’s way",
+    "tags": [],
+    "dateAdded": "2026-10-10T12:00:00.000Z"
+  },
+  {
+    "id": "oubliette-390",
+    "word": "oubliette",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A basement room accessible only from a hole in the ceiling, a dungeon. from french, \"to forget\"",
+    "source": "",
+    "tags": [
+      "architecture",
+      "french"
+    ],
+    "dateAdded": "2020-06-22T12:00:00.000Z"
+  },
+  {
+    "id": "pale-392",
+    "word": "pale",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "An area under a particular jurisdiction (like jews in poland, or the irish), an enclosure",
+    "source": "the netanyahus",
+    "tags": [],
+    "dateAdded": "2022-02-13T12:00:00.000Z"
+  },
+  {
+    "id": "pantler-393",
+    "word": "pantler",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Analogous to a butler; the guy in charge of the pantry (in charge of the bread! butlers are technically in charge of the wines and liquors--the buttery!)",
+    "source": "sodom and gomorrah",
+    "tags": [],
+    "dateAdded": "2026-10-10T12:00:00.000Z"
+  },
+  {
+    "id": "parlous-394",
+    "word": "parlous",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Full of danger or risk/uncertainty, like \"perilous\"--in phrases like \"a parlous state\"",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2021-06-13T12:00:00.000Z"
+  },
+  {
+    "id": "parquet-395",
+    "word": "parquet",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A patterned wood surface, like wood flooring (wood mosaic), or the main part of a theater",
+    "source": "",
+    "tags": [
+      "architecture"
+    ],
+    "dateAdded": "2020-04-28T12:00:00.000Z"
+  },
+  {
+    "id": "parvenu-396",
+    "word": "parvenu",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A nouveau riche, basically. M-W: \"a rich person of plebeian origins\"",
+    "source": "",
+    "tags": [
+      "french"
+    ],
+    "dateAdded": "2020-06-21T12:00:00.000Z"
+  },
+  {
+    "id": "parvis-397",
+    "word": "parvis",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A courtyard or enclosed area in front of a church or cathedral",
+    "source": "madame bovary",
+    "tags": [
+      "architecture"
+    ],
+    "dateAdded": "2020-05-07T12:00:00.000Z"
+  },
+  {
+    "id": "pastern-398",
+    "word": "pastern",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "The part of a horse's foot that's basically its ankle, right above the hoof",
+    "source": "probably angle of repose",
+    "tags": [],
+    "dateAdded": "2023-01-02T12:00:00.000Z"
+  },
+  {
+    "id": "peculate-399",
+    "word": "peculate",
+    "partOfSpeech": [
+      "verb"
+    ],
+    "definition": "Embezzle money",
+    "source": "john fowles' the magus",
+    "tags": [],
+    "dateAdded": "2024-05-30T12:00:00.000Z"
+  },
+  {
+    "id": "pelage-400",
+    "word": "pelage",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "The fur, hair or wool of a mammal",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2021-05-16T12:00:00.000Z"
+  },
+  {
+    "id": "pentimento-401",
+    "word": "pentimento",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "In a painting, evidence of earlier lines/forms that have been painted over [related to \"repentance\"]",
+    "source": "the accidental masterpiece",
+    "tags": [],
+    "dateAdded": "2020-06-22T12:00:00.000Z"
+  },
+  {
+    "id": "pergola-402",
+    "word": "pergola",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "An arbor or trellis, one of those wooden backyard things where, according to M-W, \"parallel colonnades supporting an open roof of girders and cross rafters\"",
+    "source": "",
+    "tags": [
+      "architecture"
+    ],
+    "dateAdded": "2021-03-28T12:00:00.000Z"
+  },
+  {
+    "id": "peripeteia-403",
+    "word": "peripeteia",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Sudden reversals of fortune in a story",
+    "source": "john fowles' the magus",
+    "tags": [],
+    "dateAdded": "2024-05-30T12:00:00.000Z"
+  },
+  {
+    "id": "peroration-404",
+    "word": "peroration",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "The ending part of a speech that's supposed to be super uplifting/motivating",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2021-06-06T12:00:00.000Z"
+  },
+  {
+    "id": "perquisition-405",
+    "word": "perquisition",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A thorough/meticulous search, specifically a search by warrant",
+    "source": "anna burns' milkman",
+    "tags": [],
+    "dateAdded": "2021-06-21T12:00:00.000Z"
+  },
+  {
+    "id": "persiflage-406",
+    "word": "persiflage",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Light banter or mockery",
+    "source": "",
+    "tags": [
+      "french"
+    ],
+    "dateAdded": "2021-03-28T12:00:00.000Z"
+  },
+  {
+    "id": "pharos-407",
+    "word": "pharos",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "The greek word for lighthouse",
+    "source": "so often used to refer to the lighthouse of alexandria (",
+    "tags": [],
+    "dateAdded": "2021-03-28T12:00:00.000Z"
+  },
+  {
+    "id": "phatic-408",
+    "word": "phatic",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Language for social interaction instead of communicating information; small talk. ex. \"how are you\" or \"what's up\"",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2020-06-22T12:00:00.000Z"
+  },
+  {
+    "id": "philippic-409",
+    "word": "philippic",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A tirade, a speech full of attacks and denunciations (named after demosthenes' angry speeches warning about king philip ii of macedon)",
+    "source": "an inkl weekly email",
+    "tags": [],
+    "dateAdded": "2021-07-11T12:00:00.000Z"
+  },
+  {
+    "id": "philopena-410",
+    "word": "philopena",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A german game between a man and a woman that involves claiming gifts from each other",
+    "source": "thomas mann's the magic mountain",
+    "tags": [],
+    "dateAdded": "2024-11-21T12:00:00.000Z"
+  },
+  {
+    "id": "piacular-411",
+    "word": "piacular",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Something that requires atoning for, sinful or heinous; or sacrificial, making atonement",
+    "source": "",
+    "tags": [
+      "latin"
+    ],
+    "dateAdded": "2021-03-28T12:00:00.000Z"
+  },
+  {
+    "id": "pica-412",
+    "word": "pica",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "(in typography) a unit of measurement roughly one-sixth of an inch. one pica is 12 points (hence \"12 point font\"!). it's also an eating disorder where one eats stuff not normally considered food",
+    "source": "the nyt crossword",
+    "tags": [
+      "medical"
+    ],
+    "dateAdded": "2021-12-05T12:00:00.000Z"
+  },
+  {
+    "id": "pinchbeck-413",
+    "word": "pinchbeck",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "An alloy of copper and zinc used to imitate gold, or something fake. pinchbeck was the name of the 1700s london watchmaker who invented it",
+    "source": "the guermantes way",
+    "tags": [],
+    "dateAdded": "2026-10-10T12:00:00.000Z"
+  },
+  {
+    "id": "pixilated-414",
+    "word": "pixilated",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Mentally unbalanced, crazy, confused, addled in the head. or whimsical (from \"pixie\")",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2021-05-23T12:00:00.000Z"
+  },
+  {
+    "id": "pleached-415",
+    "word": "pleached",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Trees that have been trained to weave together so that all the branches intertwine",
+    "source": "within a budding grove",
+    "tags": [],
+    "dateAdded": "2026-10-10T12:00:00.000Z"
+  },
+  {
+    "id": "pleonasm-416",
+    "word": "pleonasm",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Using more words than is necessary to convey meaning; redundancy",
+    "source": "DFW's \"authority and american usage,\"",
+    "tags": [],
+    "dateAdded": "2020-06-22T12:00:00.000Z"
+  },
+  {
+    "id": "pole-position-417",
+    "word": "pole position",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "The front position at the start of a car race, usually given to the driver with the best qualifying time",
+    "source": "who will pay reparations on my soul?",
+    "tags": [],
+    "dateAdded": "2022-02-20T12:00:00.000Z"
+  },
+  {
+    "id": "pomatumed-418",
+    "word": "pomatumed",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Pomaded. (pomatum=pomade), n",
+    "source": "probably angle of repose",
+    "tags": [],
+    "dateAdded": "2023-01-02T12:00:00.000Z"
+  },
+  {
+    "id": "popliteal-419",
+    "word": "popliteal",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Related to or located in the hollow at the back of the knee",
+    "source": "",
+    "tags": [
+      "medical"
+    ],
+    "dateAdded": "2021-03-28T12:00:00.000Z"
+  },
+  {
+    "id": "portamento-420",
+    "word": "portamento",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "In music, sliding from one note to another--like glissando, but shorter and between closer notes",
+    "source": "thomas mann's the magic mountain",
+    "tags": [],
+    "dateAdded": "2024-11-21T12:00:00.000Z"
+  },
+  {
+    "id": "poshlost-421",
+    "word": "poshlost",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "An untranslatable russian word that means, like, banality or triviality",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2021-04-24T12:00:00.000Z"
+  },
+  {
+    "id": "poste-restante-422",
+    "word": "poste restante",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Fr., \"remainder post.\" a service where the post office holds the mail until the recipient fetches them. often used by travelers",
+    "source": "",
+    "tags": [
+      "french"
+    ],
+    "dateAdded": "2020-06-13T12:00:00.000Z"
+  },
+  {
+    "id": "pourparler-423",
+    "word": "pourparler",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A discussion before negotiations, ex. for agreements or treaties",
+    "source": "DFW's \"authority and american usage,\"",
+    "tags": [
+      "french"
+    ],
+    "dateAdded": "2020-06-22T12:00:00.000Z"
+  },
+  {
+    "id": "predella-424",
+    "word": "predella",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "The bottom part of an altar that has a little series of paintings; also maybe the stairs?",
+    "source": "within a budding grove",
+    "tags": [
+      "architecture",
+      "christian"
+    ],
+    "dateAdded": "2026-10-10T12:00:00.000Z"
+  },
+  {
+    "id": "preterition-425",
+    "word": "preterition",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "The act of omitting. basically praeteritio in english",
+    "source": "within a budding grove",
+    "tags": [],
+    "dateAdded": "2026-10-10T12:00:00.000Z"
+  },
+  {
+    "id": "prevenient-426",
+    "word": "prevenient",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Preceding in time. \"prevenient grace\"--the idea that god gives grace before we know about it",
+    "source": "middlemarch",
+    "tags": [
+      "christian"
+    ],
+    "dateAdded": "2020-06-22T12:00:00.000Z"
+  },
+  {
+    "id": "prolegomenon-427",
+    "word": "prolegomenon",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Prefatory remarks in a book, or a critical essay that introduces a work",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2021-03-28T12:00:00.000Z"
+  },
+  {
+    "id": "prolepsis-428",
+    "word": "prolepsis",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Anticipation, like saying something that might happen in the future as if it's already happened (like when in the job application process?)",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2021-05-16T12:00:00.000Z"
+  },
+  {
+    "id": "propaedeutic-429",
+    "word": "propaedeutic",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "An introduction to a particular field of knowledge (like a 101 class) or what stuff you need to know before you start studying a certain field",
+    "source": "the netanyahus",
+    "tags": [],
+    "dateAdded": "2022-02-13T12:00:00.000Z"
+  },
+  {
+    "id": "provenience-430",
+    "word": "provenience",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Origin or source. in art, provenience is where a piece of art was originally made or found, while provenance refers to its history of ownership",
+    "source": "dorothy armstrong's threads of empire",
+    "tags": [],
+    "dateAdded": "2025-11-11T12:00:00.000Z"
+  },
+  {
+    "id": "pruritic-431",
+    "word": "pruritic",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Of, relating to, or marked by itching",
+    "source": "talking to jennie about moe's catne woes",
+    "tags": [
+      "latin",
+      "medical"
+    ],
+    "dateAdded": "2021-05-10T12:00:00.000Z"
+  },
+  {
+    "id": "psephology-432",
+    "word": "psephology",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "The scientific/statistical study of elections and voting trends",
+    "source": "inkl email",
+    "tags": [],
+    "dateAdded": "2020-10-31T12:00:00.000Z"
+  },
+  {
+    "id": "pullulate-433",
+    "word": "pullulate",
+    "partOfSpeech": [
+      "verb"
+    ],
+    "definition": "Germinate, sprout, or breed",
+    "source": "swann's way",
+    "tags": [],
+    "dateAdded": "2026-10-10T12:00:00.000Z"
+  },
+  {
+    "id": "purblind-434",
+    "word": "purblind",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Partially blind; also lacking understanding or insight, obtuse",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2020-06-22T12:00:00.000Z"
+  },
+  {
+    "id": "purdah-435",
+    "word": "purdah",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A muslim and hindu practice of concealing/separating women by using veils, curtains, walls, etc.; a state of seclusion or concealment",
+    "source": "martin amis' inside story",
+    "tags": [],
+    "dateAdded": "2021-03-28T12:00:00.000Z"
+  },
+  {
+    "id": "purlieu-436",
+    "word": "purlieu",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "An adjacent area, the surroundings/environs; or a frequently visited place or haunt",
+    "source": "vis and ramin",
+    "tags": [],
+    "dateAdded": "2021-09-17T12:00:00.000Z"
+  },
+  {
+    "id": "puttee-437",
+    "word": "puttee",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A leg wrap for the calves worn by soldiers until the 1940s",
+    "source": "making of the atomic bomb",
+    "tags": [],
+    "dateAdded": "2025-04-21T12:00:00.000Z"
+  },
+  {
+    "id": "pyretic-438",
+    "word": "pyretic",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Fevered, feverish, or fever inducing--basically anything to do with fevers",
+    "source": "",
+    "tags": [
+      "medical"
+    ],
+    "dateAdded": "2026-10-11T12:56:19.359827Z"
+  },
+  {
+    "id": "quellazaire-440",
+    "word": "quellazaire",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A cigarette holder",
+    "source": "kate bolick's spinster",
+    "tags": [],
+    "dateAdded": "2026-10-10T12:00:00.000Z"
+  },
+  {
+    "id": "quenelle-441",
+    "word": "quenelle",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "An egg-shaped lump of food. originally it was a mix of fish/other meat, bread crumbs and egg that was shaped with an oval and poached, and served as a garnish in haute cuisine. but now people use it to describe the shape of fancy ice cream or butter",
+    "source": "",
+    "tags": [
+      "french"
+    ],
+    "dateAdded": "2020-04-04T12:00:00.000Z"
+  },
+  {
+    "id": "quern-442",
+    "word": "quern",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "An ancient hand-mill for grinding grain, made of stone",
+    "source": "vis and ramin",
+    "tags": [],
+    "dateAdded": "2021-07-05T12:00:00.000Z"
+  },
+  {
+    "id": "quiddity-443",
+    "word": "quiddity",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "The inherent essence or nature of something, its \"what-ness\" (from latin quid)",
+    "source": "who will pay reparations on my soul",
+    "tags": [
+      "latin"
+    ],
+    "dateAdded": "2022-02-13T12:00:00.000Z"
+  },
+  {
+    "id": "quirt-444",
+    "word": "quirt",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A riding whip from the southwest with a braided leather lash, or to strike or drive with that whip",
+    "source": "probably angle of repose",
+    "tags": [],
+    "dateAdded": "2023-01-02T12:00:00.000Z"
+  },
+  {
+    "id": "quisling-445",
+    "word": "quisling",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A traitor, someone who collaborates with an enemy occupying force (named after a norwegian who collaborated with the nazis)",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2021-04-17T12:00:00.000Z"
+  },
+  {
+    "id": "quondam-446",
+    "word": "quondam",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Former, sometime, at-one-point",
+    "source": "",
+    "tags": [
+      "latin"
+    ],
+    "dateAdded": "2021-05-16T12:00:00.000Z"
+  },
+  {
+    "id": "rebarbative-448",
+    "word": "rebarbative",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Repellent, irritating",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2020-06-22T12:00:00.000Z"
+  },
+  {
+    "id": "recension-449",
+    "word": "recension",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A revision of a text after critical analysis, a revised edition of a text",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2021-05-16T12:00:00.000Z"
+  },
+  {
+    "id": "recherche-450",
+    "word": "recherche",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Exotic/rare/exquisite, but also pretentious, \"excessively refined\"",
+    "source": "social commentary reading on gay history",
+    "tags": [
+      "french"
+    ],
+    "dateAdded": "2020-01-30T12:00:00.000Z"
+  },
+  {
+    "id": "recrudescence-451",
+    "word": "recrudescence",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "The re-occurrence of something bad after a period without it, like symptoms of a disease, the disease itself, or guerrilla warfare",
+    "source": "",
+    "tags": [
+      "medical"
+    ],
+    "dateAdded": "2021-05-23T12:00:00.000Z"
+  },
+  {
+    "id": "recusant-452",
+    "word": "recusant",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Someone who refuses to accept or obey authority--they \"recuse\" themselves from it. [from english roman catholics (1570-1791) who refused to attend services for the church of england, which was illegal]",
+    "source": "",
+    "tags": [
+      "christian"
+    ],
+    "dateAdded": "2020-06-13T12:00:00.000Z"
+  },
+  {
+    "id": "remuda-453",
+    "word": "remuda",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "In the american west, a herd of horses that cowboys would pick their rides from for the day",
+    "source": "making of the atomic bomb",
+    "tags": [],
+    "dateAdded": "2025-04-21T12:00:00.000Z"
+  },
+  {
+    "id": "rentier-454",
+    "word": "rentier",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Someone living off of income from property or investments",
+    "source": "john fowles' the magus",
+    "tags": [
+      "french"
+    ],
+    "dateAdded": "2024-05-30T12:00:00.000Z"
+  },
+  {
+    "id": "rep-455",
+    "word": "rep",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A kind of ribbed, corded fabric, apparently associated with elegance and formality",
+    "source": "swann's way",
+    "tags": [],
+    "dateAdded": "2026-10-10T12:00:00.000Z"
+  },
+  {
+    "id": "reredos-456",
+    "word": "reredos",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "The back screen part of an altar, with a bunch of paintings on it",
+    "source": "within a budding grove",
+    "tags": [
+      "architecture",
+      "christian"
+    ],
+    "dateAdded": "2026-10-10T12:00:00.000Z"
+  },
+  {
+    "id": "retrousse-457",
+    "word": "retrousse",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Turned up (used to describe noses)",
+    "source": "michael chabon's wonder boys",
+    "tags": [
+      "french"
+    ],
+    "dateAdded": "2024-05-30T12:00:00.000Z"
+  },
+  {
+    "id": "rhinorrhea-458",
+    "word": "rhinorrhea",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A runny nose",
+    "source": "",
+    "tags": [
+      "medical"
+    ],
+    "dateAdded": "2021-04-17T12:00:00.000Z"
+  },
+  {
+    "id": "rodomontade-459",
+    "word": "rodomontade",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A bragging speech, bluster",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2020-02-05T12:00:00.000Z"
+  },
+  {
+    "id": "rogation-460",
+    "word": "rogation",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Some sort of christian ceremony involving processions and chanting \"the litany of the saints\"; days of prayer and fasting in christianity",
+    "source": "",
+    "tags": [
+      "christian"
+    ],
+    "dateAdded": "2026-10-11T12:56:19.360642Z"
+  },
+  {
+    "id": "ruction-461",
+    "word": "ruction",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A noisy fight, disturbance or quarrel",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2021-04-17T12:00:00.000Z"
+  },
+  {
+    "id": "rumspringa-462",
+    "word": "rumspringa",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A pennsylvania dutch/amish term for a rite of passage for teens (age 16) where they might explore the non-amish world and see if it's for them or not, but generally they're not under the control of their parents anymore so they can do social stuff and date",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2021-05-16T12:00:00.000Z"
+  },
+  {
+    "id": "runagate-463",
+    "word": "runagate",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A runaway or fugitive. an old way of saying renegade",
+    "source": "swann's way",
+    "tags": [],
+    "dateAdded": "2026-10-10T12:00:00.000Z"
+  },
+  {
+    "id": "rusk-464",
+    "word": "rusk",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Dry, hard biscuits/bread, often baked twice, and often given to babies to help them teeth. ex. biscotti, bruschetta, zweiback",
+    "source": "the nyt crossword",
+    "tags": [],
+    "dateAdded": "2021-10-24T12:00:00.000Z"
+  },
+  {
+    "id": "sachem-466",
+    "word": "sachem",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "The chief of a confederation of the Algonquian tribes of the North Atlantic coast, or a leader of the tammany society in new york",
+    "source": "robert caro's the power broker",
+    "tags": [],
+    "dateAdded": "2024-04-11T12:00:00.000Z"
+  },
+  {
+    "id": "salient-467",
+    "word": "salient",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Something, like a promontory, that projects out or up from its surroundings. esp. used for fortification/lines of defense",
+    "source": "DFW's \"the view from mrs. thompson's,\"",
+    "tags": [],
+    "dateAdded": "2020-06-13T12:00:00.000Z"
+  },
+  {
+    "id": "sapid-468",
+    "word": "sapid",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Flavorful, having a pleasant taste",
+    "source": "the NYT crossword",
+    "tags": [],
+    "dateAdded": "2021-12-18T12:00:00.000Z"
+  },
+  {
+    "id": "saprogenic-469",
+    "word": "saprogenic",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Causing or produced by decay or putrefaction",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2021-03-28T12:00:00.000Z"
+  },
+  {
+    "id": "sapropel-470",
+    "word": "sapropel",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "In marine geology, dark sediments on ocean, estuary, or lake floors rich in organic matter (greek \"sapros,\" rotten, see \"saprogenic\"!)",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2021-03-28T12:00:00.000Z"
+  },
+  {
+    "id": "satori-471",
+    "word": "satori",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "In buddhism, particularly zen buddhism, sudden enlightenment, awakening, comprehension",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2021-05-16T12:00:00.000Z"
+  },
+  {
+    "id": "satrap-472",
+    "word": "satrap",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "An ancient persian provincial governor",
+    "source": "the atlantic",
+    "tags": [],
+    "dateAdded": "2022-02-20T12:00:00.000Z"
+  },
+  {
+    "id": "satrapy-473",
+    "word": "satrapy",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "The territory or jurisdiction governed by a satrap, which was a governor of a province in ancient Persia. or a local ruler in general",
+    "source": "robert caro's the power broker",
+    "tags": [],
+    "dateAdded": "2024-04-11T12:00:00.000Z"
+  },
+  {
+    "id": "schlamperei-474",
+    "word": "schlamperei",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A sloppiness ascribed by germans to austrians or southern germans",
+    "source": "john fowles' the magus",
+    "tags": [],
+    "dateAdded": "2024-05-30T12:00:00.000Z"
+  },
+  {
+    "id": "sciolism-475",
+    "word": "sciolism",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Expressing opinions on something you know very little about",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2020-06-22T12:00:00.000Z"
+  },
+  {
+    "id": "scop-476",
+    "word": "scop",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "An old english bard or poet mentioned in literature",
+    "source": "beowulf",
+    "tags": [],
+    "dateAdded": "2023-01-02T12:00:00.000Z"
+  },
+  {
+    "id": "scopophilia-477",
+    "word": "scopophilia",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Literally love of looking--the fetish of watching, or the male gaze, or just the aesthetic pleasure of looking at stuff",
+    "source": "jeremy atherton lin's gay bar",
+    "tags": [],
+    "dateAdded": "2022-01-09T12:00:00.000Z"
+  },
+  {
+    "id": "scurf-478",
+    "word": "scurf",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Basically dandruff, or a flaky covering on a surface (on plants, some sort of bad fungal infection)",
+    "source": "death comes for the archbishop",
+    "tags": [
+      "medical"
+    ],
+    "dateAdded": "2021-06-06T12:00:00.000Z"
+  },
+  {
+    "id": "semblable-479",
+    "word": "semblable",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Similar or seeming to be; as noun, someone like oneself, one's fellow",
+    "source": "a response to that one n+1 op-ed about book critics",
+    "tags": [],
+    "dateAdded": "2021-11-14T12:00:00.000Z"
+  },
+  {
+    "id": "sempiternal-480",
+    "word": "sempiternal",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Eternal",
+    "source": "frank kermode's the sense of an ending",
+    "tags": [
+      "latin"
+    ],
+    "dateAdded": "2021-06-13T12:00:00.000Z"
+  },
+  {
+    "id": "seneschal-481",
+    "word": "seneschal",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "The steward of a medieval great house (by court appointment!), an overseer of servants/laborers, a general historical administrator",
+    "source": "erec and enide",
+    "tags": [],
+    "dateAdded": "2021-05-23T12:00:00.000Z"
+  },
+  {
+    "id": "serac-482",
+    "word": "serac",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A spike of ice on a glacier, often created by intersecting crevasses; can collapse and kill mountaineers",
+    "source": "paige mcclanahan's the new tourist",
+    "tags": [],
+    "dateAdded": "2024-04-11T12:00:00.000Z"
+  },
+  {
+    "id": "sequacious-483",
+    "word": "sequacious",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Someone who adopts ideas without a ton of thought, intellectually a follower",
+    "source": "john gardner's on moral fiction",
+    "tags": [],
+    "dateAdded": "2026-10-10T12:00:00.000Z"
+  },
+  {
+    "id": "shako-484",
+    "word": "shako",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A band cap; a tall cylindrical military cap with a visor and sometimes a feather",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2026-10-11T12:56:19.362445Z"
+  },
+  {
+    "id": "shamus-485",
+    "word": "shamus",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Slang for a private detective or police officer",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2021-05-16T12:00:00.000Z"
+  },
+  {
+    "id": "shawm-486",
+    "word": "shawm",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A double-reed woodwind instrument made in medieval and renaissance europe, a precursor to the oboe, what the pied piper might have played",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2021-03-28T12:00:00.000Z"
+  },
+  {
+    "id": "shrive-487",
+    "word": "shrive",
+    "partOfSpeech": [
+      "verb"
+    ],
+    "definition": "To free someone from guilt, absolve, hear the confession of (as a priest); or, present oneself to a priest for these things",
+    "source": "",
+    "tags": [
+      "christian"
+    ],
+    "dateAdded": "2021-03-28T12:00:00.000Z"
+  },
+  {
+    "id": "sinciput-488",
+    "word": "sinciput",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "The forehead; the front, top half of the skull. comes from latin \"caput\"",
+    "source": "looking up \"occiput,\"",
+    "tags": [
+      "latin",
+      "medical"
+    ],
+    "dateAdded": "2022-04-10T12:00:00.000Z"
+  },
+  {
+    "id": "sinople-489",
+    "word": "sinople",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A dark reddish pigment. later, in heraldry, it switched to mean \"green\" (from a black sea port called sinope)",
+    "source": "the guermantes way",
+    "tags": [],
+    "dateAdded": "2026-10-10T12:00:00.000Z"
+  },
+  {
+    "id": "skeuomorph-490",
+    "word": "skeuomorph",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "An object derived from another object that retains design characteristics of the original (ex. light bulbs shaped like candle flames, digital audio consoles with knobs that look like physical ones, recycle bin or floppy disk icons). often used in discussions of computer user interfaces",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2021-04-04T12:00:00.000Z"
+  },
+  {
+    "id": "smaragdine-491",
+    "word": "smaragdine",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "The same color as/somehow like emeralds",
+    "source": "research on obscure colors",
+    "tags": [],
+    "dateAdded": "2021-03-28T12:00:00.000Z"
+  },
+  {
+    "id": "smolt-492",
+    "word": "smolt",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A young salmon or trout, at the life stage when it turns silver and is ready to migrate to the sea",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2023-01-02T12:00:00.000Z"
+  },
+  {
+    "id": "sodality-493",
+    "word": "sodality",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Brotherhood, community, an organized society or fellowship, particularly a religious guild/devotional or charitable association of Roman Catholic laity",
+    "source": "",
+    "tags": [
+      "christian"
+    ],
+    "dateAdded": "2021-06-21T12:00:00.000Z"
+  },
+  {
+    "id": "solecism-494",
+    "word": "solecism",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "An instance of bad grammar, or a blunder/breach of etiquette",
+    "source": "DFW's \"authority and american usage,\"",
+    "tags": [],
+    "dateAdded": "2020-06-22T12:00:00.000Z"
+  },
+  {
+    "id": "solmization-495",
+    "word": "solmization",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "The system/act/practice of using syllables to correspond to notes on a scale (sol + mi!), like solfege",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2021-03-28T12:00:00.000Z"
+  },
+  {
+    "id": "soubrette-496",
+    "word": "soubrette",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A coquettish maid or frivolous young woman in comedies, or the actress or opera singer who plays the part",
+    "source": "villette",
+    "tags": [
+      "french"
+    ],
+    "dateAdded": "2022-02-06T12:00:00.000Z"
+  },
+  {
+    "id": "soutane-497",
+    "word": "soutane",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A cassock, an ankle-length robe worn by priests",
+    "source": "fintan o'toole's we don’t know ourselves",
+    "tags": [
+      "christian",
+      "french"
+    ],
+    "dateAdded": "2026-10-10T12:00:00.000Z"
+  },
+  {
+    "id": "spavined-498",
+    "word": "spavined",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Old and decrepit--literally, afflicted with spavin, which is a bone swelling in a horse's leg from strain",
+    "source": "michael chabon's wonder boys",
+    "tags": [
+      "medical"
+    ],
+    "dateAdded": "2024-05-30T12:00:00.000Z"
+  },
+  {
+    "id": "spillikin-499",
+    "word": "spillikin",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Splinters or fragments, or a game played with little rods",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2021-05-16T12:00:00.000Z"
+  },
+  {
+    "id": "spinney-500",
+    "word": "spinney",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A small british forest with undergrowth",
+    "source": "lev grossman's the magicians",
+    "tags": [],
+    "dateAdded": "2026-10-10T12:00:00.000Z"
+  },
+  {
+    "id": "spoor-501",
+    "word": "spoor",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "The tracks, trail, or droppings of a wild animal, with which it can be tracked; a trace in which something can be followed",
+    "source": "james wood's how fiction works",
+    "tags": [],
+    "dateAdded": "2021-05-23T12:00:00.000Z"
+  },
+  {
+    "id": "sponson-502",
+    "word": "sponson",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A projection from the side of a ship or plane, like a gun platform",
+    "source": "making of the atomic bomb",
+    "tags": [],
+    "dateAdded": "2025-04-21T12:00:00.000Z"
+  },
+  {
+    "id": "sporran-503",
+    "word": "sporran",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "The purse you wear with a kilt",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2020-01-30T12:00:00.000Z"
+  },
+  {
+    "id": "stentor-504",
+    "word": "stentor",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A person with a loud voice. in the trojan war, there was a greek herald with a loud voice named stentor",
+    "source": "vinson cunningham's great expectations",
+    "tags": [],
+    "dateAdded": "2026-10-10T12:00:00.000Z"
+  },
+  {
+    "id": "stertorous-505",
+    "word": "stertorous",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Used to describe breathing that's labored and noisy, characterized by a harsh snoring or gasping sound",
+    "source": "",
+    "tags": [
+      "medical"
+    ],
+    "dateAdded": "2021-05-16T12:00:00.000Z"
+  },
+  {
+    "id": "stook-506",
+    "word": "stook",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "British. a bundle of grain standing up on end",
+    "source": "beowulf",
+    "tags": [],
+    "dateAdded": "2023-01-02T12:00:00.000Z"
+  },
+  {
+    "id": "stylite-507",
+    "word": "stylite",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A christian ascetic who lived on a pillar (common in the early days of the byzantine empire, in syria)",
+    "source": "",
+    "tags": [
+      "christian"
+    ],
+    "dateAdded": "2026-10-11T12:56:19.363294Z"
+  },
+  {
+    "id": "styptic-508",
+    "word": "styptic",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Something that stops bleeding/constricts stuff, like flesh",
+    "source": "DFW's \"authority and american usage,\"",
+    "tags": [
+      "medical"
+    ],
+    "dateAdded": "2020-06-22T12:00:00.000Z"
+  },
+  {
+    "id": "sudor-509",
+    "word": "sudor",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Sweat, but like a fancy way of referring to it. (also, sweat in spanish)",
+    "source": "jeremy atherton lin's gay bar",
+    "tags": [
+      "medical"
+    ],
+    "dateAdded": "2022-01-09T12:00:00.000Z"
+  },
+  {
+    "id": "suivant-510",
+    "word": "suivant",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Following, from french",
+    "source": "john gardner's on moral fiction",
+    "tags": [
+      "french"
+    ],
+    "dateAdded": "2026-10-10T12:00:00.000Z"
+  },
+  {
+    "id": "sump-511",
+    "word": "sump",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A pit or reservoir used as a drain or receptacle for liquids, like a cesspool",
+    "source": "ben goldfarb's eager",
+    "tags": [],
+    "dateAdded": "2021-06-13T12:00:00.000Z"
+  },
+  {
+    "id": "supererogation-512",
+    "word": "supererogation",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Literally an act that is above and beyond the call of duty, \"the act of performing more than is required by duty, obligation, or need\"",
+    "source": "molloy",
+    "tags": [],
+    "dateAdded": "2021-06-06T12:00:00.000Z"
+  },
+  {
+    "id": "suppurate-513",
+    "word": "suppurate",
+    "partOfSpeech": [
+      "verb"
+    ],
+    "definition": "To form pus, fester",
+    "source": "DFW's \"authority and american usage,\"",
+    "tags": [
+      "medical"
+    ],
+    "dateAdded": "2020-06-22T12:00:00.000Z"
+  },
+  {
+    "id": "surd-514",
+    "word": "surd",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Irrational (cf. \"absurd\"); n. in phonetics, a type of consonant sound said with the breath and not the voice, voiceless, and in math, an irrational number",
+    "source": "annie dillard's pilgrim at tinker creek",
+    "tags": [],
+    "dateAdded": "2021-03-28T12:00:00.000Z"
+  },
+  {
+    "id": "swinged-515",
+    "word": "swinged",
+    "partOfSpeech": [
+      "verb"
+    ],
+    "definition": "Struck hard, beaten (present tense swinge)",
+    "source": "beowulf",
+    "tags": [],
+    "dateAdded": "2023-01-02T12:00:00.000Z"
+  },
+  {
+    "id": "swivet-516",
+    "word": "swivet",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Extreme agitation, a fluster or panic",
+    "source": "DFW's \"authority and american usage,\"",
+    "tags": [],
+    "dateAdded": "2020-06-22T12:00:00.000Z"
+  },
+  {
+    "id": "synoptic-517",
+    "word": "synoptic",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Providing a general view of the whole, or taking the same view (like the first three gospels, which all have similar stories)",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2021-04-17T12:00:00.000Z"
+  },
+  {
+    "id": "tabellion-519",
+    "word": "tabellion",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A historical scribe (from tabella, tablet in latin)",
+    "source": "swann's way",
+    "tags": [
+      "latin"
+    ],
+    "dateAdded": "2026-10-10T12:00:00.000Z"
+  },
+  {
+    "id": "tabescent-520",
+    "word": "tabescent",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Wasting away",
+    "source": "\"whichy thickets,\"",
+    "tags": [
+      "medical"
+    ],
+    "dateAdded": "2020-06-21T12:00:00.000Z"
+  },
+  {
+    "id": "tarn-521",
+    "word": "tarn",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A small mountain lake formed by glacial erosion",
+    "source": "burntcoat",
+    "tags": [],
+    "dateAdded": "2022-02-06T12:00:00.000Z"
+  },
+  {
+    "id": "termitary-522",
+    "word": "termitary",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A termite's nest",
+    "source": "john fowles' the magus",
+    "tags": [],
+    "dateAdded": "2024-05-30T12:00:00.000Z"
+  },
+  {
+    "id": "thaumaturgy-523",
+    "word": "thaumaturgy",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "The performance of miracles; magic",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2021-04-17T12:00:00.000Z"
+  },
+  {
+    "id": "thole-524",
+    "word": "thole",
+    "partOfSpeech": [
+      "verb"
+    ],
+    "definition": "Scottish. to endure something without complaint, tolerate",
+    "source": "beowulf",
+    "tags": [],
+    "dateAdded": "2023-01-02T12:00:00.000Z"
+  },
+  {
+    "id": "thole-pin-525",
+    "word": "thole pin",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A pin attached to the side of a rowboat to act as a fulcrum for an oar (usually in pairs)",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2021-03-28T12:00:00.000Z"
+  },
+  {
+    "id": "threnody-526",
+    "word": "threnody",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A lament, a song of lamentation, an elegy. from \"threnos,\" greek for \"dirge\"",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2021-03-28T12:00:00.000Z"
+  },
+  {
+    "id": "thurifer-527",
+    "word": "thurifer",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "The person in a christian church who carries the censer (incense-burner) during ceremonies",
+    "source": "barbara pym's a glass of blessings",
+    "tags": [
+      "christian"
+    ],
+    "dateAdded": "2025-11-11T12:00:00.000Z"
+  },
+  {
+    "id": "tiercel-528",
+    "word": "tiercel",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A male hawk, especially a male peregrine falcon. used, obviously, in falconry",
+    "source": "erec and enide",
+    "tags": [],
+    "dateAdded": "2021-05-23T12:00:00.000Z"
+  },
+  {
+    "id": "tilth-529",
+    "word": "tilth",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Cultivated land or prepared surface soil, the level of soil suitability for growing stuff",
+    "source": "o pioneers!",
+    "tags": [],
+    "dateAdded": "2021-08-08T12:00:00.000Z"
+  },
+  {
+    "id": "titivate-530",
+    "word": "titivate",
+    "partOfSpeech": [
+      "verb"
+    ],
+    "definition": "Make oneself look attractive, make small enhancing improvements to something; smarten or spruce up",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2021-03-28T12:00:00.000Z"
+  },
+  {
+    "id": "titubation-531",
+    "word": "titubation",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A tremor/shaking of the head or body from a brain disease",
+    "source": "within a budding grove",
+    "tags": [
+      "medical"
+    ],
+    "dateAdded": "2026-10-10T12:00:00.000Z"
+  },
+  {
+    "id": "tocsin-532",
+    "word": "tocsin",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "An alarm bell or warning signal, a bell that was used to sound alarms (esp. in france?)",
+    "source": "",
+    "tags": [
+      "french"
+    ],
+    "dateAdded": "2021-05-16T12:00:00.000Z"
+  },
+  {
+    "id": "tombola-533",
+    "word": "tombola",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "British, a raffle in which usually numbered tickets are drawn at random from a revolving drum with prizes awarded to those drawing tickets that match numbers preassigned to a prize, or the drum itself",
+    "source": "dorthe nors' wild swims",
+    "tags": [],
+    "dateAdded": "2021-06-21T12:00:00.000Z"
+  },
+  {
+    "id": "tonitruous-534",
+    "word": "tonitruous",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Thunderous, fulminating",
+    "source": "literally from the latin for thunder, \"tonitrus\" (old in art school",
+    "tags": [
+      "latin"
+    ],
+    "dateAdded": "2021-05-23T12:00:00.000Z"
+  },
+  {
+    "id": "tonsorial-535",
+    "word": "tonsorial",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Related to cutting hair/the work of a barber",
+    "source": "sodom and gomorrah",
+    "tags": [],
+    "dateAdded": "2026-10-10T12:00:00.000Z"
+  },
+  {
+    "id": "touchpaper-536",
+    "word": "touchpaper",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Often \"blue touchpaper.\" a piece of paper attached to a firework that you light to set it off, OR, metaphorically, some instigating incident",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2020-06-13T12:00:00.000Z"
+  },
+  {
+    "id": "travois-537",
+    "word": "travois",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A wooden frame structure (two sticks crossed) used by plains indians to transport goods, pulled by dogs",
+    "source": "annie dillard's an american childhood",
+    "tags": [],
+    "dateAdded": "2022-03-26T12:00:00.000Z"
+  },
+  {
+    "id": "trinitite-538",
+    "word": "trinitite",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "The greenish glassy substance left on the desert floor after the plutonium-based Trinity nuclear bomb test on July 16, 1945, near Alamogordo, New Mexico, formed when sand was kicked up and liquefied in the heat of the blast",
+    "source": "a recent rich cohen nyrb piece about white sands",
+    "tags": [],
+    "dateAdded": "2021-04-04T12:00:00.000Z"
+  },
+  {
+    "id": "triune-539",
+    "word": "triune",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "The trinity: the father, son, and holy spirit united into one; something with three parts or aspects",
+    "source": "",
+    "tags": [
+      "christian"
+    ],
+    "dateAdded": "2021-05-23T12:00:00.000Z"
+  },
+  {
+    "id": "troglobite-540",
+    "word": "troglobite",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "An animal that lives only underground or in caves/is specially adapted to lightless cave life",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2021-05-23T12:00:00.000Z"
+  },
+  {
+    "id": "tucket-541",
+    "word": "tucket",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Trumpet fanfare, possibly from the word for \"to beat a drum\"",
+    "source": "vis and ramin",
+    "tags": [],
+    "dateAdded": "2021-07-18T12:00:00.000Z"
+  },
+  {
+    "id": "tumbrel-542",
+    "word": "tumbrel",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A two-wheeled farm cart that can be tipped; also vehicles that carried people to the guillotines during the french revolution",
+    "source": "graeme wood in the atlantic on peter turchin",
+    "tags": [
+      "french"
+    ],
+    "dateAdded": "2020-11-14T12:00:00.000Z"
+  },
+  {
+    "id": "turophile-543",
+    "word": "turophile",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A cheese fancier/connoisseur",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2021-04-17T12:00:00.000Z"
+  },
+  {
+    "id": "tuque-544",
+    "word": "tuque",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A knit cap, VERY canadian--according to fast company, \"a symbol of French-Canadian nationalism since at least the 1837 Patriotes Rebellion\"",
+    "source": "",
+    "tags": [
+      "french"
+    ],
+    "dateAdded": "2021-05-16T12:00:00.000Z"
+  },
+  {
+    "id": "ukase-546",
+    "word": "ukase",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A russian proclamation/edict; an order from a higher authority, often final and arbitrary",
+    "source": "at the stranger's gate",
+    "tags": [],
+    "dateAdded": "2020-06-22T12:00:00.000Z"
+  },
+  {
+    "id": "undinist-547",
+    "word": "undinist",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Someone who takes sexual pleasure from water, especially pee/peeing",
+    "source": "jeremy atherton lin's gay bar",
+    "tags": [],
+    "dateAdded": "2022-01-09T12:00:00.000Z"
+  },
+  {
+    "id": "vade-mecum-549",
+    "word": "vade mecum",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Lat. \"go with me.\" a handy book carried around; a manual for reference, or something carried around regularly by someone",
+    "source": "",
+    "tags": [
+      "latin"
+    ],
+    "dateAdded": "2020-06-13T12:00:00.000Z"
+  },
+  {
+    "id": "vair-550",
+    "word": "vair",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Fur from squirrels, usually bluish-gray, that was used to line clothes in the 13th and 14th centuries, and also the name of a heraldic pattern that mimics the pattern the pelts made. also consider miniver, which is just the white part (the fur on the squirrel's belly) and not the gray",
+    "source": "erec and enide",
+    "tags": [],
+    "dateAdded": "2021-05-23T12:00:00.000Z"
+  },
+  {
+    "id": "vatic-551",
+    "word": "vatic",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Prophetic, oracular--telling the future",
+    "source": "digital minimalism",
+    "tags": [],
+    "dateAdded": "2022-04-17T12:00:00.000Z"
+  },
+  {
+    "id": "vaticination-552",
+    "word": "vaticination",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A prophecy or prediction",
+    "source": "related to \"vatic,\" from the latin vates, \"prophet or seer\" (",
+    "tags": [
+      "latin"
+    ],
+    "dateAdded": "2023-01-02T12:00:00.000Z"
+  },
+  {
+    "id": "vavasour-553",
+    "word": "vavasour",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "In feudal times, a vassal who owed allegiance to a baron but had vassals under him (likely from vassus vasorum)",
+    "source": "erec and enide",
+    "tags": [],
+    "dateAdded": "2021-05-23T12:00:00.000Z"
+  },
+  {
+    "id": "veldt-554",
+    "word": "veldt",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "Southern african grasslands",
+    "source": "DFW's \"authority and american usage,\"",
+    "tags": [],
+    "dateAdded": "2020-06-22T12:00:00.000Z"
+  },
+  {
+    "id": "velleity-555",
+    "word": "velleity",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A wish or inclination that is so insignificant that a person feels little or no compulsion to act on it/not strong enough to lead to action",
+    "source": "molloy",
+    "tags": [],
+    "dateAdded": "2021-06-06T12:00:00.000Z"
+  },
+  {
+    "id": "verklempt-556",
+    "word": "verklempt",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Choked up, overcome with emotion",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2021-04-17T12:00:00.000Z"
+  },
+  {
+    "id": "vespertine-557",
+    "word": "vespertine",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Related to or occurring in the evening",
+    "source": "jeremy atherton lin's gay bar",
+    "tags": [],
+    "dateAdded": "2022-01-09T12:00:00.000Z"
+  },
+  {
+    "id": "viaticum-558",
+    "word": "viaticum",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "The eucharist (bread and wine) given to a person before she dies--part of last rites. also, an ancient roman allowance for traveling, like an expense account for officials on public missions. \"something with you on your way.\"",
+    "source": "madame bovary",
+    "tags": [
+      "christian"
+    ],
+    "dateAdded": "2020-04-28T12:00:00.000Z"
+  },
+  {
+    "id": "vicinal-559",
+    "word": "vicinal",
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definition": "Local, in a certain area; in chemistry, adjacent in a molecule",
+    "source": "jeremy atherton lin's gay bar",
+    "tags": [],
+    "dateAdded": "2022-01-09T12:00:00.000Z"
+  },
+  {
+    "id": "viga-560",
+    "word": "viga",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A wooden roof beam in southwestern adobe structures",
+    "source": "that atlantic caity weaver piece about second hand shopping",
+    "tags": [
+      "architecture"
+    ],
+    "dateAdded": "2026-10-10T12:00:00.000Z"
+  },
+  {
+    "id": "volplane-561",
+    "word": "volplane",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A steep dive by a bird or plane, often with the engine off",
+    "source": "anelise chen's clam down",
+    "tags": [
+      "french"
+    ],
+    "dateAdded": "2025-04-21T12:00:00.000Z"
+  },
+  {
+    "id": "whitlow-563",
+    "word": "whitlow",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A finger infection",
+    "source": "sodom and gomorrah",
+    "tags": [
+      "medical"
+    ],
+    "dateAdded": "2026-10-10T12:00:00.000Z"
+  },
+  {
+    "id": "yashmak-565",
+    "word": "yashmak",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "A type of historical turkish headcovering kind of like a niqab, where only the eyes are revealed",
+    "source": "john fowles' the magus",
+    "tags": [],
+    "dateAdded": "2024-05-30T12:00:00.000Z"
+  },
+  {
+    "id": "yataghan-566",
+    "word": "yataghan",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "An ottoman knife, curved or kind of wavy",
+    "source": "john fowles' the magus",
+    "tags": [],
+    "dateAdded": "2024-05-30T12:00:00.000Z"
+  },
+  {
+    "id": "zelig-568",
+    "word": "Zelig",
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definition": "After a character in a 1983 woody allen movie, a nondescript person who is able to change their appearance, behavior, or attitudes and shows up in a wide variety of situations",
+    "source": "",
+    "tags": [],
+    "dateAdded": "2021-05-16T12:00:00.000Z"
+  }
+];
