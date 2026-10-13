@@ -127,6 +127,36 @@ class DevServerHandler(SimpleHTTPRequestHandler):
         # Default static file serving
         return super().do_GET()
 
+    def do_POST(self):
+        if self.path == '/api/save':
+            content_length = int(self.headers.get('Content-Length', 0))
+            body = self.rfile.read(content_length).decode('utf-8')
+            try:
+                import json
+                data = json.loads(body)
+                os.makedirs('data', exist_ok=True)
+                with open('data/words.json', 'w', encoding='utf-8') as f:
+                    json.dump(data, f, indent=2, ensure_ascii=False)
+
+                # Also write to js/words.js for dual compatibility
+                words_js_content = "/**\n * Curated Personal Dictionary entries.\n */\nexport const INITIAL_WORDS = " + json.dumps(data, indent=2, ensure_ascii=False) + ";\n"
+                with open('js/words.js', 'w', encoding='utf-8') as f:
+                    f.write(words_js_content)
+
+                self.send_response(200)
+                self.send_header('Content-Type', 'application/json')
+                self.end_headers()
+                self.wfile.write(b'{"ok": true}')
+                return
+            except Exception as e:
+                self.send_response(500)
+                self.send_header('Content-Type', 'application/json')
+                self.end_headers()
+                self.wfile.write(f'{{"error": "{str(e)}"}}'.encode('utf-8'))
+                return
+        self.send_response(404)
+        self.end_headers()
+
     def log_message(self, format, *args):
         # Filter out noisy SSE heartbeats from console output
         if args and len(args) > 0 and '__livereload' in str(args[0]):

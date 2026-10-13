@@ -486,7 +486,7 @@ const saveTokenBtn = document.getElementById('save-token-btn');
 const GITHUB_REPO_OWNER = 'sweetgingkolove';
 const GITHUB_REPO_NAME = 'personal_dictionary';
 const GITHUB_BRANCH = 'main';
-const GITHUB_WORDS_FILE = 'js/words.js';
+const GITHUB_WORDS_FILE = 'data/words.json';
 const GITHUB_TOKEN_STORAGE_KEY = 'personal_dictionary_gh_token';
 const GITHUB_AUTOSYNC_STORAGE_KEY = 'personal_dictionary_gh_autosync';
 const GITHUB_LAST_SYNC_STORAGE_KEY = 'personal_dictionary_gh_last_sync';
@@ -1186,9 +1186,10 @@ export function clearGitHubToken() {
 
 export function isAutoSyncEnabled() {
   try {
-    return localStorage.getItem(GITHUB_AUTOSYNC_STORAGE_KEY) === 'true';
+    const val = localStorage.getItem(GITHUB_AUTOSYNC_STORAGE_KEY);
+    return val !== 'false'; // Default to true!
   } catch {
-    return false;
+    return true;
   }
 }
 
@@ -1302,6 +1303,23 @@ async function testGitHubConnection(token) {
   }
 }
 
+// Fingerprint dictionary state to detect actual changes
+let lastPushedFingerprint = '';
+let autoPushTimeout = null;
+
+function computeDictionaryFingerprint() {
+  if (!state.words || !Array.isArray(state.words)) return '';
+  return JSON.stringify(state.words.map(w => ({
+    id: w.id,
+    w: w.word,
+    p: w.partOfSpeech,
+    d: w.definition,
+    s: w.source,
+    t: w.tags,
+    da: w.dateAdded
+  })));
+}
+
 export async function pushToGitHub({ silent = false } = {}) {
   const token = getGitHubToken();
   if (!token) {
@@ -1309,11 +1327,12 @@ export async function pushToGitHub({ silent = false } = {}) {
     return false;
   }
 
-  updateSyncModalStatusUI('syncing', 'Pushing changes to GitHub...', 'Creating automated commit on branch main...');
+  updateSyncModalStatusUI('syncing', 'Pushing changes to GitHub...', 'Updating data/words.json on branch main...');
   updateHeaderSyncButtonBadge('☁ Syncing...');
   if (pushGithubBtn) pushGithubBtn.disabled = true;
 
   try {
+    // 1. Fetch current file to get its blob SHA
     const fileRes = await fetch(
       `https://api.github.com/repos/${GITHUB_REPO_OWNER}/${GITHUB_REPO_NAME}/contents/${GITHUB_WORDS_FILE}?ref=${GITHUB_BRANCH}&_t=${Date.now()}`,
       {
@@ -1338,13 +1357,14 @@ export async function pushToGitHub({ silent = false } = {}) {
       throw new Error(errData.message || `Failed to fetch file SHA (${fileRes.status})`);
     }
 
+    // 2. Prepare pure JSON content
     const sortedWords = [...state.words].sort((a, b) =>
       (a.word || '').localeCompare(b.word || '', undefined, { sensitivity: 'base' })
     );
     const wordsJson = JSON.stringify(sortedWords, null, 2);
-    const contentText = `/**\n * Curated Personal Dictionary entries.\n */\nexport const INITIAL_WORDS = ${wordsJson};\n`;
-    const base64Content = utf8ToBase64(contentText);
+    const base64Content = utf8ToBase64(wordsJson);
 
+    // 3. PUT commit to data/words.json
     const putRes = await fetch(
       `https://api.github.com/repos/${GITHUB_REPO_OWNER}/${GITHUB_REPO_NAME}/contents/${GITHUB_WORDS_FILE}`,
       {
@@ -1356,7 +1376,7 @@ export async function pushToGitHub({ silent = false } = {}) {
           'X-GitHub-Api-Version': '2022-11-28'
         },
         body: JSON.stringify({
-          message: `Update dictionary entries (${state.words.length} words)`,
+          message: `Update dictionary words (${state.words.length} entries)`,
           content: base64Content,
           sha: sha || undefined,
           branch: GITHUB_BRANCH
@@ -1374,14 +1394,24 @@ export async function pushToGitHub({ silent = false } = {}) {
 
     const nowIso = new Date().toISOString();
     setLastSyncTime(nowIso);
+    lastPushedFingerprint = computeDictionaryFingerprint();
+
+    // Also notify local dev server if running on localhost
+    if (location.hostname === 'localhost' || location.hostname === '127.0.0.1') {
+      fetch('/api/save', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: wordsJson
+      }).catch(() => {});
+    }
 
     updateSyncModalStatusUI(
       'connected',
       '✓ Synced to GitHub just now',
-      `Successfully committed ${state.words.length} words to GitHub. GitHub Pages will refresh with latest entries within 1-2 minutes.`
+      `Successfully committed ${state.words.length} entries to data/words.json. GitHub Pages will refresh automatically.`
     );
     updateHeaderSyncButtonBadge('☁ Synced');
-    setTimeout(() => updateHeaderSyncButtonBadge('☁ Sync'), 4000);
+    setTimeout(() => updateHeaderSyncButtonBadge('☁ Ready'), 3000);
 
     return true;
   } catch (err) {
@@ -1399,7 +1429,7 @@ export async function pushToGitHub({ silent = false } = {}) {
 
 export async function pullFromGitHub() {
   const token = getGitHubToken();
-  updateSyncModalStatusUI('syncing', 'Pulling latest from GitHub...', 'Downloading js/words.js from branch main...');
+  updateSyncModalStatusUI('syncing', 'Pulling latest from GitHub...', 'Downloading data/words.json from branch main...');
   if (pullGithubBtn) pullGithubBtn.disabled = true;
 
   try {
@@ -1425,19 +1455,22 @@ export async function pullFromGitHub() {
     }
 
     const decoded = base64ToUtf8(fileData.content);
-    const bracketStart = decoded.indexOf('[');
-    const bracketEnd = decoded.lastIndexOf(']');
-    if (bracketStart === -1 || bracketEnd === -1) {
-      throw new Error('Could not find INITIAL_WORDS array in downloaded file.');
+    let wordsArray;
+    try {
+      wordsArray = JSON.parse(decoded);
+    } catch {
+      const bracketStart = decoded.indexOf('[');
+      const bracketEnd = decoded.lastIndexOf(']');
+      wordsArray = JSON.parse(decoded.substring(bracketStart, bracketEnd + 1));
     }
 
-    const wordsArray = JSON.parse(decoded.substring(bracketStart, bracketEnd + 1));
     if (!Array.isArray(wordsArray)) {
       throw new Error('Parsed data is not an array.');
     }
 
     state.words = wordsArray.map(normalizeEntry);
     persistWords(state.words);
+    lastPushedFingerprint = computeDictionaryFingerprint();
     renderTagFilterBar();
     renderAddTagPicker();
     render();
@@ -1448,10 +1481,10 @@ export async function pullFromGitHub() {
     updateSyncModalStatusUI(
       'connected',
       '✓ Pulled latest words',
-      `Loaded ${state.words.length} words directly from GitHub into this device.`
+      `Loaded ${state.words.length} entries directly from GitHub into this device.`
     );
     updateHeaderSyncButtonBadge('☁ Synced');
-    setTimeout(() => updateHeaderSyncButtonBadge('☁ Sync'), 4000);
+    setTimeout(() => updateHeaderSyncButtonBadge('☁ Ready'), 3000);
     alert(`Successfully loaded ${state.words.length} words from GitHub!`);
   } catch (err) {
     console.error('GitHub Pull error:', err);
@@ -1490,9 +1523,78 @@ function closeSyncModal() {
   syncDialog.close();
 }
 
-function triggerAutoSync() {
-  if (isAutoSyncEnabled() && getGitHubToken()) {
-    pushToGitHub({ silent: true });
+export function triggerAutoSync() {
+  const currentFingerprint = computeDictionaryFingerprint();
+  if (lastPushedFingerprint && currentFingerprint === lastPushedFingerprint) {
+    return; // Nothing changed
+  }
+
+  // Also save to local server disk if running on localhost
+  if (location.hostname === 'localhost' || location.hostname === '127.0.0.1') {
+    fetch('/api/save', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(state.words)
+    }).catch(() => {});
+  }
+
+  const token = getGitHubToken();
+  if (!token) {
+    updateHeaderSyncButtonBadge('☁ Connect Token');
+    return;
+  }
+
+  if (!isAutoSyncEnabled()) {
+    return;
+  }
+
+  if (autoPushTimeout) {
+    clearTimeout(autoPushTimeout);
+  }
+
+  updateHeaderSyncButtonBadge('☁ Saving...');
+  autoPushTimeout = setTimeout(async () => {
+    const success = await pushToGitHub({ silent: true });
+    if (success) {
+      lastPushedFingerprint = computeDictionaryFingerprint();
+    }
+  }, 500);
+}
+
+/**
+ * Asynchronously refresh words from data/words.json if available.
+ */
+async function loadRemoteWordsJson() {
+  try {
+    const res = await fetch('data/words.json?_t=' + Date.now());
+    if (res.ok) {
+      const data = await res.json();
+      if (Array.isArray(data) && data.length > 0) {
+        const remoteFingerprint = JSON.stringify(data.map(w => ({
+          id: w.id,
+          w: w.word,
+          p: w.partOfSpeech,
+          d: w.definition,
+          s: w.source,
+          t: w.tags,
+          da: w.dateAdded
+        })));
+        const currentFingerprint = computeDictionaryFingerprint();
+
+        if (remoteFingerprint !== currentFingerprint) {
+          state.words = data.map(normalizeEntry);
+          persistWords(state.words);
+          lastPushedFingerprint = remoteFingerprint;
+          renderTagFilterBar();
+          renderAddTagPicker();
+          render();
+        } else {
+          lastPushedFingerprint = currentFingerprint;
+        }
+      }
+    }
+  } catch (err) {
+    // Fallback: words already loaded from localStorage or INITIAL_WORDS
   }
 }
 
@@ -1872,6 +1974,7 @@ initEvents();
 renderTagFilterBar();
 renderAddTagPicker();
 render();
+loadRemoteWordsJson();
 if (getGitHubToken()) {
   updateHeaderSyncButtonBadge('☁ Ready');
 }

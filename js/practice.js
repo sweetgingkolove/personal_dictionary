@@ -951,3 +951,18 @@ populateTagSelect();
 updatePoolBadge();
 initEvents();
 startNewRound();
+
+// Asynchronously sync latest from data/words.json if available
+(async function loadRemotePracticeWords() {
+  try {
+    const res = await fetch('data/words.json?_t=' + Date.now());
+    if (res.ok) {
+      const data = await res.json();
+      if (Array.isArray(data) && data.length > 0) {
+        state.allWords = data.map(normalizeEntry);
+        populateTagSelect();
+        updatePoolBadge();
+      }
+    }
+  } catch {}
+})();
