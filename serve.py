@@ -15,7 +15,8 @@ from http.server import ThreadingHTTPServer, SimpleHTTPRequestHandler
 
 PORT = 8000
 WATCH_EXTENSIONS = {'.html', '.css', '.js', '.json', '.svg', '.png', '.jpg', '.jpeg'}
-IGNORE_DIRS = {'.git', '__pycache__', 'scratch', '.vscode'}
+IGNORE_DIRS = {'.git', '__pycache__', 'scratch', '.vscode', 'data'}
+IGNORE_FILES = {'words.js', 'words.json'}
 
 # Thread-safe queue list for connected SSE clients
 subscribers_lock = threading.Lock()
@@ -180,6 +181,8 @@ def get_files_snapshot(base_dir):
         # Exclude ignored directories
         dirs[:] = [d for d in dirs if d not in IGNORE_DIRS and not d.startswith('.')]
         for file in files:
+            if file in IGNORE_FILES:
+                continue
             ext = os.path.splitext(file)[1].lower()
             if ext in WATCH_EXTENSIONS:
                 full_path = os.path.join(root, file)

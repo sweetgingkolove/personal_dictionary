@@ -411,6 +411,8 @@ const state = {
 
 // DOM Elements
 const wordsContainer = document.getElementById('words-container');
+const alphabetNav = document.getElementById('alphabet-nav');
+const alphabetNavInner = document.getElementById('alphabet-nav-inner');
 const searchInput = document.getElementById('search-input');
 const clearSearchBtn = document.getElementById('clear-search-btn');
 const posFilterContainer = document.getElementById('pos-filter-container');
@@ -466,30 +468,23 @@ const exportAllCountLabel = document.getElementById('export-all-count-label');
 const exportFilteredOption = document.getElementById('export-filtered-option');
 const exportFilteredCountLabel = document.getElementById('export-filtered-count-label');
 
-// GitHub Cloud Sync Elements
-const syncDialog = document.getElementById('sync-dialog');
-const openSyncModalBtn = document.getElementById('open-sync-modal-btn');
-const closeSyncModalBtn = document.getElementById('close-sync-modal-btn');
-const syncStatusCard = document.getElementById('sync-status-card');
-const syncStatusDot = document.getElementById('sync-status-dot');
-const syncStatusText = document.getElementById('sync-status-text');
-const syncStatusDetail = document.getElementById('sync-status-detail');
-const pushGithubBtn = document.getElementById('push-github-btn');
-const pullGithubBtn = document.getElementById('pull-github-btn');
-const ghTokenInput = document.getElementById('gh-token-input');
-const toggleTokenVisibilityBtn = document.getElementById('toggle-token-visibility-btn');
-const ghAutosyncCheckbox = document.getElementById('gh-autosync-checkbox');
-const clearTokenBtn = document.getElementById('clear-token-btn');
-const saveTokenBtn = document.getElementById('save-token-btn');
-
-// GitHub Sync Constants
-const GITHUB_REPO_OWNER = 'sweetgingkolove';
-const GITHUB_REPO_NAME = 'personal_dictionary';
-const GITHUB_BRANCH = 'main';
-const GITHUB_WORDS_FILE = 'data/words.json';
-const GITHUB_TOKEN_STORAGE_KEY = 'personal_dictionary_gh_token';
-const GITHUB_AUTOSYNC_STORAGE_KEY = 'personal_dictionary_gh_autosync';
-const GITHUB_LAST_SYNC_STORAGE_KEY = 'personal_dictionary_gh_last_sync';
+// Google Drive Sync Elements
+const driveSyncBtn = document.getElementById('drive-sync-btn');
+const driveSyncIndicator = document.getElementById('drive-sync-indicator');
+const driveStatusLabel = document.getElementById('drive-status-label');
+const syncPopover = document.getElementById('sync-popover');
+const syncUserAvatar = document.getElementById('sync-user-avatar');
+const syncUserName = document.getElementById('sync-user-name');
+const syncUserEmail = document.getElementById('sync-user-email');
+const syncPopoverStatus = document.getElementById('sync-popover-status');
+const syncNowBtn = document.getElementById('sync-now-btn');
+const syncSettingsBtn = document.getElementById('sync-settings-btn');
+const syncSignoutBtn = document.getElementById('sync-signout-btn');
+const driveSettingsModal = document.getElementById('drive-settings-modal');
+const closeDriveModalBtn = document.getElementById('close-drive-modal-btn');
+const cancelDriveModalBtn = document.getElementById('cancel-drive-modal-btn');
+const saveDriveClientIdBtn = document.getElementById('save-drive-client-id-btn');
+const driveClientIdInput = document.getElementById('drive-client-id-input');
 
 /**
  * Format ISO date string into readable text.
@@ -574,7 +569,7 @@ function deleteWord(id) {
     renderTagFilterBar();
     renderAddTagPicker();
     render();
-    triggerAutoSync();
+    syncDictionaryChanges();
   }
 }
 
@@ -813,23 +808,222 @@ function escapeHtml(str) {
     .replace(/'/g, '&#039;');
 }
 
+const ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+
 /**
- * Render the word list and counts.
+ * Extract and normalize the first letter of a word for alphabetical grouping.
+ * Handles diacritics, unicode replacement characters, and punctuation.
+ */
+export function getFirstLetter(word) {
+  if (!word) return '#';
+  let clean = String(word).trim();
+  if (clean.toLowerCase().includes('claircissement')) return 'E';
+  clean = clean.replace(/^[\ufffd\uFFFD\?]+/, '').trim();
+  if (!clean) return '#';
+  const normalized = clean.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  const firstChar = normalized.charAt(0).toUpperCase();
+  return /[A-Z]/.test(firstChar) ? firstChar : '#';
+}
+
+/**
+ * Create a visual section header for an alphabetical group of words.
+ */
+function createLetterSectionHeader(letter, count) {
+  const header = document.createElement('div');
+  header.className = 'letter-section-header';
+  header.id = `letter-${letter}`;
+  header.setAttribute('data-letter', letter);
+
+  const titleWrap = document.createElement('div');
+  titleWrap.className = 'letter-section-title-wrap';
+
+  const charSpan = document.createElement('h2');
+  charSpan.className = 'letter-section-char';
+  charSpan.textContent = letter;
+
+  const countSpan = document.createElement('span');
+  countSpan.className = 'letter-section-count';
+  countSpan.textContent = `${count} ${count === 1 ? 'word' : 'words'}`;
+
+  titleWrap.appendChild(charSpan);
+  titleWrap.appendChild(countSpan);
+
+  const topBtn = document.createElement('button');
+  topBtn.type = 'button';
+  topBtn.className = 'letter-section-top-link';
+  topBtn.title = 'Back to top of dictionary';
+  topBtn.setAttribute('aria-label', `Back to top from section ${letter}`);
+  topBtn.innerHTML = '↑ top';
+  topBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  header.appendChild(titleWrap);
+  header.appendChild(topBtn);
+
+  return header;
+}
+
+/**
+ * Render the alphabet jump navigation bar with live available letter status.
+ */
+function renderAlphabetNav(letterCounts = {}) {
+  if (!alphabetNavInner) return;
+
+  const hasHash = Boolean(letterCounts['#'] && letterCounts['#'] > 0);
+  const letters = [...ALPHABET];
+  if (hasHash) {
+    letters.push('#');
+  }
+
+  let html = `
+    <button type="button" class="alpha-jump-btn top-btn" data-action="top" title="Back to top" aria-label="Back to top">↑</button>
+  `;
+
+  letters.forEach(letter => {
+    const count = letterCounts[letter] || 0;
+    const isDisabled = count === 0;
+    const title = isDisabled
+      ? `No words starting with ${letter}`
+      : `${letter}: ${count} ${count === 1 ? 'word' : 'words'}`;
+
+    html += `
+      <button
+        type="button"
+        class="alpha-jump-btn ${isDisabled ? 'disabled' : ''}"
+        data-letter="${letter}"
+        title="${title}"
+        aria-label="Jump to letter ${letter}${count > 0 ? ` (${count} words)` : ''}"
+        ${isDisabled ? 'disabled aria-disabled="true"' : ''}
+      >${letter}</button>
+    `;
+  });
+
+  alphabetNavInner.innerHTML = html;
+}
+
+/**
+ * Smoothly scroll to the requested letter section.
+ * Automatically switches to alphabetical sort if currently sorted by date.
+ */
+function jumpToLetter(letter) {
+  if (!letter) return;
+
+  if (state.selectedSort !== 'alpha-asc' && state.selectedSort !== 'alpha-desc') {
+    state.selectedSort = 'alpha-asc';
+    if (sortSelect) sortSelect.value = 'alpha-asc';
+    render();
+  }
+
+  const target = document.getElementById(`letter-${letter}`);
+  if (target) {
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    target.classList.remove('highlight-pulse');
+    void target.offsetWidth; // Force reflow to re-trigger animation
+    target.classList.add('highlight-pulse');
+
+    if (alphabetNavInner) {
+      alphabetNavInner.querySelectorAll('.alpha-jump-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('data-letter') === letter);
+      });
+    }
+
+    try {
+      history.replaceState(null, '', `#letter-${letter}`);
+    } catch {}
+  }
+}
+
+let scrollSpyTicking = false;
+
+/**
+ * ScrollSpy listener: highlights the letter button in the jump bar
+ * corresponding to the section currently in view.
+ */
+function updateActiveLetterOnScroll() {
+  if (scrollSpyTicking) return;
+  scrollSpyTicking = true;
+
+  requestAnimationFrame(() => {
+    scrollSpyTicking = false;
+    const headers = document.querySelectorAll('.letter-section-header');
+    if (!headers || headers.length === 0) {
+      if (alphabetNavInner) {
+        alphabetNavInner.querySelectorAll('.alpha-jump-btn').forEach(btn => btn.classList.remove('active'));
+      }
+      return;
+    }
+
+    const navHeight = alphabetNav ? alphabetNav.offsetHeight : 45;
+    const threshold = navHeight + 35;
+
+    let activeLetter = '';
+
+    if (window.scrollY < 120) {
+      activeLetter = headers[0].getAttribute('data-letter');
+    } else {
+      for (let i = 0; i < headers.length; i++) {
+        const rect = headers[i].getBoundingClientRect();
+        if (rect.top <= threshold) {
+          activeLetter = headers[i].getAttribute('data-letter');
+        } else {
+          break;
+        }
+      }
+    }
+
+    if (alphabetNavInner) {
+      alphabetNavInner.querySelectorAll('.alpha-jump-btn').forEach(btn => {
+        const letter = btn.getAttribute('data-letter');
+        btn.classList.toggle('active', Boolean(activeLetter && letter === activeLetter));
+      });
+    }
+  });
+}
+
+/**
+ * Render the word list, alphabet jump bar, and counts.
  */
 function render() {
   const items = getFilteredAndSortedWords();
   wordsContainer.innerHTML = '';
 
+  // Calculate letter counts for filtered items
+  const letterCounts = {};
+  items.forEach(entry => {
+    const letter = getFirstLetter(entry.word);
+    letterCounts[letter] = (letterCounts[letter] || 0) + 1;
+  });
+
+  // Render the alphabet navigation bar with live counts and disabled states
+  renderAlphabetNav(letterCounts);
+
   if (items.length === 0) {
     wordsContainer.appendChild(createEmptyState());
   } else {
-    items.forEach(entry => {
-      wordsContainer.appendChild(createWordItem(entry));
-    });
+    const isAlphaSort = state.selectedSort === 'alpha-asc' || state.selectedSort === 'alpha-desc';
+
+    if (isAlphaSort) {
+      let currentLetter = '';
+      items.forEach(entry => {
+        const letter = getFirstLetter(entry.word);
+        if (letter !== currentLetter) {
+          currentLetter = letter;
+          wordsContainer.appendChild(createLetterSectionHeader(letter, letterCounts[letter]));
+        }
+        wordsContainer.appendChild(createWordItem(entry));
+      });
+    } else {
+      items.forEach(entry => {
+        wordsContainer.appendChild(createWordItem(entry));
+      });
+    }
   }
 
   const count = state.words.length;
   totalCountBadge.textContent = `${count} ${count === 1 ? 'word' : 'words'}`;
+
+  updateActiveLetterOnScroll();
 }
 
 /**
@@ -972,8 +1166,7 @@ export function generateStandardExport(words) {
   let currentLetter = '';
 
   sorted.forEach(entry => {
-    const firstChar = (entry.word || '').trim().charAt(0).toUpperCase();
-    const letter = /[A-Z]/.test(firstChar) ? firstChar : '#';
+    const letter = getFirstLetter(entry.word);
 
     if (letter !== currentLetter) {
       currentLetter = letter;
@@ -1013,8 +1206,7 @@ export function generateCompactExport(words) {
   let currentLetter = '';
 
   sorted.forEach(entry => {
-    const firstChar = (entry.word || '').trim().charAt(0).toLowerCase();
-    const letter = /[a-z]/.test(firstChar) ? firstChar : '#';
+    const letter = getFirstLetter(entry.word).toLowerCase();
 
     if (letter !== currentLetter) {
       currentLetter = letter;
@@ -1155,381 +1347,22 @@ function handleDownloadExport() {
 }
 
 // ==========================================
-// GitHub Cloud Sync Logic
+// Google Drive Cloud Storage & Sync Logic
 // ==========================================
 
-export function getGitHubToken() {
-  try {
-    return localStorage.getItem(GITHUB_TOKEN_STORAGE_KEY) || '';
-  } catch {
-    return '';
-  }
-}
+export function syncDictionaryChanges() {
+  localStorage.setItem('dictionary_last_local_update', String(Date.now()));
 
-export function saveGitHubToken(token) {
-  try {
-    if (token) {
-      localStorage.setItem(GITHUB_TOKEN_STORAGE_KEY, token.trim());
-    } else {
-      localStorage.removeItem(GITHUB_TOKEN_STORAGE_KEY);
-    }
-  } catch (err) {
-    console.error('Failed to save GitHub token:', err);
-  }
-}
-
-export function clearGitHubToken() {
-  try {
-    localStorage.removeItem(GITHUB_TOKEN_STORAGE_KEY);
-  } catch {}
-}
-
-export function isAutoSyncEnabled() {
-  try {
-    const val = localStorage.getItem(GITHUB_AUTOSYNC_STORAGE_KEY);
-    return val !== 'false'; // Default to true!
-  } catch {
-    return true;
-  }
-}
-
-export function setAutoSyncEnabled(enabled) {
-  try {
-    localStorage.setItem(GITHUB_AUTOSYNC_STORAGE_KEY, enabled ? 'true' : 'false');
-  } catch {}
-}
-
-export function getLastSyncTime() {
-  try {
-    return localStorage.getItem(GITHUB_LAST_SYNC_STORAGE_KEY) || '';
-  } catch {
-    return '';
-  }
-}
-
-export function setLastSyncTime(isoStr) {
-  try {
-    localStorage.setItem(GITHUB_LAST_SYNC_STORAGE_KEY, isoStr);
-  } catch {}
-}
-
-function utf8ToBase64(str) {
-  const encoder = new TextEncoder();
-  const bytes = encoder.encode(str);
-  let binary = '';
-  for (let i = 0; i < bytes.length; i++) {
-    binary += String.fromCharCode(bytes[i]);
-  }
-  return btoa(binary);
-}
-
-function base64ToUtf8(base64) {
-  const binary = atob(base64.replace(/\s/g, ''));
-  const bytes = new Uint8Array(binary.length);
-  for (let i = 0; i < binary.length; i++) {
-    bytes[i] = binary.charCodeAt(i);
-  }
-  return new TextDecoder().decode(bytes);
-}
-
-function formatRelativeTime(isoStr) {
-  if (!isoStr) return '';
-  try {
-    const diffMs = Date.now() - new Date(isoStr).getTime();
-    const diffMins = Math.floor(diffMs / 60000);
-    if (diffMins < 1) return 'just now';
-    if (diffMins === 1) return '1 minute ago';
-    if (diffMins < 60) return `${diffMins} minutes ago`;
-    const diffHours = Math.floor(diffMins / 60);
-    if (diffHours === 1) return '1 hour ago';
-    if (diffHours < 24) return `${diffHours} hours ago`;
-    return new Date(isoStr).toLocaleDateString(undefined, { month: 'short', day: 'numeric' });
-  } catch {
-    return '';
-  }
-}
-
-function updateSyncModalStatusUI(type, message, detail) {
-  if (!syncStatusDot || !syncStatusText) return;
-  syncStatusDot.className = 'sync-status-dot';
-  if (type === 'connected') {
-    syncStatusDot.classList.add('dot-connected');
-  } else if (type === 'syncing') {
-    syncStatusDot.classList.add('dot-syncing');
-  } else if (type === 'error') {
-    syncStatusDot.classList.add('dot-error');
-  } else {
-    syncStatusDot.classList.add('dot-disconnected');
-  }
-
-  syncStatusText.textContent = message || '';
-  if (syncStatusDetail && detail !== undefined) {
-    syncStatusDetail.textContent = detail;
-  }
-}
-
-function updateHeaderSyncButtonBadge(text = '☁ Sync') {
-  if (!openSyncModalBtn) return;
-  openSyncModalBtn.textContent = text;
-}
-
-async function testGitHubConnection(token) {
-  if (!token) {
-    return { ok: false, error: 'No token provided' };
-  }
-  try {
-    const res = await fetch(`https://api.github.com/repos/${GITHUB_REPO_OWNER}/${GITHUB_REPO_NAME}`, {
-      headers: {
-        'Authorization': `Bearer ${token.trim()}`,
-        'Accept': 'application/vnd.github+json',
-        'X-GitHub-Api-Version': '2022-11-28'
-      }
+  // Queue background upload to Google Drive if connected
+  if (window.DriveSync && window.DriveSync.isConnected()) {
+    window.DriveSync.queueSync({
+      words: state.words,
+      customTags: getCustomTags(),
+      updatedAt: Date.now()
     });
-
-    if (res.ok) {
-      const data = await res.json();
-      const canPush = Boolean(data.permissions ? data.permissions.push : true);
-      return { ok: true, data, canPush };
-    } else {
-      let errMsg = `GitHub API Error (${res.status})`;
-      try {
-        const errJson = await res.json();
-        if (errJson.message) errMsg = errJson.message;
-      } catch {}
-      return { ok: false, error: errMsg, status: res.status };
-    }
-  } catch (err) {
-    return { ok: false, error: err.message || 'Network connection failed' };
-  }
-}
-
-// Fingerprint dictionary state to detect actual changes
-let lastPushedFingerprint = '';
-let autoPushTimeout = null;
-
-function computeDictionaryFingerprint() {
-  if (!state.words || !Array.isArray(state.words)) return '';
-  return JSON.stringify(state.words.map(w => ({
-    id: w.id,
-    w: w.word,
-    p: w.partOfSpeech,
-    d: w.definition,
-    s: w.source,
-    t: w.tags,
-    da: w.dateAdded
-  })));
-}
-
-export async function pushToGitHub({ silent = false } = {}) {
-  const token = getGitHubToken();
-  if (!token) {
-    if (!silent) openSyncModal();
-    return false;
   }
 
-  updateSyncModalStatusUI('syncing', 'Pushing changes to GitHub...', 'Updating data/words.json on branch main...');
-  updateHeaderSyncButtonBadge('☁ Syncing...');
-  if (pushGithubBtn) pushGithubBtn.disabled = true;
-
-  try {
-    // 1. Fetch current file to get its blob SHA
-    const fileRes = await fetch(
-      `https://api.github.com/repos/${GITHUB_REPO_OWNER}/${GITHUB_REPO_NAME}/contents/${GITHUB_WORDS_FILE}?ref=${GITHUB_BRANCH}&_t=${Date.now()}`,
-      {
-        headers: {
-          'Authorization': `Bearer ${token}`,
-          'Accept': 'application/vnd.github+json',
-          'X-GitHub-Api-Version': '2022-11-28'
-        }
-      }
-    );
-
-    let sha = '';
-    if (fileRes.ok) {
-      const fileData = await fileRes.json();
-      sha = fileData.sha;
-    } else if (fileRes.status === 401) {
-      throw new Error('Invalid or expired GitHub token. Please verify your token.');
-    } else if (fileRes.status === 404) {
-      // File doesn't exist yet, sha can remain empty
-    } else {
-      const errData = await fileRes.json().catch(() => ({}));
-      throw new Error(errData.message || `Failed to fetch file SHA (${fileRes.status})`);
-    }
-
-    // 2. Prepare pure JSON content
-    const sortedWords = [...state.words].sort((a, b) =>
-      (a.word || '').localeCompare(b.word || '', undefined, { sensitivity: 'base' })
-    );
-    const wordsJson = JSON.stringify(sortedWords, null, 2);
-    const base64Content = utf8ToBase64(wordsJson);
-
-    // 3. PUT commit to data/words.json
-    const putRes = await fetch(
-      `https://api.github.com/repos/${GITHUB_REPO_OWNER}/${GITHUB_REPO_NAME}/contents/${GITHUB_WORDS_FILE}`,
-      {
-        method: 'PUT',
-        headers: {
-          'Authorization': `Bearer ${token}`,
-          'Accept': 'application/vnd.github+json',
-          'Content-Type': 'application/json',
-          'X-GitHub-Api-Version': '2022-11-28'
-        },
-        body: JSON.stringify({
-          message: `Update dictionary words (${state.words.length} entries)`,
-          content: base64Content,
-          sha: sha || undefined,
-          branch: GITHUB_BRANCH
-        })
-      }
-    );
-
-    if (!putRes.ok) {
-      const putErr = await putRes.json().catch(() => ({}));
-      if (putRes.status === 409) {
-        throw new Error('Conflict detected: Remote repository was updated elsewhere. Pull first before pushing.');
-      }
-      throw new Error(putErr.message || `Push failed (${putRes.status})`);
-    }
-
-    const nowIso = new Date().toISOString();
-    setLastSyncTime(nowIso);
-    lastPushedFingerprint = computeDictionaryFingerprint();
-
-    // Also notify local dev server if running on localhost
-    if (location.hostname === 'localhost' || location.hostname === '127.0.0.1') {
-      fetch('/api/save', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: wordsJson
-      }).catch(() => {});
-    }
-
-    updateSyncModalStatusUI(
-      'connected',
-      '✓ Synced to GitHub just now',
-      `Successfully committed ${state.words.length} entries to data/words.json. GitHub Pages will refresh automatically.`
-    );
-    updateHeaderSyncButtonBadge('☁ Synced');
-    setTimeout(() => updateHeaderSyncButtonBadge('☁ Ready'), 3000);
-
-    return true;
-  } catch (err) {
-    console.error('GitHub Push error:', err);
-    updateSyncModalStatusUI('error', 'Push failed', err.message);
-    updateHeaderSyncButtonBadge('☁ Sync Error');
-    if (!silent) {
-      alert(`GitHub Push error: ${err.message}`);
-    }
-    return false;
-  } finally {
-    if (pushGithubBtn) pushGithubBtn.disabled = false;
-  }
-}
-
-export async function pullFromGitHub() {
-  const token = getGitHubToken();
-  updateSyncModalStatusUI('syncing', 'Pulling latest from GitHub...', 'Downloading data/words.json from branch main...');
-  if (pullGithubBtn) pullGithubBtn.disabled = true;
-
-  try {
-    const headers = {
-      'Accept': 'application/vnd.github+json',
-      'X-GitHub-Api-Version': '2022-11-28'
-    };
-    if (token) headers['Authorization'] = `Bearer ${token}`;
-
-    const res = await fetch(
-      `https://api.github.com/repos/${GITHUB_REPO_OWNER}/${GITHUB_REPO_NAME}/contents/${GITHUB_WORDS_FILE}?ref=${GITHUB_BRANCH}&_t=${Date.now()}`,
-      { headers }
-    );
-
-    if (!res.ok) {
-      const errData = await res.json().catch(() => ({}));
-      throw new Error(errData.message || `Download failed (${res.status})`);
-    }
-
-    const fileData = await res.json();
-    if (!fileData.content) {
-      throw new Error('No content returned from repository file.');
-    }
-
-    const decoded = base64ToUtf8(fileData.content);
-    let wordsArray;
-    try {
-      wordsArray = JSON.parse(decoded);
-    } catch {
-      const bracketStart = decoded.indexOf('[');
-      const bracketEnd = decoded.lastIndexOf(']');
-      wordsArray = JSON.parse(decoded.substring(bracketStart, bracketEnd + 1));
-    }
-
-    if (!Array.isArray(wordsArray)) {
-      throw new Error('Parsed data is not an array.');
-    }
-
-    state.words = wordsArray.map(normalizeEntry);
-    persistWords(state.words);
-    lastPushedFingerprint = computeDictionaryFingerprint();
-    renderTagFilterBar();
-    renderAddTagPicker();
-    render();
-
-    const nowIso = new Date().toISOString();
-    setLastSyncTime(nowIso);
-
-    updateSyncModalStatusUI(
-      'connected',
-      '✓ Pulled latest words',
-      `Loaded ${state.words.length} entries directly from GitHub into this device.`
-    );
-    updateHeaderSyncButtonBadge('☁ Synced');
-    setTimeout(() => updateHeaderSyncButtonBadge('☁ Ready'), 3000);
-    alert(`Successfully loaded ${state.words.length} words from GitHub!`);
-  } catch (err) {
-    console.error('GitHub Pull error:', err);
-    updateSyncModalStatusUI('error', 'Pull failed', err.message);
-    alert(`Pull failed: ${err.message}`);
-  } finally {
-    if (pullGithubBtn) pullGithubBtn.disabled = false;
-  }
-}
-
-function openSyncModal() {
-  if (!syncDialog) return;
-  const token = getGitHubToken();
-  if (ghTokenInput) ghTokenInput.value = token;
-  if (ghAutosyncCheckbox) ghAutosyncCheckbox.checked = isAutoSyncEnabled();
-
-  const lastSync = getLastSyncTime();
-  if (token) {
-    const detail = lastSync
-      ? `Connected to ${GITHUB_REPO_OWNER}/${GITHUB_REPO_NAME}. Last synced: ${formatRelativeTime(lastSync)}.`
-      : `Connected to ${GITHUB_REPO_OWNER}/${GITHUB_REPO_NAME}. Ready to push or pull.`;
-    updateSyncModalStatusUI('connected', 'Token configured', detail);
-  } else {
-    updateSyncModalStatusUI(
-      'disconnected',
-      'Not connected to GitHub',
-      'Enter your Fine-Grained Personal Access Token below to enable pushing and pulling from this device.'
-    );
-  }
-
-  syncDialog.showModal();
-}
-
-function closeSyncModal() {
-  if (!syncDialog) return;
-  syncDialog.close();
-}
-
-export function triggerAutoSync() {
-  const currentFingerprint = computeDictionaryFingerprint();
-  if (lastPushedFingerprint && currentFingerprint === lastPushedFingerprint) {
-    return; // Nothing changed
-  }
-
-  // Also save to local server disk if running on localhost
+  // Also save to local server disk if running on localhost dev server
   if (location.hostname === 'localhost' || location.hostname === '127.0.0.1') {
     fetch('/api/save', {
       method: 'POST',
@@ -1537,65 +1370,259 @@ export function triggerAutoSync() {
       body: JSON.stringify(state.words)
     }).catch(() => {});
   }
-
-  const token = getGitHubToken();
-  if (!token) {
-    updateHeaderSyncButtonBadge('☁ Connect Token');
-    return;
-  }
-
-  if (!isAutoSyncEnabled()) {
-    return;
-  }
-
-  if (autoPushTimeout) {
-    clearTimeout(autoPushTimeout);
-  }
-
-  updateHeaderSyncButtonBadge('☁ Saving...');
-  autoPushTimeout = setTimeout(async () => {
-    const success = await pushToGitHub({ silent: true });
-    if (success) {
-      lastPushedFingerprint = computeDictionaryFingerprint();
-    }
-  }, 500);
 }
 
-/**
- * Asynchronously refresh words from data/words.json if available.
- */
-async function loadRemoteWordsJson() {
-  try {
-    const res = await fetch('data/words.json?_t=' + Date.now());
-    if (res.ok) {
-      const data = await res.json();
-      if (Array.isArray(data) && data.length > 0) {
-        const remoteFingerprint = JSON.stringify(data.map(w => ({
-          id: w.id,
-          w: w.word,
-          p: w.partOfSpeech,
-          d: w.definition,
-          s: w.source,
-          t: w.tags,
-          da: w.dateAdded
-        })));
-        const currentFingerprint = computeDictionaryFingerprint();
+function setupDriveSync() {
+  if (!window.DriveSync) return;
 
-        if (remoteFingerprint !== currentFingerprint) {
-          state.words = data.map(normalizeEntry);
-          persistWords(state.words);
-          lastPushedFingerprint = remoteFingerprint;
-          renderTagFilterBar();
-          renderAddTagPicker();
-          render();
-        } else {
-          lastPushedFingerprint = currentFingerprint;
-        }
+  window.DriveSync.init({
+    onStatusChange: handleDriveStatusChange,
+    onRemoteData: handleRemoteDriveData
+  });
+
+  if (driveSyncBtn) {
+    driveSyncBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const clientId = window.DriveSync ? window.DriveSync.getClientId() : '';
+      if (!clientId) {
+        openDriveSettingsModal();
+      } else {
+        toggleSyncPopover();
+      }
+    });
+  }
+
+  if (syncNowBtn) {
+    syncNowBtn.addEventListener('click', () => {
+      const status = window.DriveSync ? window.DriveSync.getStatus() : 'unconfigured';
+      if (status === 'unconfigured') {
+        closeSyncPopover();
+        openDriveSettingsModal();
+      } else if (status === 'disconnected') {
+        closeSyncPopover();
+        window.DriveSync.connect();
+      } else {
+        // Push local words or pull remote
+        window.DriveSync.queueSync({
+          words: state.words,
+          customTags: getCustomTags(),
+          updatedAt: Date.now()
+        });
+        window.DriveSync.syncNow();
+      }
+    });
+  }
+
+  if (syncSettingsBtn) {
+    syncSettingsBtn.addEventListener('click', () => {
+      closeSyncPopover();
+      openDriveSettingsModal();
+    });
+  }
+
+  if (syncSignoutBtn) {
+    syncSignoutBtn.addEventListener('click', () => {
+      closeSyncPopover();
+      window.DriveSync.disconnect();
+    });
+  }
+
+  // Modal Events
+  if (closeDriveModalBtn) {
+    closeDriveModalBtn.addEventListener('click', closeDriveSettingsModal);
+  }
+
+  if (cancelDriveModalBtn) {
+    cancelDriveModalBtn.addEventListener('click', closeDriveSettingsModal);
+  }
+
+  if (saveDriveClientIdBtn) {
+    saveDriveClientIdBtn.addEventListener('click', () => {
+      const id = driveClientIdInput ? driveClientIdInput.value.trim() : '';
+      if (id) {
+        window.DriveSync.setClientId(id);
+        closeDriveSettingsModal();
+        window.DriveSync.connect();
+      }
+    });
+  }
+
+  if (driveSettingsModal) {
+    driveSettingsModal.addEventListener('click', (e) => {
+      if (e.target === driveSettingsModal) {
+        closeDriveSettingsModal();
+      }
+    });
+  }
+
+  // Close popover on click outside
+  document.addEventListener('click', (e) => {
+    if (syncPopover && syncPopover.style.display !== 'none') {
+      if (!syncPopover.contains(e.target) && !driveSyncBtn.contains(e.target)) {
+        closeSyncPopover();
       }
     }
-  } catch (err) {
-    // Fallback: words already loaded from localStorage or INITIAL_WORDS
+  });
+
+  // Close modal on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && driveSettingsModal && driveSettingsModal.style.display !== 'none') {
+      closeDriveSettingsModal();
+    }
+  });
+}
+
+function handleDriveStatusChange({ status, detail, user, lastSync, clientId }) {
+  if (!driveSyncBtn) return;
+
+  driveSyncBtn.classList.remove('synced', 'syncing', 'error');
+
+  if (status === 'unconfigured') {
+    if (driveSyncIndicator) driveSyncIndicator.style.backgroundColor = 'var(--text-light)';
+    if (driveStatusLabel) driveStatusLabel.textContent = 'Drive';
+    driveSyncBtn.setAttribute('title', 'Connect Google Drive (Click to configure)');
+    if (syncPopoverStatus) syncPopoverStatus.textContent = 'Setup required: enter Google OAuth Client ID.';
+    if (syncSignoutBtn) syncSignoutBtn.style.display = 'none';
+    if (syncNowBtn) syncNowBtn.textContent = 'Setup Drive';
+  } else if (status === 'disconnected') {
+    if (driveSyncIndicator) driveSyncIndicator.style.backgroundColor = 'var(--text-light)';
+    if (driveStatusLabel) driveStatusLabel.textContent = 'Connect';
+    driveSyncBtn.setAttribute('title', 'Click to connect Google Drive');
+    if (syncPopoverStatus) syncPopoverStatus.textContent = 'Disconnected. Dictionary saved locally.';
+    if (syncSignoutBtn) syncSignoutBtn.style.display = 'none';
+    if (syncNowBtn) syncNowBtn.textContent = 'Connect Drive';
+  } else if (status === 'connecting' || status === 'syncing') {
+    driveSyncBtn.classList.add('syncing');
+    if (driveStatusLabel) driveStatusLabel.textContent = 'Syncing...';
+    driveSyncBtn.setAttribute('title', 'Syncing with Google Drive...');
+    if (syncPopoverStatus) syncPopoverStatus.textContent = 'Syncing dictionary with Google Drive...';
+  } else if (status === 'synced') {
+    driveSyncBtn.classList.add('synced');
+    if (driveStatusLabel) driveStatusLabel.textContent = 'Synced';
+    const syncTimeStr = lastSync ? new Date(lastSync).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) : 'just now';
+    driveSyncBtn.setAttribute('title', `Synced to Google Drive (${syncTimeStr})`);
+    if (syncPopoverStatus) syncPopoverStatus.textContent = `All words saved in Google Drive (${syncTimeStr}).`;
+    if (syncSignoutBtn) syncSignoutBtn.style.display = 'block';
+    if (syncNowBtn) syncNowBtn.textContent = 'Sync Now';
+  } else if (status === 'error') {
+    driveSyncBtn.classList.add('error');
+    if (driveStatusLabel) driveStatusLabel.textContent = 'Error';
+    driveSyncBtn.setAttribute('title', detail || 'Google Drive sync error');
+    if (syncPopoverStatus) syncPopoverStatus.textContent = detail ? `Sync error: ${detail}` : 'Could not reach Google Drive.';
+  } else if (status === 'offline') {
+    if (driveSyncIndicator) driveSyncIndicator.style.backgroundColor = 'var(--accent-gold)';
+    if (driveStatusLabel) driveStatusLabel.textContent = 'Offline';
+    driveSyncBtn.setAttribute('title', 'Offline. Changes saved locally.');
+    if (syncPopoverStatus) syncPopoverStatus.textContent = 'Device is offline. Changes saved locally.';
   }
+
+  // Update User info in popover
+  if (user && user.email) {
+    if (syncUserName) syncUserName.textContent = user.name || 'Google Account';
+    if (syncUserEmail) syncUserEmail.textContent = user.email;
+    if (syncUserAvatar) {
+      if (user.picture) {
+        syncUserAvatar.innerHTML = `<img src="${user.picture}" alt="${user.name ? user.name.replace(/"/g, '&quot;') : 'Google Account'}" />`;
+      } else {
+        syncUserAvatar.textContent = (user.name || user.email || 'G').charAt(0).toUpperCase();
+      }
+    }
+  } else {
+    if (syncUserName) syncUserName.textContent = 'Google Drive';
+    if (syncUserEmail) syncUserEmail.textContent = clientId ? 'Not connected' : 'Not configured';
+    if (syncUserAvatar) syncUserAvatar.textContent = 'G';
+  }
+}
+
+function handleRemoteDriveData(remoteData) {
+  if (!remoteData) return;
+
+  let remoteWords = null;
+  let remoteTags = null;
+  let remoteUpdatedAt = 0;
+
+  if (Array.isArray(remoteData)) {
+    remoteWords = remoteData;
+  } else if (remoteData && typeof remoteData === 'object') {
+    if (Array.isArray(remoteData.words)) {
+      remoteWords = remoteData.words;
+    }
+    if (Array.isArray(remoteData.customTags)) {
+      remoteTags = remoteData.customTags;
+    }
+    remoteUpdatedAt = Number(remoteData.updatedAt) || 0;
+  }
+
+  if (remoteWords && remoteWords.length > 0) {
+    const localUpdatedAt = Number(localStorage.getItem('dictionary_last_local_update')) || 0;
+    // Only update if remote is newer or local has not been updated locally
+    if (remoteUpdatedAt >= localUpdatedAt || !localUpdatedAt) {
+      const normalizedRemote = remoteWords.map(normalizeEntry);
+      const hasChanged = JSON.stringify(state.words) !== JSON.stringify(normalizedRemote);
+
+      if (hasChanged) {
+        state.words = normalizedRemote;
+        persistWords(state.words);
+
+        if (remoteTags && remoteTags.length > 0) {
+          registerCustomTags(remoteTags);
+        }
+
+        renderTagFilterBar();
+        renderAddTagPicker();
+        render();
+
+        // Also save to local server disk if running on localhost dev server
+        if (location.hostname === 'localhost' || location.hostname === '127.0.0.1') {
+          fetch('/api/save', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(state.words)
+          }).catch(() => {});
+        }
+      }
+
+      localStorage.setItem('dictionary_last_local_update', String(Math.max(remoteUpdatedAt, Date.now())));
+    }
+  } else if (state.words && state.words.length > 0) {
+    // Remote drive file was newly created or empty, upload current local words
+    if (window.DriveSync) {
+      window.DriveSync.queueSync({
+        words: state.words,
+        customTags: getCustomTags(),
+        updatedAt: Date.now()
+      });
+    }
+  }
+}
+
+function toggleSyncPopover() {
+  if (!syncPopover) return;
+  if (syncPopover.style.display === 'none' || !syncPopover.style.display) {
+    syncPopover.style.display = 'block';
+  } else {
+    closeSyncPopover();
+  }
+}
+
+function closeSyncPopover() {
+  if (syncPopover) syncPopover.style.display = 'none';
+}
+
+function openDriveSettingsModal() {
+  if (!driveSettingsModal) return;
+  closeSyncPopover();
+  if (driveClientIdInput) {
+    driveClientIdInput.value = window.DriveSync ? window.DriveSync.getClientId() : '';
+  }
+  driveSettingsModal.style.display = 'flex';
+  if (driveClientIdInput) {
+    setTimeout(() => driveClientIdInput.focus(), 50);
+  }
+}
+
+function closeDriveSettingsModal() {
+  if (driveSettingsModal) driveSettingsModal.style.display = 'none';
 }
 
 /**
@@ -1780,7 +1807,7 @@ function initEvents() {
     renderAddTagPicker();
     render();
     closeAddModal();
-    triggerAutoSync();
+    syncDictionaryChanges();
   });
 
   // Edit Modal interactions
@@ -1860,7 +1887,7 @@ function initEvents() {
     renderAddTagPicker();
     render();
     closeEditModal();
-    triggerAutoSync();
+    syncDictionaryChanges();
   });
 
   // Back to Top button
@@ -1902,79 +1929,41 @@ function initEvents() {
     downloadExportBtn.addEventListener('click', handleDownloadExport);
   }
 
-  // GitHub Cloud Sync interactions
-  if (openSyncModalBtn) {
-    openSyncModalBtn.addEventListener('click', openSyncModal);
-  }
-  if (closeSyncModalBtn) {
-    closeSyncModalBtn.addEventListener('click', closeSyncModal);
-  }
-  if (syncDialog) {
-    syncDialog.addEventListener('click', (e) => {
-      if (e.target === syncDialog) {
-        closeSyncModal();
-      }
-    });
-  }
-  if (toggleTokenVisibilityBtn && ghTokenInput) {
-    toggleTokenVisibilityBtn.addEventListener('click', () => {
-      const isPass = ghTokenInput.type === 'password';
-      ghTokenInput.type = isPass ? 'text' : 'password';
-      toggleTokenVisibilityBtn.textContent = isPass ? '🔒' : '👁';
-    });
-  }
-  if (ghAutosyncCheckbox) {
-    ghAutosyncCheckbox.addEventListener('change', (e) => {
-      setAutoSyncEnabled(e.target.checked);
-    });
-  }
-  if (saveTokenBtn && ghTokenInput) {
-    saveTokenBtn.addEventListener('click', async () => {
-      const val = ghTokenInput.value.trim();
-      if (!val) {
-        alert('Please enter a GitHub token or click Clear Token.');
+  // Alphabet Jump Bar interactions
+  if (alphabetNavInner) {
+    alphabetNavInner.addEventListener('click', (e) => {
+      const btn = e.target.closest('.alpha-jump-btn');
+      if (!btn || btn.disabled || btn.classList.contains('disabled')) return;
+
+      const action = btn.getAttribute('data-action');
+      if (action === 'top') {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
         return;
       }
-      saveTokenBtn.disabled = true;
-      saveTokenBtn.textContent = 'Testing...';
-      updateSyncModalStatusUI('syncing', 'Testing token with GitHub API...');
-      const res = await testGitHubConnection(val);
-      saveTokenBtn.disabled = false;
-      saveTokenBtn.textContent = 'Save & Test';
-      if (res.ok) {
-        saveGitHubToken(val);
-        updateSyncModalStatusUI('connected', '✓ Connected successfully', `Authenticated with repository ${GITHUB_REPO_OWNER}/${GITHUB_REPO_NAME}.`);
-        updateHeaderSyncButtonBadge('☁ Ready');
-        alert('Connected successfully to GitHub!');
-      } else {
-        updateSyncModalStatusUI('error', 'Authentication failed', res.error);
-        alert(`Authentication failed: ${res.error}\n\nPlease ensure your token has "Contents: Read and write" permission for ${GITHUB_REPO_OWNER}/${GITHUB_REPO_NAME}.`);
+
+      const letter = btn.getAttribute('data-letter');
+      if (letter) {
+        jumpToLetter(letter);
       }
     });
   }
-  if (clearTokenBtn && ghTokenInput) {
-    clearTokenBtn.addEventListener('click', () => {
-      if (confirm('Clear saved GitHub token from this device?')) {
-        clearGitHubToken();
-        ghTokenInput.value = '';
-        updateSyncModalStatusUI('disconnected', 'Not connected to GitHub', 'Token removed from this device.');
-        updateHeaderSyncButtonBadge('☁ Sync');
-      }
-    });
-  }
-  if (pushGithubBtn) {
-    pushGithubBtn.addEventListener('click', () => pushToGitHub());
-  }
-  if (pullGithubBtn) {
-    pullGithubBtn.addEventListener('click', () => pullFromGitHub());
-  }
+
+  // ScrollSpy listener to update active letter button as user scrolls
+  window.addEventListener('scroll', updateActiveLetterOnScroll, { passive: true });
+
+  // Google Drive Cloud Sync setup
+  setupDriveSync();
 }
 
 initEvents();
 renderTagFilterBar();
 renderAddTagPicker();
 render();
-loadRemoteWordsJson();
-if (getGitHubToken()) {
-  updateHeaderSyncButtonBadge('☁ Ready');
+
+// Jump to letter if anchor hash is present in URL
+if (window.location.hash && window.location.hash.startsWith('#letter-')) {
+  const hashLetter = window.location.hash.replace('#letter-', '').toUpperCase();
+  setTimeout(() => {
+    jumpToLetter(hashLetter);
+  }, 150);
 }

@@ -8,10 +8,13 @@
   <title>Chelsea's Dictionary &bull; A Personal Lexicon</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2036%2036%22%3E%3Cpath%20fill%3D%22%23A0041E%22%20d%3D%22M35%2026c0%202.209-1.791%204-4%204H5c-2.209%200-4-1.791-4-4V6.313C1%204.104%206.791%200%209%200h20.625C32.719%200%2035%202.312%2035%205.375V26z%22/%3E%3Cpath%20fill%3D%22%23CCD6DD%22%20d%3D%22M33%2030c0%202.209-1.791%204-4%204H7c-2.209%200-4-1.791-4-4V6c0-4.119-.021-4%205-4h21c2.209%200%204%201.791%204%204v24z%22/%3E%3Cpath%20fill%3D%22%23E1E8ED%22%20d%3D%22M31%2031c0%201.657-1.343%203-3%203H4c-1.657%200-3-1.343-3-3V7c0-1.657%201.343-3%203-3h24c1.657%200%203%201.343%203%203v24z%22/%3E%3Cpath%20fill%3D%22%23BE1931%22%20d%3D%22M31%2032c0%202.209-1.791%204-4%204H6c-2.209%200-4-1.791-4-4V10c0-2.209%201.791-4%204-4h21c2.209%200%204%201.791%204%204v22z%22/%3E%3Cpath%20fill%3D%22%23DD2E44%22%20d%3D%22M29%2032c0%202.209-1.791%204-4%204H6c-2.209%200-4-1.791-4-4V12c0-2.209%201.791-4%204-4h19.335C27.544%208%2029%209.456%2029%2011.665V32z%22/%3E%3Cpath%20fill%3D%22%23A0041E%22%20d%3D%22M6%206C4.312%206%204.269%204.078%205%203.25%205.832%202.309%207.125%202%209.438%202H11V0H8.281C4.312%200%201%202.5%201%205.375V32c0%202.209%201.791%204%204%204h2V6H6z%22/%3E%3C/svg%3E">
   <link rel="alternate icon" href="favicon.svg?v=2" type="image/svg+xml">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=EB+Garamond:ital,wght@0,400..700;1,400..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
 </head>
 <body>
   <div class="app-container">
@@ -31,9 +34,34 @@
             <option value="date-desc">Newest first</option>
             <option value="date-asc">Oldest first</option>
           </select>
-          <button id="open-sync-modal-btn" class="sync-btn" aria-label="GitHub Cloud Sync" title="GitHub Cloud Sync">
-            ☁ Sync
-          </button>
+          <div class="header-sync-area">
+            <button type="button" class="drive-sync-btn" id="drive-sync-btn" title="Google Drive Cloud Storage" aria-label="Google Drive Sync">
+              <span class="drive-sync-indicator" id="drive-sync-indicator"></span>
+              <svg class="drive-icon" viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+                <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM19 18H6c-2.21 0-4-1.79-4-4 0-2.05 1.53-3.76 3.56-3.97l1.07-.11.5-.95C8.08 7.14 9.94 6 12 6c2.62 0 4.88 1.86 5.39 4.43l.3 1.5 1.53.11c1.56.1 2.78 1.41 2.78 2.96 0 1.65-1.35 3-3 3z"/>
+              </svg>
+              <span class="drive-status-label" id="drive-status-label">Drive</span>
+            </button>
+
+            <!-- Drive Sync Popover Dropdown -->
+            <div class="sync-popover" id="sync-popover" style="display: none;">
+              <div class="sync-popover-header">
+                <div class="user-avatar" id="sync-user-avatar">G</div>
+                <div class="user-meta">
+                  <span class="user-name font-serif" id="sync-user-name">Google Drive</span>
+                  <span class="user-email" id="sync-user-email">Not connected</span>
+                </div>
+              </div>
+              <div class="sync-popover-status" id="sync-popover-status">
+                Local-only mode
+              </div>
+              <div class="sync-popover-actions">
+                <button type="button" class="sync-action-btn primary" id="sync-now-btn">Sync Now</button>
+                <button type="button" class="sync-action-btn" id="sync-settings-btn">Settings</button>
+                <button type="button" class="sync-action-btn danger" id="sync-signout-btn" style="display: none;">Sign Out</button>
+              </div>
+            </div>
+          </div>
           <button id="open-export-modal-btn" class="export-btn" aria-label="Export dictionary words">
             Export
           </button>
@@ -82,6 +110,13 @@
         <button class="tag-filter-btn" data-tag="textiles">textiles</button>
       </div>
     </header>
+
+    <!-- Alphabet Quick-Jump Index Navigation -->
+    <nav class="alphabet-nav" id="alphabet-nav" aria-label="Alphabet jump navigation">
+      <div class="alphabet-nav-inner" id="alphabet-nav-inner">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </nav>
 
     <main>
       <div id="words-container" class="words-list" aria-live="polite">
@@ -301,81 +336,51 @@
     </div>
   </dialog>
 
-  <!-- GitHub Cloud Sync Modal -->
-  <dialog id="sync-dialog" class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h2 class="modal-title">GitHub Cloud Sync</h2>
-        <button id="close-sync-modal-btn" class="modal-close-icon" aria-label="Close dialog">✕</button>
+  <!-- Google Drive Settings Modal -->
+  <div class="drive-modal-overlay" id="drive-settings-modal" style="display: none;">
+    <div class="drive-modal-card">
+      <div class="modal-card-header">
+        <h3 class="modal-title font-serif">Google Drive Sync</h3>
+        <button type="button" class="modal-close-icon" id="close-drive-modal-btn" aria-label="Close modal">✕</button>
       </div>
-
-      <div class="sync-status-card" id="sync-status-card">
-        <div class="sync-status-header">
-          <span class="sync-status-dot" id="sync-status-dot"></span>
-          <span class="sync-status-text" id="sync-status-text">Checking connection...</span>
-        </div>
-        <p class="sync-status-detail" id="sync-status-detail">
-          Connect your GitHub Personal Access Token to sync dictionary edits between your phone and computer.
-        </p>
+      <p class="modal-intro font-serif">
+        Save your dictionary privately in your Google Drive to sync seamlessly across your phone, tablet, and computer.
+        Only your dictionary data file is accessed.
+      </p>
+      <div class="modal-field">
+        <label for="drive-client-id-input" class="modal-label font-serif">Google OAuth 2.0 Client ID</label>
+        <input
+          type="text"
+          id="drive-client-id-input"
+          class="modal-text-input"
+          placeholder="e.g. 123456789-abc.apps.googleusercontent.com"
+          autocomplete="off"
+          spellcheck="false"
+        />
       </div>
-
-      <div class="sync-actions-row">
-        <button type="button" id="push-github-btn" class="btn-save sync-action-btn" title="Push current dictionary words to GitHub">
-          ↑ Push to GitHub
-        </button>
-        <button type="button" id="pull-github-btn" class="btn-secondary sync-action-btn" title="Pull latest words from GitHub">
-          ↓ Pull from GitHub
-        </button>
+      <div class="modal-guide-box">
+        <div class="guide-title font-serif">Quick Setup (Free &amp; 2 mins):</div>
+        <ol class="guide-steps">
+          <li>Open <a href="https://console.cloud.google.com/" target="_blank" rel="noopener">Google Cloud Console</a> and create a project (e.g. <em>Dictionary</em>).</li>
+          <li>Enable <strong>Google Drive API</strong> under <em>APIs &amp; Services &rarr; Library</em>.</li>
+          <li>Configure <strong>OAuth Consent Screen</strong> (User Type: <em>External</em>). Add your Google email as a test user.</li>
+          <li>Go to <em>Credentials &rarr; Create Credentials &rarr; <strong>OAuth client ID</strong> (Web application)</em>.</li>
+          <li>Under <strong>Authorized JavaScript origins</strong>, add:
+            <br><code class="guide-code">http://localhost:8000</code> and/or <code class="guide-code">https://sweetgingkolove.github.io</code>
+          </li>
+          <li>Copy the <strong>Client ID</strong>, paste it above, and click Save.</li>
+        </ol>
       </div>
-
-      <div class="form-field" style="margin-top: 1.25rem;">
-        <label for="gh-token-input">Fine-Grained Personal Access Token</label>
-        <div class="token-input-wrapper">
-          <input
-            type="password"
-            id="gh-token-input"
-            class="form-input"
-            placeholder="github_pat_11..."
-            autocomplete="off"
-            spellcheck="false"
-          >
-          <button type="button" id="toggle-token-visibility-btn" class="token-toggle-btn" title="Show or hide token">👁</button>
-        </div>
-        <span class="field-hint">
-          Saved exclusively on this device's private storage. Never committed to code.
-        </span>
-      </div>
-
-      <div class="sync-options-row">
-        <label class="sync-checkbox-label">
-          <input type="checkbox" id="gh-autosync-checkbox" checked>
-          <span>Automatically push to GitHub on every edit</span>
-        </label>
-      </div>
-
-      <details class="sync-instructions-accordion">
-        <summary>How to create a Fine-Grained Token (1 minute)</summary>
-        <div class="instructions-content">
-          <ol>
-            <li>On GitHub, go to <strong>Settings &rarr; Developer Settings &rarr; Personal access tokens &rarr; Fine-grained tokens</strong>.</li>
-            <li>Click <strong>Generate new token</strong>.</li>
-            <li>Name it (e.g. <em>Dictionary Sync</em>) and set an expiration.</li>
-            <li>Under <strong>Repository access</strong>, select <strong>Only select repositories</strong> and choose <strong>personal_dictionary</strong>.</li>
-            <li>Under <strong>Repository permissions</strong>, find <strong>Contents</strong> and set it to <strong>Read and write</strong>.</li>
-            <li>Click <strong>Generate token</strong>, copy it, and paste it into the box above.</li>
-          </ol>
-        </div>
-      </details>
-
-      <div class="modal-actions">
-        <button type="button" id="clear-token-btn" class="btn-cancel" title="Remove saved token from this device">Clear Token</button>
-        <button type="button" id="save-token-btn" class="btn-save" title="Save token and test connection">Save &amp; Test</button>
+      <div class="modal-footer-actions">
+        <button type="button" class="modal-btn secondary" id="cancel-drive-modal-btn">Cancel</button>
+        <button type="button" class="modal-btn primary" id="save-drive-client-id-btn">Save &amp; Connect</button>
       </div>
     </div>
-  </dialog>
+  </div>
 
   <button id="back-to-top-btn" class="back-to-top-btn" aria-label="Back to top" title="Back to top">↑</button>
 
+  <script src="js/drive-sync.js"></script>
   <script type="module" src="js/app.js"></script>
 </body>
 </html>
