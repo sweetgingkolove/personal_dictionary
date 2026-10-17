@@ -1,0 +1,22 @@
+{
+  "name": "Chelsea's Dictionary",
+  "short_name": "Dictionary",
+  "description": "A personal dictionary of curious and erudite terms.",
+  "icons": [
+    {
+      "src": "apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#e2d2ae",
+  "theme_color": "#e2d2ae"
+}

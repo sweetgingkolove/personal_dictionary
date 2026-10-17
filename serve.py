@@ -58,6 +58,12 @@ INJECTED_SNIPPET = """
 """
 
 class DevServerHandler(SimpleHTTPRequestHandler):
+    extensions_map = {
+        **SimpleHTTPRequestHandler.extensions_map,
+        '.webmanifest': 'application/manifest+json',
+        '.svg': 'image/svg+xml',
+    }
+
     def end_headers(self):
         # Prevent browser caching during local development
         self.send_header('Cache-Control', 'no-cache, no-store, must-revalidate')
