@@ -100,8 +100,17 @@ class DevServerHandler(SimpleHTTPRequestHandler):
                         subscribers.remove(client_queue)
             return
 
-        # Intercept HTML requests to inject auto-reload script
         clean_path = self.path.split('?')[0].split('#')[0]
+
+        # Intercept favicon fallback if .ico is requested
+        if clean_path == '/favicon.ico' and not os.path.exists('favicon.ico'):
+            if os.path.exists('favicon.svg'):
+                self.send_response(302)
+                self.send_header('Location', '/favicon.svg')
+                self.end_headers()
+                return
+
+        # Intercept HTML requests to inject auto-reload script
         if clean_path == '/' or clean_path.endswith('.html'):
             filepath = 'index.html' if clean_path == '/' else clean_path.lstrip('/')
             if os.path.exists(filepath) and os.path.isfile(filepath):
@@ -228,7 +237,23 @@ def main():
     root_dir = pathlib.Path(__file__).parent.resolve()
     os.chdir(root_dir)
 
-    port = find_available_port(PORT)
+    requested_port = PORT
+    for i, arg in enumerate(sys.argv[1:]):
+        if arg.isdigit():
+            requested_port = int(arg)
+            break
+        elif arg in ('--port', '-p') and i + 1 < len(sys.argv[1:]):
+            val = sys.argv[1:][i + 1]
+            if val.isdigit():
+                requested_port = int(val)
+                break
+        elif arg.startswith('--port='):
+            val = arg.split('=', 1)[1]
+            if val.isdigit():
+                requested_port = int(val)
+                break
+
+    port = find_available_port(requested_port)
     server_address = ('', port)
 
     httpd = ThreadingHTTPServer(server_address, DevServerHandler)
