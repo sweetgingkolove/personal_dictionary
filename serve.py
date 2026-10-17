@@ -93,7 +93,7 @@ class DevServerHandler(SimpleHTTPRequestHandler):
                         # Send heartbeat to keep connection alive
                         self.wfile.write(b": heartbeat\n\n")
                         self.wfile.flush()
-            except (ConnectionResetError, BrokenPipeError):
+            except (ConnectionError, OSError):
                 pass
             finally:
                 with subscribers_lock:
@@ -103,8 +103,16 @@ class DevServerHandler(SimpleHTTPRequestHandler):
 
         clean_path = self.path.split('?')[0].split('#')[0]
 
-        # Intercept favicon fallback if .ico is requested
-        if clean_path == '/favicon.ico' and not os.path.exists('favicon.ico'):
+        # Handle sw.js if a browser previously registered a service worker on localhost
+        if clean_path == '/sw.js' and not os.path.exists('sw.js'):
+            self.send_response(200)
+            self.send_header('Content-Type', 'application/javascript')
+            self.send_header('Content-Length', '0')
+            self.end_headers()
+            return
+
+        # Intercept favicon fallback if .ico or png sizes are requested
+        if clean_path in ('/favicon.ico', '/favicon-32x32.png', '/favicon-16x16.png') and not os.path.exists(clean_path.lstrip('/')):
             if os.path.exists('favicon.svg'):
                 self.send_response(302)
                 self.send_header('Location', '/favicon.svg')
